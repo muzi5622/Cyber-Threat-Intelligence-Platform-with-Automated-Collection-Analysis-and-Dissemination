@@ -1,8 +1,11 @@
 # CTI Platform (EduQual Level 6) — Automated Collection → Analysis → Dissemination
 
 **Project Title:** Comprehensive Cyber Threat Intelligence Platform with Automated Collection, Analysis, and Dissemination
+
 **Student:** Muzammal
+
 **Diploma:** Diploma in Artificial Intelligence Operations (EduQual Level 6)
+
 **Platform Core:** OpenCTI + RSS OSINT + NLP IOC Extraction + TAXII-style STIX export
 
 ## 1) What This Project Does (End-to-End)
