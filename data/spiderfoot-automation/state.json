@@ -1,0 +1,39 @@
+{
+  "seen_reports": [
+    "4a0b646a-aeec-4917-a2e4-99b6d15814b6",
+    "b33fd6f0-3a66-40dd-9992-075ac972df2f",
+    "4442c82b-2362-419f-bce7-1d71535df23e",
+    "18dbdc17-b398-41ad-b1f8-b0c38c3f3683",
+    "e3077f7a-97cb-4d2e-9f98-33230147c547",
+    "0ce2b3d6-4ff1-4315-ac3c-c6dbc0ecc3df",
+    "b1202065-0e77-4e47-81f1-792bf323922a",
+    "415b958f-2779-4b7b-b23d-36ad16460b63",
+    "c2474c77-d758-4ca4-aece-55c6c8a9dc53",
+    "185fa881-b237-4be8-8d69-b31d8b20e6b3",
+    "56f84729-7c80-48f1-b6be-800be94b79b9",
+    "aac4c030-483b-4247-a101-48dc710d83a1",
+    "2667e961-d978-44a6-b6f4-87f97820eb57",
+    "aca24a39-37d8-4aa2-867a-7d6b9817549a",
+    "54d7400d-49fa-4979-9d75-8eddac5fe94f",
+    "3f30939c-96e6-4873-891c-e6be084c3c37",
+    "f43cdc9b-1964-412a-b1d3-972c89f6f45e",
+    "ea8bf8e0-0af2-44e4-a1c9-6ebb1c3a3398",
+    "09dcb96b-5bb9-4ed9-80d1-f3fc340ce3a7",
+    "fa3706eb-9dde-48ce-beb3-32ea96101f29",
+    "01e4b621-70fe-4ee8-a2fc-c2c8b9fff1fd",
+    "38b2c95a-50e3-4a13-a443-c753d76e38ca",
+    "71710020-451a-42af-bd43-ee0430ff6b1b",
+    "b3b56f84-f5a3-46fa-9e4d-1b076319ed78",
+    "82526a5f-c705-478f-b7c9-5df7c3ecc7f3",
+    "d4c66b4f-bafb-40db-9397-acec84466d6b",
+    "c65b3b2f-201e-4bdd-9129-7720e68120e9",
+    "c1bcffeb-13b4-4bfe-8f8c-fde61a5d1400",
+    "a45a5a7c-47df-49d1-abc5-f6c78c93a5c5",
+    "1bed9c2d-33a4-45d2-8466-25778d94b456",
+    "dc368324-b40d-499a-8350-898c8c465063"
+  ],
+  "seen_targets": [
+    "domain:malware-cdn.org",
+    "domain:0xmuzamil.dev"
+  ]
+}

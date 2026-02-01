@@ -6,6 +6,146 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "id": "indicator--81ec55e97104",
+      "name": "IOC 0xmuzamil.dev",
+      "pattern": "[x-opencti:value = '0xmuzamil.dev']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e44d56f7d062",
+      "name": "IOC spiderfoot-test.example",
+      "pattern": "[x-opencti:value = 'spiderfoot-test.example']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--92a0d5aebf03",
+      "name": "IOC cti-lab.org",
+      "pattern": "[x-opencti:value = 'cti-lab.org']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ff5b5e2f2a8f",
+      "name": "IOC cloudflare.com",
+      "pattern": "[x-opencti:value = 'cloudflare.com']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9a8b527e12a7",
+      "name": "IOC login-secure-github.com",
+      "pattern": "[x-opencti:value = 'login-secure-github.com']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a6993ad85f30",
+      "name": "IOC github.com",
+      "pattern": "[x-opencti:value = 'github.com']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--539805857ac2",
+      "name": "IOC https://github.com/login",
+      "pattern": "[x-opencti:value = 'https://github.com/login']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--62283df8fe47",
+      "name": "IOC 1.1.1.1",
+      "pattern": "[x-opencti:value = '1.1.1.1']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dcf91a583438",
+      "name": "IOC update.exe",
+      "pattern": "[x-opencti:value = 'update.exe']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9483f93cf893",
+      "name": "IOC malware-cdn.org",
+      "pattern": "[x-opencti:value = 'malware-cdn.org']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3def2ac41604",
+      "name": "IOC badware-update.net",
+      "pattern": "[x-opencti:value = 'badware-update.net']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--514ee3dc0ca5",
+      "name": "IOC https://malware-cdn.org/update.exe",
+      "pattern": "[x-opencti:value = 'https://malware-cdn.org/update.exe']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d11d3a12560d",
+      "name": "IOC 8.8.8.8",
+      "pattern": "[x-opencti:value = '8.8.8.8']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ee49b49c41af",
+      "name": "IOC 104.16.0.10",
+      "pattern": "[x-opencti:value = '104.16.0.10']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f1f5b85f6b06",
+      "name": "IOC www.theregister.com",
+      "pattern": "[x-opencti:value = 'www.theregister.com']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f2be960b9045",
+      "name": "IOC https://www.theregister.com/2026/01/04/ai_agents_insider_threats_panw",
+      "pattern": "[x-opencti:value = 'https://www.theregister.com/2026/01/04/ai_agents_insider_threats_panw']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cf398d27a975",
+      "name": "IOC clawdbot.clawdbot",
+      "pattern": "[x-opencti:value = 'clawdbot.clawdbot']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dd9a4c851b39",
+      "name": "IOC promise.prototype.catch",
+      "pattern": "[x-opencti:value = 'promise.prototype.catch']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8d0199c03ee0",
+      "name": "IOC promise.prototype.then",
+      "pattern": "[x-opencti:value = 'promise.prototype.then']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--36063187531c",
+      "name": "IOC node.js",
+      "pattern": "[x-opencti:value = 'node.js']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
       "id": "indicator--bd15a14a1154",
       "name": "IOC www.ipidea.io",
       "pattern": "[x-opencti:value = 'www.ipidea.io']"

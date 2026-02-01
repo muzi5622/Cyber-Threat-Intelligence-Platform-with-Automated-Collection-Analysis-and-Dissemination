@@ -180,11 +180,32 @@ services:
 
     volumes:
       - ./data/nlp:/state
-  
     depends_on:
       - opencti
     restart: unless-stopped
-
+  # -------------------------
+  # Layer 4: SpiderFoot automation (OpenCTI -> SpiderFoot -> OpenCTI)
+  # -------------------------
+  spiderfoot-automation:
+    build: ./services/spiderfoot-automation
+    environment:
+      - OPENCTI_BASE=http://opencti:8080
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - RUN_EVERY_SECONDS=600
+      - REPORT_LIMIT=30
+      - SF_TIMEOUT_SECONDS=300
+      - SF_USECASE=passive
+      - SF_MAX_THREADS=10
+      - SF_MAX_TARGETS_PER_CYCLE=10
+      - STATE_PATH=/data/state.json
+      - OUT_DIR=/data/scans
+      - SF_MODULES=sfp_dnsresolve,sfp_sslcert,sfp_whois,sfp_hosting,sfp_webserver
+    volumes:
+      - ./data/spiderfoot-automation:/data
+    depends_on:
+      - opencti
+      - spiderfoot
+    restart: unless-stopped
   # -------------------------
   # Layer 5: Intelligence API (custom)
   # -------------------------
