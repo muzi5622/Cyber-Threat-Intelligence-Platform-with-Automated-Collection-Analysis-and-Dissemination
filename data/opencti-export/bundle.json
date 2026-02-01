@@ -1,0 +1,126 @@
+{
+  "type": "bundle",
+  "id": "bundle--demo",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bd15a14a1154",
+      "name": "IOC www.ipidea.io",
+      "pattern": "[x-opencti:value = 'www.ipidea.io']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7231499212f6",
+      "name": "IOC silver.inc",
+      "pattern": "[x-opencti:value = 'silver.inc']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a5d950bcc4d8",
+      "name": "IOC https://www.hexacorn.com/blog/2026/01/03/beyond-good-ol-run-key-part-156",
+      "pattern": "[x-opencti:value = 'https://www.hexacorn.com/blog/2026/01/03/beyond-good-ol-run-key-part-156']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--eba939b0d38e",
+      "name": "IOC www.hexacorn.com",
+      "pattern": "[x-opencti:value = 'www.hexacorn.com']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--64a58ba0815e",
+      "name": "IOC https://www.hexacorn.com/blog/2026/01/03/beyond-good-ol-run-key-part-155",
+      "pattern": "[x-opencti:value = 'https://www.hexacorn.com/blog/2026/01/03/beyond-good-ol-run-key-part-155']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--13e8ddf25710",
+      "name": "IOC https://www.securityweek.com/escan-antivirus-delivers-malware-in-supply-chain-attack",
+      "pattern": "[x-opencti:value = 'https://www.securityweek.com/escan-antivirus-delivers-malware-in-supply-chain-attack']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d85cd2a889d9",
+      "name": "IOC https://www.securityweek.com/in-other-news-paid-for-being-jailed-googles-68m-settlement-cisa-chiefs-chatgpt-leak",
+      "pattern": "[x-opencti:value = 'https://www.securityweek.com/in-other-news-paid-for-being-jailed-googles-68m-settlement-cisa-chiefs-chatgpt-leak']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7b630d115599",
+      "name": "IOC https://www.securityweek.com/aisy-launches-out-of-stealth-to-transform-vulnerability-management",
+      "pattern": "[x-opencti:value = 'https://www.securityweek.com/aisy-launches-out-of-stealth-to-transform-vulnerability-management']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--63b9b5232a80",
+      "name": "IOC https://www.securityweek.com/175000-exposed-ollama-hosts-could-enable-llm-abuse",
+      "pattern": "[x-opencti:value = 'https://www.securityweek.com/175000-exposed-ollama-hosts-could-enable-llm-abuse']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--525874b01c0b",
+      "name": "IOC www.securityweek.com",
+      "pattern": "[x-opencti:value = 'www.securityweek.com']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b8de8aecd3fc",
+      "name": "IOC https://www.securityweek.com",
+      "pattern": "[x-opencti:value = 'https://www.securityweek.com']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--df2ff5ba4c6c",
+      "name": "IOC https://www.securityweek.com/white-house-scraps-burdensome-software-security-rules",
+      "pattern": "[x-opencti:value = 'https://www.securityweek.com/white-house-scraps-burdensome-software-security-rules']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0572bea9f001",
+      "name": "IOC https://www.trendmicro.com/en_us/research/26/a/peckbirdy-script-framework.html",
+      "pattern": "[x-opencti:value = 'https://www.trendmicro.com/en_us/research/26/a/peckbirdy-script-framework.html']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--aad89e14472f",
+      "name": "IOC http://feeds.trendmicro.com/TrendMicroSimplySecurity",
+      "pattern": "[x-opencti:value = 'http://feeds.trendmicro.com/TrendMicroSimplySecurity']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2a1a9f2930aa",
+      "name": "IOC peckbirdy-script-framework.html",
+      "pattern": "[x-opencti:value = 'peckbirdy-script-framework.html']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dfd1ef6b4c09",
+      "name": "IOC www.trendmicro.com",
+      "pattern": "[x-opencti:value = 'www.trendmicro.com']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--253575b8b81b",
+      "name": "IOC feeds.trendmicro.com",
+      "pattern": "[x-opencti:value = 'feeds.trendmicro.com']"
+    }
+  ]
+}
