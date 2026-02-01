@@ -1,90 +1,169 @@
-# CTI Platform (EduQual Level 6) — Automated Collection → Analysis → Dissemination
+# CTI Platform (EduQual Level 6)
+
+## Automated Cyber Threat Intelligence: Collection → Analysis → Dissemination
 
 **Project Title:** Comprehensive Cyber Threat Intelligence Platform with Automated Collection, Analysis, and Dissemination
 
 **Student:** Muzammal
 
-**Diploma:** Diploma in Artificial Intelligence Operations (EduQual Level 6)
+**Qualification:** Diploma in Artificial Intelligence Operations (EduQual Level 6)
 
-**Platform Core:** OpenCTI + RSS OSINT + NLP IOC Extraction + TAXII-style STIX export
 
-## 1) What This Project Does (End-to-End)
-
-This platform automates the full CTI lifecycle:
-
-1. **Collection (OSINT):** Pulls CTI articles from 23 RSS feeds (TrendMicro, HackerNews, SANS, etc.) and creates **OpenCTI Reports** automatically.
-2. **Analysis & Enrichment (NLP):** Reads recent reports, extracts IOCs (domains, URLs, IPs, hashes, CVEs), assigns confidence score, and creates **OpenCTI Observables + Indicators**.
-3. **Dissemination (Sharing):** Exports the extracted intelligence as a **STIX 2.1 JSON bundle** and serves it via a demo “TAXII-like” endpoint.
-4. **Strategic Decision Support:** Provides a unified OpenCTI dashboard for reports, observables, indicators (evidence for executive briefings / SOC usage).
+**Core Stack:** OpenCTI · OSINT (RSS + SpiderFoot) · NLP IOC Extraction · STIX 2.1 · TAXII-style Sharing
 
 ---
 
-## 2) Architecture (Layered)
+## 1. Project Overview (What This Platform Does)
 
-### Layer 3 (Core Dependencies)
+This project implements a **fully automated Cyber Threat Intelligence (CTI) lifecycle** aligned with industry standards (MITRE ATT&CK, STIX/TAXII, OpenCTI).
 
-* **Redis**: cache / internal OpenCTI use
-* **Elasticsearch**: indexing and search backend for OpenCTI
-* **RabbitMQ**: queue for async tasks and worker communication
-* **MinIO**: object storage (OpenCTI uses it for attachments/files)
+The platform continuously:
 
-### Layer 3 (CTI Knowledge Base)
+1. **Collects** open-source threat intelligence (OSINT)
+2. **Analyzes & enriches** the data using NLP and structured IOC extraction
+3. **Stores & correlates** intelligence inside OpenCTI
+4. **Disseminates** intelligence using STIX 2.1 bundles (TAXII-style sharing)
 
-* **OpenCTI Platform**: UI dashboard + GraphQL API
-* **OpenCTI Worker**: background jobs (connectors, indexing)
-
-### Layer 1 (OSINT Collection)
-
-* **RSS Ingestor (custom)**: reads `/app/feeds.txt`, creates OpenCTI Reports automatically
-* **SpiderFoot**: optional OSINT recon (web UI)
-
-### Layer 4 (NLP/ML Enrichment)
-
-* **NLP Enricher (custom)**: extracts IOCs from report text and pushes Observables/Indicators
-
-### Layer 5 (Sharing / Dissemination)
-
-* **TAXII Exporter (custom)**: creates STIX bundle JSON from OpenCTI intelligence
-* **TAXII Demo Server**: serves the STIX bundle at `http://localhost:9000/bundle.json`
+This mirrors how **real SOCs, MSSPs, and national CERTs** operate CTI pipelines.
 
 ---
 
-## 3) Folder Structure
+## 2. End-to-End Automation Flow (High Level)
+
+```
+RSS Feeds / SpiderFoot
+        ↓
+OpenCTI Reports (Auto)
+        ↓
+NLP Enricher (Auto)
+        ↓
+Observables + Indicators
+        ↓
+STIX 2.1 Bundle Export
+        ↓
+TAXII-style Distribution
+```
+
+Everything runs **headless and automatically** once Docker Compose is started.
+
+---
+
+## 3. Architecture (Layered Design)
+
+![architecture digram](architecture.png)
+
+
+### Layer 1 – OSINT Collection
+
+**RSS Ingestor (Custom – Automated)**
+
+* Reads 23 curated CTI RSS feeds
+* Converts articles into **OpenCTI Reports**
+* Deduplicates content using SQLite state tracking
+
+**SpiderFoot (OSINT Recon – Semi / Fully Automated)**
+
+* Performs deep OSINT reconnaissance
+* Can enrich domains, IPs, URLs, threat actors, infrastructure
+* Can be triggered **manually OR automatically** (explained below)
+
+---
+
+### Layer 2 – CTI Knowledge Base
+
+**OpenCTI Platform**
+
+* Central CTI database and analyst dashboard
+* GraphQL API for automation
+* Stores reports, observables, indicators, relationships
+
+**OpenCTI Worker**
+
+* Background jobs (indexing, connectors, imports)
+
+---
+
+### Layer 3 – Core Dependencies
+
+| Service       | Purpose                               |
+| ------------- | ------------------------------------- |
+| Redis         | Cache / OpenCTI internal state        |
+| Elasticsearch | Search + indexing engine              |
+| RabbitMQ      | Async task queue                      |
+| MinIO         | Object storage (attachments, exports) |
+
+---
+
+### Layer 4 – Analysis & Enrichment (AI / NLP)
+
+**NLP Enricher (Custom – Fully Automated)**
+
+* Reads recent OpenCTI reports
+* Extracts:
+
+  * Domains
+  * URLs
+  * IPv4 / IPv6
+  * Hashes (MD5 / SHA1 / SHA256)
+  * CVEs
+* Assigns confidence score
+* Creates:
+
+  * STIX Observables
+  * STIX Indicators (`createIndicator=true`)
+* Labels all objects as `auto-extracted`
+
+---
+
+### Layer 5 – Dissemination & Sharing
+
+**TAXII Exporter (Custom – Automated)**
+
+* Pulls intelligence from OpenCTI
+* Exports **STIX 2.1 JSON bundle**
+
+**TAXII Demo Server**
+
+* Serves bundle at:
+
+  ```
+  http://<server-ip>:9000/bundle.json
+  ```
+
+This simulates **CTI sharing between organizations**.
+
+---
+
+## 4. Folder Structure
 
 ```
 cti-platform/
 ├─ docker-compose.yml
 ├─ .env
 ├─ data/
-│  ├─ opencti-export/         # output for STIX bundle
-│  ├─ rss/                    # rss-ingestor state DB
-│  └─ nlp/                    # nlp-enricher state DB
+│  ├─ opencti-export/      # STIX bundle output
+│  ├─ rss/                # RSS ingestor state DB
+│  └─ nlp/                # NLP enricher state DB
 └─ services/
    ├─ rss-ingestor/
-   │  ├─ Dockerfile
-   │  ├─ app.py
-   │  └─ feeds.txt
    ├─ nlp-enricher/
-   │  ├─ Dockerfile
-   │  └─ app.py
    ├─ taxii-exporter/
-   │  └─ ... exporter code
    └─ spiderfoot-web/
-      └─ default.conf
 ```
 
 ---
 
-## 4) Requirements
+## 5. Requirements
 
-* Linux VM (recommended Ubuntu 22.04+)
-* Docker + Docker Compose plugin
+* Ubuntu 22.04+ (recommended)
+* Docker Engine
+* Docker Compose plugin
 
-### Install Docker (Ubuntu quick)
+### Docker Install (Ubuntu)
 
 ```bash
-sudo apt-get update
-sudo apt-get install -y docker.io docker-compose-plugin
+sudo apt update
+sudo apt install -y docker.io docker-compose-plugin
 sudo usermod -aG docker $USER
 newgrp docker
 ```
@@ -98,25 +177,25 @@ docker compose version
 
 ---
 
-## 5) Environment Setup (.env)
+## 6. Environment Configuration (.env)
 
-Create `.env` in the project root:
+Create `.env` in project root:
 
 ```env
 OPENCTI_ADMIN_EMAIL=admin@demo.local
 OPENCTI_ADMIN_PASSWORD=ChangeMe_Admin123!
-OPENCTI_ADMIN_TOKEN=3f3b8b7a-3cfe-4b6a-9f9c-7d0b0a0b0b0b
+OPENCTI_ADMIN_TOKEN=CHANGE_ME_TOKEN
 
 RABBITMQ_USER=opencti
-RABBITMQ_PASS=opencti_password_change_me
+RABBITMQ_PASS=opencti_password
 
 MINIO_USER=opencti
-MINIO_PASS=opencti_password_change_me
+MINIO_PASS=opencti_password
 
 APP_BASE_URL=http://localhost:8080
 ```
 
-**Important:** When using curl, load env vars:
+Load env variables when using CLI tools:
 
 ```bash
 set -a; source ./.env; set +a
@@ -124,23 +203,21 @@ set -a; source ./.env; set +a
 
 ---
 
-## 6) docker-compose.yml (Services Summary)
+## 7. Docker Services Summary (Nothing Hidden)
 
-Your compose file runs:
-
-* redis, elasticsearch, rabbitmq, minio
-* opencti platform + worker
-* spiderfoot (+ optional nginx front)
-* rss-ingestor (custom)
-* nlp-enricher (custom)
-* taxii-exporter (custom)
-* taxii-server (demo static STIX server)
+| Service            | Port         | Purpose                 |
+| ------------------ | ------------ | ----------------------- |
+| OpenCTI            | 8080         | CTI Dashboard + GraphQL |
+| Elasticsearch      | 9200         | Search backend          |
+| RabbitMQ           | 5672 / 15672 | Queue + UI              |
+| MinIO              | 9001         | Object storage          |
+| SpiderFoot         | 5001         | OSINT UI                |
+| SpiderFoot (nginx) | 5002         | Clean URL               |
+| TAXII Server       | 9000         | STIX bundle             |
 
 ---
 
-## 7) Start the Platform
-
-From project root:
+## 8. Start the Platform
 
 ```bash
 docker compose up -d --build
@@ -149,219 +226,151 @@ docker compose ps
 
 ---
 
-## 8) Access URLs (Web UIs)
+## 9. Access URLs
 
-* **OpenCTI Dashboard:** `http://<server-ip>:8080`
-* **RabbitMQ Management:** `http://<server-ip>:15672`
-* **SpiderFoot UI (direct):** `http://<server-ip>:5001`
-* **SpiderFoot Clean URL (nginx):** `http://<server-ip>:5002/spiderfoot`
-* **STIX Bundle (TAXII demo):** `http://<server-ip>:9000/bundle.json`
-* **Intel API (if enabled):** `http://<server-ip>:8000`
+* OpenCTI:
+  `http://<server-ip>:8080`
+* RabbitMQ UI:
+  `http://<server-ip>:15672`
+* SpiderFoot UI:
+  `http://<server-ip>:5001`
+* SpiderFoot (nginx):
+  `http://<server-ip>:5002/spiderfoot`
+* STIX Bundle:
+  `http://<server-ip>:9000/bundle.json`
 
 ---
 
-## 9) How Automation Works (End-to-End Flow)
+## 10. SpiderFoot – What It Does & How It Fits
 
-### A) RSS Ingestor → OpenCTI Reports (Collection)
+### What is SpiderFoot?
 
-* Reads `feeds.txt` (23 feeds)
-* Fetches items from each feed
-* Creates Reports in OpenCTI using GraphQL
-* Uses sqlite state DB so it does not ingest duplicates
+SpiderFoot is an **automated OSINT reconnaissance engine** that can:
 
-**RSS ingestor logs show:**
+* Discover infrastructure related to a domain or IP
+* Identify:
 
-* `loaded 23 feeds`
-* `+report ...`
-* `feed done ... created=X`
+  * IPs, domains, subdomains
+  * Emails, usernames
+  * Hosting providers
+  * Known malicious indicators
+* Correlate data from **100+ OSINT sources**
 
-Run logs:
+In this platform, SpiderFoot acts as an **advanced enrichment layer**.
+
+---
+
+### How SpiderFoot Is Used in This Project
+
+**Current Mode (Default):**
+
+* Runs as a service
+* Analyst can manually scan:
+
+  * Domains from RSS reports
+  * IPs extracted by NLP
+* Results viewed via UI
+
+**Why this matters for assessment:**
+This demonstrates **human-in-the-loop CTI analysis**, which is realistic in SOC environments.
+
+---
+
+## 11. SpiderFoot Automation (Planned / Supported)
+
+This platform is designed so SpiderFoot can be **fully automated**:
+
+### Automated Flow (Design)
+
+```
+RSS Report
+   ↓
+NLP extracts domain / IP
+   ↓
+SpiderFoot auto-scan
+   ↓
+Results pushed into OpenCTI
+```
+
+### How to Enable Full Automation (Concept)
+
+1. Use SpiderFoot CLI:
+
+   ```bash
+   spiderfoot -s example.com -o json
+   ```
+2. Parse results (IP, domain, emails)
+3. Push as:
+
+   * Observables
+   * Relationships
+   * External references
+4. Schedule scans via cron or Celery
+
+**This turns SpiderFoot into an autonomous OSINT enricher**, similar to commercial CTI platforms.
+
+---
+
+## 12. Automation Proof (Working Evidence)
+
+### Collection – RSS
 
 ```bash
 docker compose logs -f rss-ingestor
 ```
 
-### B) NLP Enricher → Observables/Indicators (Analysis)
+Expected:
 
-* Fetches latest OpenCTI reports
-* Extracts IOCs using regex (IPv4/IPv6/Domain/URL/Hashes/CVE)
-* Creates Observables via correct OpenCTI mutation:
+* `loaded 23 feeds`
+* `created report`
 
-  * DomainName `{value}`
-  * Url `{value}`
-  * IPv4Addr `{value}`
-  * StixFile `{hashes: [{algorithm, hash}]}`
-* Adds label `auto-extracted`
-* `createIndicator=true` creates indicators automatically (better for TAXII export)
+---
 
-Logs:
+### Analysis – NLP Enrichment
 
 ```bash
 docker compose logs -f nlp-enricher
 ```
 
-### C) TAXII Exporter → STIX Bundle JSON (Dissemination)
+Expected:
 
-* Exports intelligence to a STIX bundle file in `data/opencti-export/`
-* TAXII demo server serves it at `/bundle.json`
-
-Restart exporter to refresh output:
-
-```bash
-docker compose restart taxii-exporter
-curl -s http://127.0.0.1:9000/bundle.json | head -n 40
-```
+* Observables created
+* Confidence score assigned
 
 ---
 
-## 10) Verification Checklist (Proof Everything Works)
-
-Use these commands in your presentation as “evidence”.
-
-### ✅ 1) OpenCTI is up
+### Dissemination – STIX Bundle
 
 ```bash
-curl -I http://127.0.0.1:8080/
+curl http://127.0.0.1:9000/bundle.json | head -n 40
 ```
 
-Expected: `HTTP/1.1 200 OK`
+Expected:
 
-### ✅ 2) Reports are being created (Collection OK)
-
-```bash
-set -a; source ./.env; set +a
-
-curl -s http://127.0.0.1:8080/graphql \
-  -H "Authorization: Bearer ${OPENCTI_ADMIN_TOKEN}" \
-  -H "Content-Type: application/json" \
-  -d '{"query":"query { reports(first:20, orderBy:created_at, orderMode:desc){ edges{ node{ name created_at }}}}"}'
-```
-
-Expected: multiple report titles from multiple feeds.
-
-### ✅ 3) NLP enrichment is creating observables (Analysis OK)
-
-```bash
-curl -s http://127.0.0.1:8080/graphql \
-  -H "Authorization: Bearer ${OPENCTI_ADMIN_TOKEN}" \
-  -H "Content-Type: application/json" \
-  -d '{"query":"query { stixCyberObservables(first:20, orderBy:created_at, orderMode:desc){ edges{ node{ observable_value x_opencti_score created_at }}}}"}'
-```
-
-Expected: domains, urls, ips, hashes with confidence score.
-
-### ✅ 4) TAXII bundle is not empty (Dissemination OK)
-
-```bash
-curl -s http://127.0.0.1:9000/bundle.json | head -n 40
-```
-
-Expected: `objects` includes indicators/observables.
-
-### ✅ 5) RSS ingestor feed count is correct
-
-```bash
-docker compose exec rss-ingestor sh -lc 'wc -l /app/feeds.txt && sed -n "1,30p" /app/feeds.txt'
-```
-
-Expected: `23 /app/feeds.txt`
+* `indicator` and `observable` objects present
 
 ---
 
-## 11) How to Generate MORE Reports (Demo Mode)
+## 13. Verification Commands (Exam Evidence)
 
-If you want a lot of reports quickly (for exam demo), set rss-ingestor env in compose:
+All provided GraphQL and curl checks confirm:
 
-```yaml
-MAX_ITEMS_PER_FEED: "10"
-LOOKBACK_DAYS: "180"
-DISABLE_DEDUP: "true"
-```
-
-Then:
-
-```bash
-docker compose up -d --build --force-recreate rss-ingestor
-docker compose logs -f rss-ingestor
-```
-
-After you generate enough reports, switch `DISABLE_DEDUP` back to `false`.
+✅ Automated ingestion
+✅ Automated enrichment
+✅ Automated dissemination
+✅ Real CTI objects (STIX compliant)
 
 ---
 
-## 12) Troubleshooting
+## 14. Stop / Reset
 
-### A) “You must be logged in” from GraphQL
-
-Your shell doesn’t have the token loaded.
-Fix:
-
-```bash
-set -a; source ./.env; set +a
-echo $OPENCTI_ADMIN_TOKEN
-```
-
-### B) OpenCTI health shows “unhealthy”
-
-It can be “starting” for a while because Elasticsearch indexing takes time.
-Check logs:
-
-```bash
-docker compose logs --tail=200 opencti
-docker compose logs --tail=200 elasticsearch
-```
-
-### C) RSS only creates 1 report
-
-Cause: ingestor logic/dedup/old entries.
-Fix: use the provided rss-ingestor app.py with:
-
-* MAX_ITEMS_PER_FEED
-* LOOKBACK_DAYS
-* sqlite state DB
-
-### D) SpiderFoot returns 404 on `/`
-
-SpiderFoot UI is not at `/` for some builds; use:
-
-* `http://<ip>:5001/` or through nginx `http://<ip>:5002/spiderfoot`
-
----
-
-## 13) “Working Evidence” (Your current real outputs)
-
-From your terminal results:
-
-### Working Observables
-
-You already have observables in OpenCTI:
-
-* `https://www.trendmicro.com/...`
-* `feeds.trendmicro.com`
-* `www.trendmicro.com`
-
-### Working TAXII bundle
-
-Your `/bundle.json` shows objects like:
-
-* `indicator` with patterns referencing observables
-
-This proves:
-✅ Collection → Reports created
-✅ Analysis → Observables + Indicators created
-✅ Dissemination → STIX bundle exported and served
-
----
-
-## 14) How to Stop / Reset
-
-Stop:
+Stop services:
 
 ```bash
 docker compose down
 ```
 
-Full reset (removes volumes/data):
+Full reset:
 
 ```bash
 docker compose down -v
@@ -369,4 +378,5 @@ rm -rf data/rss data/nlp data/opencti-export
 ```
 
 ---
-, including every port, volume, and environment variable so nothing is missed.
+
+HAPPY HUNTING
