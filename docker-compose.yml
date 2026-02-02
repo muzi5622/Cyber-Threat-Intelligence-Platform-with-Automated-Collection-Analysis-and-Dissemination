@@ -1,6 +1,6 @@
 services:
   # -------------------------
-  # Layer 3: Core dependencies
+  # Core dependencies
   # -------------------------
   redis:
     image: redis:7
@@ -60,7 +60,7 @@ services:
       retries: 20
 
   # -------------------------
-  # Layer 3: OpenCTI platform
+  # OpenCTI
   # -------------------------
   opencti:
     image: opencti/platform:latest
@@ -94,10 +94,16 @@ services:
     ports:
       - "8080:8080"
     restart: unless-stopped
+
+    # IMPORTANT: curl is not installed in opencti image -> use python healthcheck
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://localhost:8080/graphql >/dev/null || exit 1"]
+      test:
+        [
+          "CMD-SHELL",
+          "python3 -c \"import urllib.request; urllib.request.urlopen('http://localhost:8080/graphql', timeout=5).read(); print('ok')\" >/dev/null 2>&1 || exit 1"
+        ]
       interval: 15s
-      timeout: 5s
+      timeout: 10s
       retries: 40
 
   worker:
@@ -111,7 +117,7 @@ services:
     restart: unless-stopped
 
   # -------------------------
-  # Layer 1: OSINT (SpiderFoot)
+  # SpiderFoot (OSINT)
   # -------------------------
   spiderfoot:
     image: dtagdevsec/spiderfoot:24.04
@@ -120,8 +126,18 @@ services:
       - "5001:8080"
     restart: unless-stopped
 
-    # -------------------------
-  # Layer 1: RSS Feed Collection (Automated)
+  spiderfoot-web:
+    image: nginx:alpine
+    ports:
+      - "5002:80"
+    depends_on:
+      - spiderfoot
+    volumes:
+      - ./services/spiderfoot-web/default.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: unless-stopped
+
+  # -------------------------
+  # RSS -> OpenCTI (Reports)
   # -------------------------
   rss-ingestor:
     build: ./services/rss-ingestor
@@ -130,7 +146,6 @@ services:
       OPENCTI_TOKEN: "${OPENCTI_ADMIN_TOKEN}"
       RUN_EVERY_SECONDS: "300"
 
-      # Make lots of reports for demo
       MAX_ITEMS_PER_FEED: "5"
       LOOKBACK_DAYS: "30"
       DISABLE_DEDUP: "false"
@@ -146,22 +161,8 @@ services:
       - opencti
     restart: unless-stopped
 
-
   # -------------------------
-  # Layer 1: SpiderFoot clean entry URL (optional)
-  # -------------------------
-  spiderfoot-web:
-    image: nginx:alpine
-    ports:
-      - "5002:80"
-    depends_on:
-      - spiderfoot
-    volumes:
-      - ./services/spiderfoot-web/default.conf:/etc/nginx/conf.d/default.conf:ro
-    restart: unless-stopped
-
-  # -------------------------
-  # Layer 4: NLP/ML Enricher (custom)
+  # NLP Enricher -> OpenCTI (Indicators/Observables)
   # -------------------------
   nlp-enricher:
     build: ./services/nlp-enricher
@@ -174,29 +175,28 @@ services:
       NLP_STATE_DB: "/state/nlp.db"
       NLP_MAX_AGE_DAYS: "14"
       NLP_FETCH_LIMIT: "20"
-      MAX_ITEMS_PER_FEED: "10"
-      LOOKBACK_DAYS: "60"
-      DISABLE_DEDUP: "true"
-
     volumes:
       - ./data/nlp:/state
     depends_on:
       - opencti
     restart: unless-stopped
+
   # -------------------------
-  # Layer 4: SpiderFoot automation (OpenCTI -> SpiderFoot -> OpenCTI)
+  # OpenCTI -> SpiderFoot -> OpenCTI (Enrichment)
   # -------------------------
   spiderfoot-automation:
     build: ./services/spiderfoot-automation
+    user: "2000:2000"   # important to avoid /data permission denied
     environment:
       - OPENCTI_BASE=http://opencti:8080
       - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
-      - RUN_EVERY_SECONDS=600
+      - RUN_EVERY_SECONDS=300
       - REPORT_LIMIT=30
       - SF_TIMEOUT_SECONDS=300
-      - SF_USECASE=passive
       - SF_MAX_THREADS=10
-      - SF_MAX_TARGETS_PER_CYCLE=10
+      - SF_MAX_TARGETS_PER_CYCLE=3
+      - ENRICH_MAX_NEW_OBSERVABLES=200
+      - ENRICH_LABEL_VALUE=spiderfoot-enriched
       - STATE_PATH=/data/state.json
       - OUT_DIR=/data/scans
       - SF_MODULES=sfp_dnsresolve,sfp_sslcert,sfp_whois,sfp_hosting,sfp_webserver
@@ -206,8 +206,35 @@ services:
       - opencti
       - spiderfoot
     restart: unless-stopped
+
   # -------------------------
-  # Layer 5: Intelligence API (custom)
+  # MalwareBazaar Recent Additions
+  # -------------------------
+  # -------------------------
+  # URLHaus (slowed down + limited resources)
+  # -------------------------
+  connector-urlhaus:
+    image: opencti/connector-urlhaus:rolling
+    restart: unless-stopped
+    depends_on:
+      - opencti
+      - rabbitmq
+    cpus: "0.30"
+    mem_limit: 512m
+    environment:
+      - OPENCTI_URL=http://opencti:8080
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - CONNECTOR_ID=${CONNECTOR_URLHAUS_ID}
+      - CONNECTOR_TYPE=EXTERNAL_IMPORT
+      - CONNECTOR_NAME=URLHaus
+      - CONNECTOR_SCOPE=urlhaus
+      - CONNECTOR_LOG_LEVEL=info
+      - CONNECTOR_CONFIDENCE_LEVEL=75
+      - CONNECTOR_RUN_AND_TERMINATE=false
+      - CONNECTOR_DURATION_PERIOD=P1D
+
+  # -------------------------
+  # (Optional) Intel API (keep if you want it)
   # -------------------------
   intel-api:
     build: ./services/intel-api
@@ -221,7 +248,7 @@ services:
     restart: unless-stopped
 
   # -------------------------
-  # Layer 5: Exporter + "TAXII demo server"
+  # (2) TAXII Exporter (OpenCTI -> STIX bundles on disk)
   # -------------------------
   taxii-exporter:
     build: ./services/taxii-exporter
@@ -236,6 +263,9 @@ services:
       - opencti
     restart: unless-stopped
 
+  # -------------------------
+  # (3) TAXII Server (serve exported bundles)
+  # -------------------------
   taxii-server:
     image: cti-taxii-server:latest
     build:
