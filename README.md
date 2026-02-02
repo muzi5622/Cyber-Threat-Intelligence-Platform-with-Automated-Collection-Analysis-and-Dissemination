@@ -34,7 +34,7 @@ All components run automatically using Docker Compose and communicate via APIs a
 ```
 RSS Feeds ─┐
            ├─> OpenCTI Reports
-SpiderFoot ┘        ↓
+URLHaus    ┘        ↓
                  NLP Enricher
                     ↓
         Observables + Indicators
@@ -66,14 +66,6 @@ The system is intentionally layered to reflect **industry CTI architectures**.
 * Reads 23 curated CTI RSS feeds
 * Converts articles into **OpenCTI Reports**
 * Uses SQLite state tracking to prevent duplicates
-
-**SpiderFoot (Analyst OSINT Mode)**
-
-* Web-based OSINT reconnaissance tool
-* Used for manual or ad-hoc investigation
-* Supports deep OSINT research on domains, IPs, URLs
-
-> This layer represents **human-in-the-loop intelligence collection**, which is standard in SOC environments.
 
 ---
 
