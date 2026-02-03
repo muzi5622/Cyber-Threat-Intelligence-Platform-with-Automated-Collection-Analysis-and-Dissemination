@@ -6,1402 +6,1402 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c1b96f5a518e",
-      "name": "IOC http://srppazza.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://srppazza.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--a36298ab5244",
+      "name": "IOC http://basic1997.duckdns.org:8443/0upm68k",
+      "pattern": "[x-opencti:value = 'http://basic1997.duckdns.org:8443/0upm68k']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--14105e1e7891",
-      "name": "IOC http://cukutdys.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://cukutdys.xyz:808/linux_arm64']"
+      "id": "indicator--480a1e4fea50",
+      "name": "IOC http://basic1997.duckdns.org:8443/0upsh4",
+      "pattern": "[x-opencti:value = 'http://basic1997.duckdns.org:8443/0upsh4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4de6b2474feb",
-      "name": "IOC http://hrqovfen.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://hrqovfen.xyz:808/linux_mips64el']"
+      "id": "indicator--585164eaac95",
+      "name": "IOC http://basic1997.duckdns.org:8443/0uparm5",
+      "pattern": "[x-opencti:value = 'http://basic1997.duckdns.org:8443/0uparm5']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7c5499fcc8a2",
-      "name": "IOC http://lldlbkse.xyz:808/linux_386",
-      "pattern": "[x-opencti:value = 'http://lldlbkse.xyz:808/linux_386']"
+      "id": "indicator--5ff01e428069",
+      "name": "IOC http://basic1997.duckdns.org:8443/0uparm",
+      "pattern": "[x-opencti:value = 'http://basic1997.duckdns.org:8443/0uparm']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--65c9c7154718",
-      "name": "IOC http://zkwf1jka.xyz:808/linux_mips",
-      "pattern": "[x-opencti:value = 'http://zkwf1jka.xyz:808/linux_mips']"
+      "id": "indicator--e14a119e0798",
+      "name": "IOC http://basic1997.duckdns.org:8443/0upspc",
+      "pattern": "[x-opencti:value = 'http://basic1997.duckdns.org:8443/0upspc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3431f885ab3b",
-      "name": "IOC http://jhmgrmsa.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://jhmgrmsa.xyz:808/linux_ppc64el']"
+      "id": "indicator--ef00eb8a76b0",
+      "name": "IOC http://191.19.235.78:8443/0upmips",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0upmips']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--da184f9d3a0b",
-      "name": "IOC http://g5oazod9.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://g5oazod9.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--aa9b9751b1a8",
+      "name": "IOC http://191.19.235.78:8443/0uparm",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0uparm']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--60c40aefdc0b",
-      "name": "IOC http://lbw3ij2h.xyz:808/linux_mips64",
-      "pattern": "[x-opencti:value = 'http://lbw3ij2h.xyz:808/linux_mips64']"
+      "id": "indicator--e7b0ad431e8e",
+      "name": "IOC http://191.19.235.78:8443/0upm68k",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0upm68k']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--92f60c29ef17",
-      "name": "IOC http://ujmfcahm.xyz:808/linux_mips",
-      "pattern": "[x-opencti:value = 'http://ujmfcahm.xyz:808/linux_mips']"
+      "id": "indicator--92be6396a000",
+      "name": "IOC http://191.19.235.78:8443/0uparm6",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0uparm6']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--114287831687",
-      "name": "IOC http://hrqovfen.xyz:808/linux_mips64",
-      "pattern": "[x-opencti:value = 'http://hrqovfen.xyz:808/linux_mips64']"
+      "id": "indicator--c42f54c82e26",
+      "name": "IOC http://191.19.235.78:8443/0upx86",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0upx86']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a599c7905a9f",
-      "name": "IOC http://izkkbcwt.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://izkkbcwt.xyz:808/download.sh']"
+      "id": "indicator--f6506320c4b5",
+      "name": "IOC http://191.19.235.78:8443/0uparm5",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0uparm5']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a486e9cf1625",
-      "name": "IOC http://sddoufhg.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://sddoufhg.xyz:808/linux_mips64el']"
+      "id": "indicator--3ad36f6461a0",
+      "name": "IOC http://191.19.235.78:8443/0upspc",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0upspc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7e11ba358ab6",
-      "name": "IOC http://qxfpdbko.xyz:808/linux_mips",
-      "pattern": "[x-opencti:value = 'http://qxfpdbko.xyz:808/linux_mips']"
+      "id": "indicator--ad1546244784",
+      "name": "IOC http://191.19.235.78:8443/0upsh4",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0upsh4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0d8f2cb8248d",
-      "name": "IOC http://vz3l6wq4.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://vz3l6wq4.xyz:808/download.sh']"
+      "id": "indicator--e3c5e0a5d3cb",
+      "name": "IOC http://191.19.235.78:8443/0upx64",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0upx64']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--369db7540285",
-      "name": "IOC http://dayzucay.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://dayzucay.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--871002230a6a",
+      "name": "IOC http://191.19.235.78:8443/0upmpsl",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0upmpsl']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f8895acdfba8",
-      "name": "IOC http://lmosmunw.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://lmosmunw.xyz:808/download.sh']"
+      "id": "indicator--e7f718a16974",
+      "name": "IOC http://191.19.235.78:8443/0upppc",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0upppc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--489aab8791c8",
-      "name": "IOC http://lsiblpys.xyz:808/linux_arm7",
-      "pattern": "[x-opencti:value = 'http://lsiblpys.xyz:808/linux_arm7']"
+      "id": "indicator--275593a774b6",
+      "name": "IOC http://191.19.235.78:8443/0uparm7",
+      "pattern": "[x-opencti:value = 'http://191.19.235.78:8443/0uparm7']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c9fcf7c63d81",
-      "name": "IOC http://cgjvix9p.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://cgjvix9p.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--e386814a4c19",
+      "name": "IOC https://cdn.jsdelivr.net/gh/web3call/ws014/zec",
+      "pattern": "[x-opencti:value = 'https://cdn.jsdelivr.net/gh/web3call/ws014/zec']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--357543e0103f",
-      "name": "IOC http://91.92.242.13/ajx",
-      "pattern": "[x-opencti:value = 'http://91.92.242.13/ajx']"
+      "id": "indicator--cb428be93e09",
+      "name": "IOC http://110.37.45.161:46887/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.37.45.161:46887/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c8940dc7a53e",
-      "name": "IOC http://xdcjatgh.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://xdcjatgh.xyz:808/download.sh']"
+      "id": "indicator--fb1f7d3f03a1",
+      "name": "IOC http://61.176.199.244:43020/bin.sh",
+      "pattern": "[x-opencti:value = 'http://61.176.199.244:43020/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7cfc6870e831",
-      "name": "IOC http://hujpxkht.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://hujpxkht.xyz:808/download.sh']"
+      "id": "indicator--d64885387938",
+      "name": "IOC http://110.39.235.67:57007/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.39.235.67:57007/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2342c6da32ab",
-      "name": "IOC http://27.207.122.204:52158/i",
-      "pattern": "[x-opencti:value = 'http://27.207.122.204:52158/i']"
+      "id": "indicator--3a2f3e818b20",
+      "name": "IOC http://42.228.244.25:43070/bin.sh",
+      "pattern": "[x-opencti:value = 'http://42.228.244.25:43070/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bf2680d9a8a7",
-      "name": "IOC http://110.37.72.176:59933/bin.sh",
-      "pattern": "[x-opencti:value = 'http://110.37.72.176:59933/bin.sh']"
+      "id": "indicator--15dc1f8383cb",
+      "name": "IOC http://27.96.228.235:4985/bin.sh",
+      "pattern": "[x-opencti:value = 'http://27.96.228.235:4985/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--01abe3cd3e74",
-      "name": "IOC http://115.57.232.194:59307/i",
-      "pattern": "[x-opencti:value = 'http://115.57.232.194:59307/i']"
+      "id": "indicator--f33ca2b68cc3",
+      "name": "IOC http://42.232.226.5:43796/bin.sh",
+      "pattern": "[x-opencti:value = 'http://42.232.226.5:43796/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a8318a243347",
-      "name": "IOC http://61.137.133.91:41306/i",
-      "pattern": "[x-opencti:value = 'http://61.137.133.91:41306/i']"
+      "id": "indicator--62cf35a373dc",
+      "name": "IOC http://130.12.180.43/files/1781548144/y3GbU2Z.exe",
+      "pattern": "[x-opencti:value = 'http://130.12.180.43/files/1781548144/y3GbU2Z.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1f0628572ce8",
-      "name": "IOC http://umkeoqxi.xyz:808/linux_386",
-      "pattern": "[x-opencti:value = 'http://umkeoqxi.xyz:808/linux_386']"
+      "id": "indicator--76caacb4746f",
+      "name": "IOC http://27.96.228.235:4985/i",
+      "pattern": "[x-opencti:value = 'http://27.96.228.235:4985/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4199e0034875",
-      "name": "IOC http://115.59.16.226:35594/i",
-      "pattern": "[x-opencti:value = 'http://115.59.16.226:35594/i']"
+      "id": "indicator--80c80a5ae9f4",
+      "name": "IOC http://115.62.154.250:41350/bin.sh",
+      "pattern": "[x-opencti:value = 'http://115.62.154.250:41350/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--826748e5b561",
-      "name": "IOC http://knuvqydu.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://knuvqydu.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--520de2a39f42",
+      "name": "IOC http://110.39.235.67:57007/i",
+      "pattern": "[x-opencti:value = 'http://110.39.235.67:57007/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3c9a6b2eff72",
-      "name": "IOC http://elnrhxml.xyz:808/linux_arm7",
-      "pattern": "[x-opencti:value = 'http://elnrhxml.xyz:808/linux_arm7']"
+      "id": "indicator--3131a8f596f8",
+      "name": "IOC https://cdn.jsdelivr.net/gh/web3call/ws014/bra",
+      "pattern": "[x-opencti:value = 'https://cdn.jsdelivr.net/gh/web3call/ws014/bra']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c0a5b064f997",
-      "name": "IOC http://lueqgwdg.xyz:808/linux_ppc64",
-      "pattern": "[x-opencti:value = 'http://lueqgwdg.xyz:808/linux_ppc64']"
+      "id": "indicator--1dda46ef2395",
+      "name": "IOC http://123.7.41.192:53174/bin.sh",
+      "pattern": "[x-opencti:value = 'http://123.7.41.192:53174/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2f79df1f25b1",
-      "name": "IOC http://jhyohyys.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://jhyohyys.xyz:808/linux_mips64el']"
+      "id": "indicator--7b5f5875cb39",
+      "name": "IOC http://110.37.45.161:46887/i",
+      "pattern": "[x-opencti:value = 'http://110.37.45.161:46887/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--522727ffdda9",
-      "name": "IOC http://tuyfdqvp.xyz:808/linux_386",
-      "pattern": "[x-opencti:value = 'http://tuyfdqvp.xyz:808/linux_386']"
+      "id": "indicator--4ac835a5307a",
+      "name": "IOC https://cdn.jsdelivr.net/gh/web3call/ws014/hex",
+      "pattern": "[x-opencti:value = 'https://cdn.jsdelivr.net/gh/web3call/ws014/hex']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d2095034ed95",
-      "name": "IOC http://lzvtdqlh.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://lzvtdqlh.xyz:808/linux_mips64el']"
+      "id": "indicator--48fd1e3bb7cc",
+      "name": "IOC http://130.12.180.43/files/804292253/Du1wwqK.exe",
+      "pattern": "[x-opencti:value = 'http://130.12.180.43/files/804292253/Du1wwqK.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c69db7baad91",
-      "name": "IOC http://qeywpydg.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://qeywpydg.xyz:808/linux_arm64']"
+      "id": "indicator--56700a3ff6d6",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.arm4",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.arm4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--96fd3f396e38",
-      "name": "IOC http://yefifcpv.xyz:808/linux_amd64",
-      "pattern": "[x-opencti:value = 'http://yefifcpv.xyz:808/linux_amd64']"
+      "id": "indicator--376e7c17cf22",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.i586",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.i586']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f3e104941fd4",
-      "name": "IOC http://91.92.242.13/sparc",
-      "pattern": "[x-opencti:value = 'http://91.92.242.13/sparc']"
+      "id": "indicator--22ca0dc1383b",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.i486",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.i486']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e33ef710e910",
-      "name": "IOC http://eyioyqhi.xyz:808/linux_mipsel",
-      "pattern": "[x-opencti:value = 'http://eyioyqhi.xyz:808/linux_mipsel']"
+      "id": "indicator--a85e2e8f8100",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.xtensa",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.xtensa']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6da48c6318bf",
-      "name": "IOC http://gemozrqt.xyz:808/linux_arm7",
-      "pattern": "[x-opencti:value = 'http://gemozrqt.xyz:808/linux_arm7']"
+      "id": "indicator--b2390f1dd463",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.spc",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.spc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--46eaae607e25",
-      "name": "IOC http://jmr25ks5.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://jmr25ks5.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--c4e7f0915ef2",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.arm8",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.arm8']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--13ac97d496b7",
-      "name": "IOC http://ywmvudyi.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://ywmvudyi.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--47db9b84bd3d",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.arm5",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.arm5']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--da80251415d0",
-      "name": "IOC http://jacwcvqt.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://jacwcvqt.xyz:808/linux_arm5']"
+      "id": "indicator--022f84a45602",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.ppc",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.ppc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--18b16e880c4b",
-      "name": "IOC http://mpfwntfz.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://mpfwntfz.xyz:808/linux_arm5']"
+      "id": "indicator--4a3708f640b1",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.arc",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.arc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--240bfd8ef7d4",
-      "name": "IOC http://iykzszow.xyz:808/linux_386",
-      "pattern": "[x-opencti:value = 'http://iykzszow.xyz:808/linux_386']"
+      "id": "indicator--a5366f542fdf",
+      "name": "IOC http://110.36.80.169:45096/i",
+      "pattern": "[x-opencti:value = 'http://110.36.80.169:45096/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--88c6becf53e0",
-      "name": "IOC http://hujpxkht.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://hujpxkht.xyz:808/linux_ppc64el']"
+      "id": "indicator--e9a8e74558ed",
+      "name": "IOC http://110.36.80.169:45096/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.36.80.169:45096/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d6f6efb55687",
-      "name": "IOC http://ifhptqfg.xyz:808/linux_arm6",
-      "pattern": "[x-opencti:value = 'http://ifhptqfg.xyz:808/linux_arm6']"
+      "id": "indicator--8e3d3361f821",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.mpsl",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.mpsl']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e83a80f42989",
-      "name": "IOC http://hrftzzqg.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://hrftzzqg.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--e66c1046cf6a",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.armv7v5",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.armv7v5']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--64a1397d713b",
-      "name": "IOC http://qxfpdbko.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://qxfpdbko.xyz:808/linux_arm64']"
+      "id": "indicator--39e3bbe485af",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.aarch64",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.aarch64']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--83e3a6390793",
-      "name": "IOC http://jxlujmgg.xyz:808/linux_mips64",
-      "pattern": "[x-opencti:value = 'http://jxlujmgg.xyz:808/linux_mips64']"
+      "id": "indicator--a2ddd403c607",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.m68k",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.m68k']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--eb89c5039b75",
-      "name": "IOC http://bgwyvsce.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://bgwyvsce.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--cfbd8664566f",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.i686",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.i686']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--349d9d57b4cb",
-      "name": "IOC http://vhktvgtf.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://vhktvgtf.xyz:808/linux_arm5']"
+      "id": "indicator--515d30dca162",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.sh4",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.sh4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b38da85e0e5f",
-      "name": "IOC http://ynncwosp.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://ynncwosp.xyz:808/linux_mips64el']"
+      "id": "indicator--715d217d513c",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.arm6",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.arm6']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f627b5e963f8",
-      "name": "IOC http://ifhptqfg.xyz:808/linux_mipsel",
-      "pattern": "[x-opencti:value = 'http://ifhptqfg.xyz:808/linux_mipsel']"
+      "id": "indicator--7c73a19c09f4",
+      "name": "IOC http://45.153.34.252:45893/hoof/aisuru.mips",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/aisuru.mips']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--87e14d78f8b3",
-      "name": "IOC http://uc9i5cjx.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://uc9i5cjx.xyz:808/linux_ppc64el']"
+      "id": "indicator--514b89c17dff",
+      "name": "IOC http://45.153.34.252:45893/hoof/kitty.x86_64",
+      "pattern": "[x-opencti:value = 'http://45.153.34.252:45893/hoof/kitty.x86_64']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--35394488b619",
-      "name": "IOC http://azhvgwsv.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://azhvgwsv.xyz:808/linux_mips64el']"
+      "id": "indicator--a62a39b21606",
+      "name": "IOC http://59.184.243.255:44327/bin.sh",
+      "pattern": "[x-opencti:value = 'http://59.184.243.255:44327/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c18ece91470b",
-      "name": "IOC http://iykzszow.xyz:808/linux_arm6",
-      "pattern": "[x-opencti:value = 'http://iykzszow.xyz:808/linux_arm6']"
+      "id": "indicator--27bc863d967c",
+      "name": "IOC https://cdn.jsdelivr.net/gh/web3call/ws014/tor",
+      "pattern": "[x-opencti:value = 'https://cdn.jsdelivr.net/gh/web3call/ws014/tor']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b949b4993ee8",
-      "name": "IOC http://laubydsz.xyz:808/linux_mipsel",
-      "pattern": "[x-opencti:value = 'http://laubydsz.xyz:808/linux_mipsel']"
+      "id": "indicator--5762bbbf6fc0",
+      "name": "IOC http://103.197.113.219:54499/Mozi.m",
+      "pattern": "[x-opencti:value = 'http://103.197.113.219:54499/Mozi.m']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5918a9baf485",
-      "name": "IOC http://hrqovfen.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://hrqovfen.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--ccecefe34f2e",
+      "name": "IOC http://115.62.154.250:41350/i",
+      "pattern": "[x-opencti:value = 'http://115.62.154.250:41350/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--734e29269e66",
-      "name": "IOC http://inbibulf.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://inbibulf.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--590b7307bb69",
+      "name": "IOC http://110.37.11.215:48507/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.37.11.215:48507/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--67b80e8c07af",
-      "name": "IOC http://muicywcz.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://muicywcz.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--b0879413af74",
+      "name": "IOC https://cdn.jsdelivr.net/gh/web3call/ws014/das",
+      "pattern": "[x-opencti:value = 'https://cdn.jsdelivr.net/gh/web3call/ws014/das']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--336e0438a82b",
-      "name": "IOC http://cukutdys.xyz:808/linux_mipsel",
-      "pattern": "[x-opencti:value = 'http://cukutdys.xyz:808/linux_mipsel']"
+      "id": "indicator--00ee314784ac",
+      "name": "IOC http://123.7.41.192:53174/i",
+      "pattern": "[x-opencti:value = 'http://123.7.41.192:53174/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3b5d42eff665",
-      "name": "IOC http://dfpgukqs.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://dfpgukqs.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--fb81d992511d",
+      "name": "IOC https://cdn.jsdelivr.net/gh/web3call/ws014/zr0",
+      "pattern": "[x-opencti:value = 'https://cdn.jsdelivr.net/gh/web3call/ws014/zr0']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b67a15f34f5f",
-      "name": "IOC http://mlsarfbx.xyz:808/linux_arm6",
-      "pattern": "[x-opencti:value = 'http://mlsarfbx.xyz:808/linux_arm6']"
+      "id": "indicator--3a635752e087",
+      "name": "IOC http://110.37.11.215:48507/i",
+      "pattern": "[x-opencti:value = 'http://110.37.11.215:48507/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--652951647aef",
-      "name": "IOC http://ofteiczw.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://ofteiczw.xyz:808/download.sh']"
+      "id": "indicator--c92d5819b54f",
+      "name": "IOC http://110.37.21.222:60688/i",
+      "pattern": "[x-opencti:value = 'http://110.37.21.222:60688/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--cfba1bf549be",
-      "name": "IOC http://cezsikty.xyz:808/linux_amd64",
-      "pattern": "[x-opencti:value = 'http://cezsikty.xyz:808/linux_amd64']"
+      "id": "indicator--7b14125f6423",
+      "name": "IOC http://117.131.92.150:48413/bin.sh",
+      "pattern": "[x-opencti:value = 'http://117.131.92.150:48413/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--14b96cd81c30",
-      "name": "IOC http://gemozrqt.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://gemozrqt.xyz:808/linux_arm64']"
+      "id": "indicator--ef9effb7e3f4",
+      "name": "IOC http://42.224.24.127:34054/bin.sh",
+      "pattern": "[x-opencti:value = 'http://42.224.24.127:34054/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a7c95d2a058c",
-      "name": "IOC http://qmzxyuki.xyz:808/linux_amd64",
-      "pattern": "[x-opencti:value = 'http://qmzxyuki.xyz:808/linux_amd64']"
+      "id": "indicator--f5a6f2be603e",
+      "name": "IOC http://42.86.171.151:34324/i",
+      "pattern": "[x-opencti:value = 'http://42.86.171.151:34324/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e6006bf79656",
-      "name": "IOC http://bnfxczkj.xyz:808/linux_arm7",
-      "pattern": "[x-opencti:value = 'http://bnfxczkj.xyz:808/linux_arm7']"
+      "id": "indicator--b793e77bf301",
+      "name": "IOC http://125.45.27.50:54382/i",
+      "pattern": "[x-opencti:value = 'http://125.45.27.50:54382/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--34e58ee06101",
-      "name": "IOC http://erveo7rb.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://erveo7rb.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--36aee346261b",
+      "name": "IOC http://222.138.100.255:37574/bin.sh",
+      "pattern": "[x-opencti:value = 'http://222.138.100.255:37574/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1076c7493786",
-      "name": "IOC http://mpfwntfz.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://mpfwntfz.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--a5c0c9d8d926",
+      "name": "IOC http://110.38.213.215:36623/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.38.213.215:36623/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1843ba838582",
-      "name": "IOC http://auycsdvk.xyz:808/linux_mips_softfloat",
-      "pattern": "[x-opencti:value = 'http://auycsdvk.xyz:808/linux_mips_softfloat']"
+      "id": "indicator--6188200a51fa",
+      "name": "IOC http://117.131.92.150:48413/i",
+      "pattern": "[x-opencti:value = 'http://117.131.92.150:48413/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d3c01623e51b",
-      "name": "IOC http://lqssptbf.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://lqssptbf.xyz:808/linux_arm5']"
+      "id": "indicator--ff7382391d84",
+      "name": "IOC http://39.71.231.194:44588/bin.sh",
+      "pattern": "[x-opencti:value = 'http://39.71.231.194:44588/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--cbe85f9ac12f",
-      "name": "IOC http://ruvsyczy.xyz:808/linux_arm6",
-      "pattern": "[x-opencti:value = 'http://ruvsyczy.xyz:808/linux_arm6']"
+      "id": "indicator--93d451846132",
+      "name": "IOC http://42.224.24.127:34054/i",
+      "pattern": "[x-opencti:value = 'http://42.224.24.127:34054/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--28d03406de52",
-      "name": "IOC http://visedgpl.xyz:808/linux_mips64",
-      "pattern": "[x-opencti:value = 'http://visedgpl.xyz:808/linux_mips64']"
+      "id": "indicator--aec7a53f2424",
+      "name": "IOC http://110.38.213.215:36623/i",
+      "pattern": "[x-opencti:value = 'http://110.38.213.215:36623/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b216d5c1c1df",
-      "name": "IOC http://wgtsbypi.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://wgtsbypi.xyz:808/linux_ppc64el']"
+      "id": "indicator--c2889b4c733e",
+      "name": "IOC http://113.238.76.3:47684/bin.sh",
+      "pattern": "[x-opencti:value = 'http://113.238.76.3:47684/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--866a8d0bfb75",
-      "name": "IOC http://cjhdaujk.xyz:808/linux_mipsel",
-      "pattern": "[x-opencti:value = 'http://cjhdaujk.xyz:808/linux_mipsel']"
+      "id": "indicator--5e601b8301c3",
+      "name": "IOC http://113.238.76.3:47684/i",
+      "pattern": "[x-opencti:value = 'http://113.238.76.3:47684/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9fab5af55a01",
-      "name": "IOC http://iot46kfv.xyz:808/linux_amd64",
-      "pattern": "[x-opencti:value = 'http://iot46kfv.xyz:808/linux_amd64']"
+      "id": "indicator--d8a45d122c41",
+      "name": "IOC http://115.55.34.108:33163/bin.sh",
+      "pattern": "[x-opencti:value = 'http://115.55.34.108:33163/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--af969dd93d89",
-      "name": "IOC http://hujpxkht.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://hujpxkht.xyz:808/linux_mips64el']"
+      "id": "indicator--5d279baf1950",
+      "name": "IOC http://115.55.34.108:33163/i",
+      "pattern": "[x-opencti:value = 'http://115.55.34.108:33163/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--15a18fb4a800",
-      "name": "IOC http://mpfwntfz.xyz:808/linux_mipsel",
-      "pattern": "[x-opencti:value = 'http://mpfwntfz.xyz:808/linux_mipsel']"
+      "id": "indicator--512a4fa15f87",
+      "name": "IOC http://42.180.198.81:41962/bin.sh",
+      "pattern": "[x-opencti:value = 'http://42.180.198.81:41962/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b656c5064f2a",
-      "name": "IOC http://rhzttlir.xyz:808/linux_ppc64",
-      "pattern": "[x-opencti:value = 'http://rhzttlir.xyz:808/linux_ppc64']"
+      "id": "indicator--d67bde85b695",
+      "name": "IOC http://31.56.120.29/ohshit.sh",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/ohshit.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8888b6b6fb61",
-      "name": "IOC http://jmr25ks5.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://jmr25ks5.xyz:808/linux_mips64el']"
+      "id": "indicator--ac5bcd5bbfdb",
+      "name": "IOC http://42.58.226.137:54763/i",
+      "pattern": "[x-opencti:value = 'http://42.58.226.137:54763/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2cad41438da0",
-      "name": "IOC http://gtedijfp.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://gtedijfp.xyz:808/linux_mips64el']"
+      "id": "indicator--2fb17d0fc338",
+      "name": "IOC http://182.117.69.178:37776/bin.sh",
+      "pattern": "[x-opencti:value = 'http://182.117.69.178:37776/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--158c527ed453",
-      "name": "IOC http://burgqbgk.xyz:808/linux_mips",
-      "pattern": "[x-opencti:value = 'http://burgqbgk.xyz:808/linux_mips']"
+      "id": "indicator--51ae975fcc8e",
+      "name": "IOC http://123.7.223.41:40285/bin.sh",
+      "pattern": "[x-opencti:value = 'http://123.7.223.41:40285/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--10ae5ed638b8",
-      "name": "IOC http://rjooiyab.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://rjooiyab.xyz:808/linux_ppc64el']"
+      "id": "indicator--5241f6c468ef",
+      "name": "IOC http://42.55.0.92:46670/bin.sh",
+      "pattern": "[x-opencti:value = 'http://42.55.0.92:46670/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--660c2358b835",
-      "name": "IOC http://qxfpdbko.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://qxfpdbko.xyz:808/download.sh']"
+      "id": "indicator--9b3681cfff1b",
+      "name": "IOC http://110.37.59.148:36718/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.37.59.148:36718/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--cb3da56bcc6f",
-      "name": "IOC http://kqpmztrd.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://kqpmztrd.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--3448a7a136cb",
+      "name": "IOC http://110.37.118.66:49771/i",
+      "pattern": "[x-opencti:value = 'http://110.37.118.66:49771/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--eed996699285",
-      "name": "IOC http://42.178.31.0:53634/bin.sh",
-      "pattern": "[x-opencti:value = 'http://42.178.31.0:53634/bin.sh']"
+      "id": "indicator--1ad3b6e9f24b",
+      "name": "IOC http://110.39.237.192:39118/i",
+      "pattern": "[x-opencti:value = 'http://110.39.237.192:39118/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5abea406d006",
-      "name": "IOC http://yfvgoalr.xyz:808/linux_amd64",
-      "pattern": "[x-opencti:value = 'http://yfvgoalr.xyz:808/linux_amd64']"
+      "id": "indicator--0e6a8306864d",
+      "name": "IOC http://182.117.69.178:37776/i",
+      "pattern": "[x-opencti:value = 'http://182.117.69.178:37776/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--10a808bd1734",
-      "name": "IOC http://wzbweoau.xyz:808/linux_ppc64",
-      "pattern": "[x-opencti:value = 'http://wzbweoau.xyz:808/linux_ppc64']"
+      "id": "indicator--6531c73f180e",
+      "name": "IOC http://110.37.59.148:36718/i",
+      "pattern": "[x-opencti:value = 'http://110.37.59.148:36718/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--800c7aa6a3df",
-      "name": "IOC http://zkwf1jka.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://zkwf1jka.xyz:808/linux_mips64el']"
+      "id": "indicator--9ed32da95273",
+      "name": "IOC http://39.187.126.20:50209/bin.sh",
+      "pattern": "[x-opencti:value = 'http://39.187.126.20:50209/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--362724ec78a3",
-      "name": "IOC http://oyeboxws.xyz:808/linux_mips",
-      "pattern": "[x-opencti:value = 'http://oyeboxws.xyz:808/linux_mips']"
+      "id": "indicator--9dd978e364dc",
+      "name": "IOC http://123.7.223.41:40285/i",
+      "pattern": "[x-opencti:value = 'http://123.7.223.41:40285/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--805cfa63d97c",
-      "name": "IOC http://iot46kfv.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://iot46kfv.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--8902463a5431",
+      "name": "IOC http://119.187.193.35:60330/bin.sh",
+      "pattern": "[x-opencti:value = 'http://119.187.193.35:60330/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b02d8c55e198",
-      "name": "IOC http://lsiblpys.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://lsiblpys.xyz:808/linux_arm5']"
+      "id": "indicator--ff4c1052f7e9",
+      "name": "IOC http://115.61.113.51:46605/bin.sh",
+      "pattern": "[x-opencti:value = 'http://115.61.113.51:46605/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--facf6405f53f",
-      "name": "IOC http://ybrprbtu.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://ybrprbtu.xyz:808/linux_mips64el']"
+      "id": "indicator--7346e2661082",
+      "name": "IOC http://119.187.193.35:60330/i",
+      "pattern": "[x-opencti:value = 'http://119.187.193.35:60330/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--042b9bbb9af1",
-      "name": "IOC http://gmyodoua.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://gmyodoua.xyz:808/linux_arm5']"
+      "id": "indicator--dd4f1f9aa870",
+      "name": "IOC http://209.200.246.236/sh4",
+      "pattern": "[x-opencti:value = 'http://209.200.246.236/sh4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c94a2c82bd9a",
-      "name": "IOC http://fjpcaeov.xyz:808/linux_mips",
-      "pattern": "[x-opencti:value = 'http://fjpcaeov.xyz:808/linux_mips']"
+      "id": "indicator--0d45b7de2763",
+      "name": "IOC http://209.200.246.236/ppc",
+      "pattern": "[x-opencti:value = 'http://209.200.246.236/ppc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--aff3ba986adb",
-      "name": "IOC http://izkkbcwt.xyz:808/linux_ppc64",
-      "pattern": "[x-opencti:value = 'http://izkkbcwt.xyz:808/linux_ppc64']"
+      "id": "indicator--e3015cc5bd57",
+      "name": "IOC http://209.200.246.236/spc",
+      "pattern": "[x-opencti:value = 'http://209.200.246.236/spc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ce0c7ec4fa46",
-      "name": "IOC http://qxfpdbko.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://qxfpdbko.xyz:808/linux_ppc64el']"
+      "id": "indicator--06f976639c3c",
+      "name": "IOC http://209.200.246.236/m68k",
+      "pattern": "[x-opencti:value = 'http://209.200.246.236/m68k']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--cfc61b37422c",
-      "name": "IOC http://wmxphecr.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://wmxphecr.xyz:808/linux_ppc64el']"
+      "id": "indicator--be08b1c13b92",
+      "name": "IOC http://209.200.246.236/mpsl",
+      "pattern": "[x-opencti:value = 'http://209.200.246.236/mpsl']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ec86c57b0436",
-      "name": "IOC http://jacwcvqt.xyz:808/linux_arm7",
-      "pattern": "[x-opencti:value = 'http://jacwcvqt.xyz:808/linux_arm7']"
+      "id": "indicator--cd1763677b44",
+      "name": "IOC http://117.231.139.171:40752/bin.sh",
+      "pattern": "[x-opencti:value = 'http://117.231.139.171:40752/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--183aca603a4b",
-      "name": "IOC http://eyioyqhi.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://eyioyqhi.xyz:808/linux_arm5']"
+      "id": "indicator--8e4e3184f259",
+      "name": "IOC https://cdn.jsdelivr.net/gh/web3call/ws014/st85",
+      "pattern": "[x-opencti:value = 'https://cdn.jsdelivr.net/gh/web3call/ws014/st85']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--47e8d5077473",
-      "name": "IOC http://hzovbscu.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://hzovbscu.xyz:808/linux_arm5']"
+      "id": "indicator--ae8b62cb91dd",
+      "name": "IOC http://117.231.139.171:40752/i",
+      "pattern": "[x-opencti:value = 'http://117.231.139.171:40752/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--aae731d488f2",
-      "name": "IOC http://uxghapzj.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://uxghapzj.xyz:808/linux_ppc64el']"
+      "id": "indicator--5f21c2a8a753",
+      "name": "IOC http://182.113.204.204:41814/bin.sh",
+      "pattern": "[x-opencti:value = 'http://182.113.204.204:41814/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fc4f74890f6a",
-      "name": "IOC http://witlzkaz.xyz:808/linux_mips",
-      "pattern": "[x-opencti:value = 'http://witlzkaz.xyz:808/linux_mips']"
+      "id": "indicator--8601327d4dc3",
+      "name": "IOC http://42.228.244.72:36866/bin.sh",
+      "pattern": "[x-opencti:value = 'http://42.228.244.72:36866/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--03cde9426b7c",
-      "name": "IOC http://witlzkaz.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://witlzkaz.xyz:808/linux_ppc64el']"
+      "id": "indicator--e75ee0fe0854",
+      "name": "IOC http://115.60.208.247:54197/bin.sh",
+      "pattern": "[x-opencti:value = 'http://115.60.208.247:54197/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--dbd724988c2e",
-      "name": "IOC http://jdvgmwau.xyz:808/linux_mipsel",
-      "pattern": "[x-opencti:value = 'http://jdvgmwau.xyz:808/linux_mipsel']"
+      "id": "indicator--edfb31db88b7",
+      "name": "IOC http://180.115.171.107:53343/bin.sh",
+      "pattern": "[x-opencti:value = 'http://180.115.171.107:53343/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6caf876a5430",
-      "name": "IOC http://ahcjfuct.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://ahcjfuct.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--9109a22941a6",
+      "name": "IOC http://115.56.180.90:52296/i",
+      "pattern": "[x-opencti:value = 'http://115.56.180.90:52296/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3c6da36a8570",
-      "name": "IOC http://jmr25ks5.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://jmr25ks5.xyz:808/linux_arm5']"
+      "id": "indicator--33997bee802a",
+      "name": "IOC http://61.53.98.154:41029/i",
+      "pattern": "[x-opencti:value = 'http://61.53.98.154:41029/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--18e07680b121",
-      "name": "IOC http://zuxjxgzt.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://zuxjxgzt.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--594b1c24779c",
+      "name": "IOC http://115.55.227.77:35771/bin.sh",
+      "pattern": "[x-opencti:value = 'http://115.55.227.77:35771/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--46d28d84ffc5",
-      "name": "IOC http://zuxjxgzt.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://zuxjxgzt.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--4d354107b83c",
+      "name": "IOC http://42.235.147.183:60315/i",
+      "pattern": "[x-opencti:value = 'http://42.235.147.183:60315/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--64493a831e4e",
-      "name": "IOC http://ywmvudyi.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://ywmvudyi.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--4ad729dc7ab7",
+      "name": "IOC http://192.109.200.250/bins/x86",
+      "pattern": "[x-opencti:value = 'http://192.109.200.250/bins/x86']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c0fd531d904e",
-      "name": "IOC http://zpwhzcuh.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://zpwhzcuh.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--90c63ffd0d1e",
+      "name": "IOC http://110.37.53.25:36219/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.37.53.25:36219/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2b6c8070177f",
-      "name": "IOC http://vtifqzzb.xyz:808/linux_386",
-      "pattern": "[x-opencti:value = 'http://vtifqzzb.xyz:808/linux_386']"
+      "id": "indicator--d8d70f8cee8b",
+      "name": "IOC http://39.75.248.215:45949/bin.sh",
+      "pattern": "[x-opencti:value = 'http://39.75.248.215:45949/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a4a439eb86f8",
-      "name": "IOC http://rhzttlir.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://rhzttlir.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--7a4ed7a775a9",
+      "name": "IOC http://110.37.67.68:60772/i",
+      "pattern": "[x-opencti:value = 'http://110.37.67.68:60772/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--718a26e2e5f9",
-      "name": "IOC http://xrwfvndh.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://xrwfvndh.xyz:808/linux_mips64el']"
+      "id": "indicator--1eb3a35f66cc",
+      "name": "IOC http://125.46.197.7:35479/bin.sh",
+      "pattern": "[x-opencti:value = 'http://125.46.197.7:35479/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--68cc9fa4b9ee",
-      "name": "IOC http://qeywpydg.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://qeywpydg.xyz:808/linux_arm5']"
+      "id": "indicator--7f4c3ccaa906",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.arc",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.arc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--330f1796c941",
-      "name": "IOC http://kaeliyvu.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://kaeliyvu.xyz:808/download.sh']"
+      "id": "indicator--3b776fdd47a4",
+      "name": "IOC http://219.157.249.86:60568/i",
+      "pattern": "[x-opencti:value = 'http://219.157.249.86:60568/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b7b2fc7b7e15",
-      "name": "IOC http://lldlbkse.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://lldlbkse.xyz:808/linux_arm64']"
+      "id": "indicator--217e0b798770",
+      "name": "IOC http://117.209.117.15:49048/i",
+      "pattern": "[x-opencti:value = 'http://117.209.117.15:49048/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2d42df80eba8",
-      "name": "IOC http://xjhrxgco.xyz:808/linux_arm7",
-      "pattern": "[x-opencti:value = 'http://xjhrxgco.xyz:808/linux_arm7']"
+      "id": "indicator--27c37b57d828",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.mpsl",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.mpsl']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bdd38b59df4c",
-      "name": "IOC http://bghxlwkc.xyz:808/linux_arm6",
-      "pattern": "[x-opencti:value = 'http://bghxlwkc.xyz:808/linux_arm6']"
+      "id": "indicator--6cc1c67286c0",
+      "name": "IOC http://59.54.88.94:42713/i",
+      "pattern": "[x-opencti:value = 'http://59.54.88.94:42713/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--be6a02e2ad62",
-      "name": "IOC http://elnrhxml.xyz:808/linux_amd64",
-      "pattern": "[x-opencti:value = 'http://elnrhxml.xyz:808/linux_amd64']"
+      "id": "indicator--b0e50cc9f84b",
+      "name": "IOC http://61.54.41.10:42945/i",
+      "pattern": "[x-opencti:value = 'http://61.54.41.10:42945/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ee6ad6f653a7",
-      "name": "IOC http://cezsikty.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://cezsikty.xyz:808/linux_mips64el']"
+      "id": "indicator--7ab63c41753f",
+      "name": "IOC http://115.56.112.152:48931/i",
+      "pattern": "[x-opencti:value = 'http://115.56.112.152:48931/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--24156c89bdd5",
-      "name": "IOC http://dfeipvjv.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://dfeipvjv.xyz:808/linux_mips64el']"
+      "id": "indicator--b61cd582874b",
+      "name": "IOC http://27.215.213.49:45980/i",
+      "pattern": "[x-opencti:value = 'http://27.215.213.49:45980/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2a591fdf4c11",
-      "name": "IOC http://gemozrqt.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://gemozrqt.xyz:808/download.sh']"
+      "id": "indicator--f1b43e9d8283",
+      "name": "IOC http://42.227.155.46:38511/i",
+      "pattern": "[x-opencti:value = 'http://42.227.155.46:38511/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7efb52fe41bf",
-      "name": "IOC http://xrwfvndh.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://xrwfvndh.xyz:808/linux_ppc64el']"
+      "id": "indicator--1a7d050d7fcb",
+      "name": "IOC http://110.36.80.170:48128/i",
+      "pattern": "[x-opencti:value = 'http://110.36.80.170:48128/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--377dbc4473c1",
-      "name": "IOC http://hzovbscu.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://hzovbscu.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--756c2dd394cf",
+      "name": "IOC http://2.56.244.89:5001/x86",
+      "pattern": "[x-opencti:value = 'http://2.56.244.89:5001/x86']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--72a454d0408a",
-      "name": "IOC http://gvoomfth.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://gvoomfth.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--3e187cd2589a",
+      "name": "IOC http://110.37.77.143:45148/i",
+      "pattern": "[x-opencti:value = 'http://110.37.77.143:45148/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b290525e600c",
-      "name": "IOC http://wyabqjml.xyz:808/linux_mips_softfloat",
-      "pattern": "[x-opencti:value = 'http://wyabqjml.xyz:808/linux_mips_softfloat']"
+      "id": "indicator--fc9d85ae778e",
+      "name": "IOC http://123.13.39.33:37579/i",
+      "pattern": "[x-opencti:value = 'http://123.13.39.33:37579/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--553dba25d43b",
-      "name": "IOC http://jhmgrmsa.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://jhmgrmsa.xyz:808/linux_mips64el']"
+      "id": "indicator--116d9b128fc8",
+      "name": "IOC http://42.228.244.72:36866/i",
+      "pattern": "[x-opencti:value = 'http://42.228.244.72:36866/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b2172363ea34",
-      "name": "IOC http://iyuvcidg.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://iyuvcidg.xyz:808/linux_arm5']"
+      "id": "indicator--f2cc4210fa39",
+      "name": "IOC http://42.52.19.190:49322/i",
+      "pattern": "[x-opencti:value = 'http://42.52.19.190:49322/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--518098bf2b77",
-      "name": "IOC http://ywmvudyi.xyz:808/linux_mips_softfloat",
-      "pattern": "[x-opencti:value = 'http://ywmvudyi.xyz:808/linux_mips_softfloat']"
+      "id": "indicator--b168214de3ec",
+      "name": "IOC http://125.46.197.7:35479/i",
+      "pattern": "[x-opencti:value = 'http://125.46.197.7:35479/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c51b46ab7537",
-      "name": "IOC http://ljaaeqbt.xyz:808/linux_arm6",
-      "pattern": "[x-opencti:value = 'http://ljaaeqbt.xyz:808/linux_arm6']"
+      "id": "indicator--28112e305e7d",
+      "name": "IOC http://222.140.187.163:34762/i",
+      "pattern": "[x-opencti:value = 'http://222.140.187.163:34762/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4b8778d5f1b7",
-      "name": "IOC http://qmzxyuki.xyz:808/linux_mips64",
-      "pattern": "[x-opencti:value = 'http://qmzxyuki.xyz:808/linux_mips64']"
+      "id": "indicator--19f4612ba109",
+      "name": "IOC http://42.233.87.216:42531/bin.sh",
+      "pattern": "[x-opencti:value = 'http://42.233.87.216:42531/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9674a3b85dca",
-      "name": "IOC http://lxbdqihy.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://lxbdqihy.xyz:808/linux_arm5']"
+      "id": "indicator--3f0d44c68a6c",
+      "name": "IOC http://119.187.202.213:33128/bin.sh",
+      "pattern": "[x-opencti:value = 'http://119.187.202.213:33128/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0c5fad962514",
-      "name": "IOC http://hujpxkht.xyz:808/linux_386",
-      "pattern": "[x-opencti:value = 'http://hujpxkht.xyz:808/linux_386']"
+      "id": "indicator--609fcdbdb2c0",
+      "name": "IOC http://60.23.234.123:49689/i",
+      "pattern": "[x-opencti:value = 'http://60.23.234.123:49689/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--db4c6bd9af89",
-      "name": "IOC http://cluxhjuk.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://cluxhjuk.xyz:808/linux_arm5']"
+      "id": "indicator--7b03c247bedb",
+      "name": "IOC http://120.84.188.87:36202/bin.sh",
+      "pattern": "[x-opencti:value = 'http://120.84.188.87:36202/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5e9d75405202",
-      "name": "IOC http://dayzucay.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://dayzucay.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--f1ba1b9333ba",
+      "name": "IOC http://39.36.83.9:33084/i",
+      "pattern": "[x-opencti:value = 'http://39.36.83.9:33084/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d7d716983593",
-      "name": "IOC http://jdvgmwau.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://jdvgmwau.xyz:808/download.sh']"
+      "id": "indicator--276d526720c2",
+      "name": "IOC http://221.202.86.92:45077/i",
+      "pattern": "[x-opencti:value = 'http://221.202.86.92:45077/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1a895f7feada",
-      "name": "IOC http://inbibulf.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://inbibulf.xyz:808/linux_arm64']"
+      "id": "indicator--6ee0fdb1d384",
+      "name": "IOC http://119.187.202.213:33128/i",
+      "pattern": "[x-opencti:value = 'http://119.187.202.213:33128/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d8f19e1ec8c1",
-      "name": "IOC http://ruvsyczy.xyz:808/linux_ppc64",
-      "pattern": "[x-opencti:value = 'http://ruvsyczy.xyz:808/linux_ppc64']"
+      "id": "indicator--2685f8ad20b2",
+      "name": "IOC http://42.233.87.216:42531/i",
+      "pattern": "[x-opencti:value = 'http://42.233.87.216:42531/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4d372f452447",
-      "name": "IOC http://hhpglfol.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://hhpglfol.xyz:808/linux_arm64']"
+      "id": "indicator--b0a6438f71c6",
+      "name": "IOC http://182.118.147.63:52958/bin.sh",
+      "pattern": "[x-opencti:value = 'http://182.118.147.63:52958/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4125d75fcd46",
-      "name": "IOC http://bqxsarhu.xyz:808/linux_mipsel",
-      "pattern": "[x-opencti:value = 'http://bqxsarhu.xyz:808/linux_mipsel']"
+      "id": "indicator--38dd5cbd0711",
+      "name": "IOC http://125.44.210.163:55739/bin.sh",
+      "pattern": "[x-opencti:value = 'http://125.44.210.163:55739/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--70a82fec2ef3",
-      "name": "IOC http://fq2xm9rz.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://fq2xm9rz.xyz:808/linux_arm64']"
+      "id": "indicator--200eca9de265",
+      "name": "IOC http://182.118.147.63:52958/i",
+      "pattern": "[x-opencti:value = 'http://182.118.147.63:52958/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bb721b049713",
-      "name": "IOC http://iot46kfv.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://iot46kfv.xyz:808/linux_arm64']"
+      "id": "indicator--aa32f8bf45c2",
+      "name": "IOC http://61.52.83.8:58272/bin.sh",
+      "pattern": "[x-opencti:value = 'http://61.52.83.8:58272/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--25fbd23cda3b",
-      "name": "IOC http://kqpmztrd.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://kqpmztrd.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--57066705856f",
+      "name": "IOC http://120.84.188.87:36202/i",
+      "pattern": "[x-opencti:value = 'http://120.84.188.87:36202/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--aeb0a064828b",
-      "name": "IOC http://lldlbkse.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://lldlbkse.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--5e5875252f89",
+      "name": "IOC http://221.3.105.59:41838/bin.sh",
+      "pattern": "[x-opencti:value = 'http://221.3.105.59:41838/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e9d74de3eebf",
-      "name": "IOC http://iykzszow.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://iykzszow.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--edd7ad28f952",
+      "name": "IOC http://27.202.213.85:59684/i",
+      "pattern": "[x-opencti:value = 'http://27.202.213.85:59684/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d1df2b9eae55",
-      "name": "IOC http://fokfwyaj.xyz:808/linux_386",
-      "pattern": "[x-opencti:value = 'http://fokfwyaj.xyz:808/linux_386']"
+      "id": "indicator--c167914e2ada",
+      "name": "IOC http://125.44.210.163:55739/i",
+      "pattern": "[x-opencti:value = 'http://125.44.210.163:55739/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f4ebe6ebda8a",
-      "name": "IOC http://gvoomfth.xyz:808/linux_arm6",
-      "pattern": "[x-opencti:value = 'http://gvoomfth.xyz:808/linux_arm6']"
+      "id": "indicator--e77ae34fe512",
+      "name": "IOC http://115.49.2.54:35066/bin.sh",
+      "pattern": "[x-opencti:value = 'http://115.49.2.54:35066/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4b6d531f82d4",
-      "name": "IOC http://hujpxkht.xyz:808/linux_arm5",
-      "pattern": "[x-opencti:value = 'http://hujpxkht.xyz:808/linux_arm5']"
+      "id": "indicator--4292c0f5a2c2",
+      "name": "IOC http://119.117.74.7:60951/bin.sh",
+      "pattern": "[x-opencti:value = 'http://119.117.74.7:60951/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--200accd1a254",
-      "name": "IOC http://jxlujmgg.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://jxlujmgg.xyz:808/linux_ppc64el']"
+      "id": "indicator--563f2c21a143",
+      "name": "IOC http://27.215.213.49:45980/bin.sh",
+      "pattern": "[x-opencti:value = 'http://27.215.213.49:45980/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e7b8954e43ac",
-      "name": "IOC http://erveo7rb.xyz:808/linux_mips_softfloat",
-      "pattern": "[x-opencti:value = 'http://erveo7rb.xyz:808/linux_mips_softfloat']"
+      "id": "indicator--3d1277b8d5b7",
+      "name": "IOC http://81.94.151.189/bin",
+      "pattern": "[x-opencti:value = 'http://81.94.151.189/bin']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7309970e618b",
-      "name": "IOC http://hpuaohfu.xyz:808/linux_arm7",
-      "pattern": "[x-opencti:value = 'http://hpuaohfu.xyz:808/linux_arm7']"
+      "id": "indicator--003d30b35702",
+      "name": "IOC http://81.94.151.189/yarn",
+      "pattern": "[x-opencti:value = 'http://81.94.151.189/yarn']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--11c786ecca86",
-      "name": "IOC http://lxbdqihy.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://lxbdqihy.xyz:808/linux_arm64']"
+      "id": "indicator--464fbaa85398",
+      "name": "IOC http://81.94.151.189/pay",
+      "pattern": "[x-opencti:value = 'http://81.94.151.189/pay']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--af40e7de222e",
-      "name": "IOC http://gmyodoua.xyz:808/linux_arm6",
-      "pattern": "[x-opencti:value = 'http://gmyodoua.xyz:808/linux_arm6']"
+      "id": "indicator--3b6916db83bd",
+      "name": "IOC http://119.117.74.7:60951/i",
+      "pattern": "[x-opencti:value = 'http://119.117.74.7:60951/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--883cdc6bf8f6",
-      "name": "IOC http://lmosmunw.xyz:808/linux_arm7",
-      "pattern": "[x-opencti:value = 'http://lmosmunw.xyz:808/linux_arm7']"
+      "id": "indicator--2d90cd6158e9",
+      "name": "IOC http://31.56.120.29/iran.arc",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.arc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--00553f541fa8",
-      "name": "IOC http://rmxkmnrk.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://rmxkmnrk.xyz:808/linux_arm64']"
+      "id": "indicator--766ef6b513b5",
+      "name": "IOC http://31.56.120.29/iran.armv7l",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.armv7l']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--99aac728d0e1",
-      "name": "IOC http://hpuaohfu.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://hpuaohfu.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--0db14226a10b",
+      "name": "IOC http://31.56.120.29/iran.x86_64",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.x86_64']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6d8a734c5655",
-      "name": "IOC http://eyioyqhi.xyz:808/linux_amd64",
-      "pattern": "[x-opencti:value = 'http://eyioyqhi.xyz:808/linux_amd64']"
+      "id": "indicator--7a3f0f7ed220",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.x86_64",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.x86_64']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7646a708f1f7",
-      "name": "IOC http://lzvtdqlh.xyz:808/linux_386",
-      "pattern": "[x-opencti:value = 'http://lzvtdqlh.xyz:808/linux_386']"
+      "id": "indicator--51ec9e0516c6",
+      "name": "IOC http://31.56.120.29/iran.armv5l",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.armv5l']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fe4da6591460",
-      "name": "IOC http://bgwyvsce.xyz:808/linux_arm6",
-      "pattern": "[x-opencti:value = 'http://bgwyvsce.xyz:808/linux_arm6']"
+      "id": "indicator--a180b6e3cd39",
+      "name": "IOC http://31.56.120.29/iran.armv6l",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.armv6l']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5ce1bb7901b9",
-      "name": "IOC http://tmnpixbs.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://tmnpixbs.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--2118617635df",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.arm7",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.arm7']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--15b76622d67d",
-      "name": "IOC http://ifhptqfg.xyz:808/linux_ppc64",
-      "pattern": "[x-opencti:value = 'http://ifhptqfg.xyz:808/linux_ppc64']"
+      "id": "indicator--de6cc7a66606",
+      "name": "IOC http://31.56.120.29/iran.i486",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.i486']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c2d472a62f79",
-      "name": "IOC http://kvsmaruh.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://kvsmaruh.xyz:808/linux_arm64']"
+      "id": "indicator--a70acbcdcbaf",
+      "name": "IOC http://31.56.120.29/iran.m68k",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.m68k']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b50220bee01a",
-      "name": "IOC http://xjhrxgco.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://xjhrxgco.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--1e62d5b7825d",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.i686",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.i686']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b08afa192167",
-      "name": "IOC http://vz3l6wq4.xyz:808/linux_arm64",
-      "pattern": "[x-opencti:value = 'http://vz3l6wq4.xyz:808/linux_arm64']"
+      "id": "indicator--6a0c81e08dd5",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.spc",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.spc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e03daf8d8a0b",
-      "name": "IOC http://xwph0rqa.xyz:808/linux_ppc64",
-      "pattern": "[x-opencti:value = 'http://xwph0rqa.xyz:808/linux_ppc64']"
+      "id": "indicator--1fbe4eee0151",
+      "name": "IOC http://31.56.120.29/iran.mipsel",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.mipsel']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b81f95776b2e",
-      "name": "IOC http://jhmgrmsa.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://jhmgrmsa.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--3e9475b6bae8",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.ppc",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.ppc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--84db2e326c96",
-      "name": "IOC http://witlzkaz.xyz:808/linux_arm7",
-      "pattern": "[x-opencti:value = 'http://witlzkaz.xyz:808/linux_arm7']"
+      "id": "indicator--9ec05b00e144",
+      "name": "IOC http://31.56.120.29/iran.aarch64",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.aarch64']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2620b51728ec",
-      "name": "IOC http://kzrjxlzj.xyz:808/linux_mipsel",
-      "pattern": "[x-opencti:value = 'http://kzrjxlzj.xyz:808/linux_mipsel']"
+      "id": "indicator--0d3260e0cd72",
+      "name": "IOC http://31.56.120.29/iran.sh4",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.sh4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1b1167aea722",
-      "name": "IOC http://elnrhxml.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://elnrhxml.xyz:808/download.sh']"
+      "id": "indicator--dabfa8718d1d",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.arm5",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.arm5']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f6725a764393",
-      "name": "IOC http://izkkbcwt.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://izkkbcwt.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--2b426f258684",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.m68k",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.m68k']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c718e0d58874",
-      "name": "IOC http://wzbweoau.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://wzbweoau.xyz:808/linux_ppc64el']"
+      "id": "indicator--0e66aed6e796",
+      "name": "IOC http://31.56.120.29/iran.powerpc",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.powerpc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--191b7cb8faf6",
-      "name": "IOC http://wmxphecr.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://wmxphecr.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--6c7d8087a920",
+      "name": "IOC http://31.56.120.29/iran.armv4l",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.armv4l']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--459c1559d6b9",
-      "name": "IOC http://z508yxrc.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://z508yxrc.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--fa29b3f420fd",
+      "name": "IOC http://31.56.120.29/iran.mips",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.mips']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--dadbd7051a0a",
-      "name": "IOC http://auycsdvk.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://auycsdvk.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--05192ece823d",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.arm6",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.arm6']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5fbba24b09fb",
-      "name": "IOC http://xjhrxgco.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://xjhrxgco.xyz:808/linux_ppc64el']"
+      "id": "indicator--ea9796b38424",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.sh4",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.sh4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c25b6bce65a3",
-      "name": "IOC http://gemozrqt.xyz:808/linux_amd64",
-      "pattern": "[x-opencti:value = 'http://gemozrqt.xyz:808/linux_amd64']"
+      "id": "indicator--785c803f4326",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.x86",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.x86']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--516717ef136e",
-      "name": "IOC http://mvntyldb.xyz:808/linux_mipsel_softfloat",
-      "pattern": "[x-opencti:value = 'http://mvntyldb.xyz:808/linux_mipsel_softfloat']"
+      "id": "indicator--76686c6cf093",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.mips",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.mips']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a6e1a89b4d82",
-      "name": "IOC http://lbw3ij2h.xyz:808/linux_386",
-      "pattern": "[x-opencti:value = 'http://lbw3ij2h.xyz:808/linux_386']"
+      "id": "indicator--83b40d575be7",
+      "name": "IOC http://31.56.120.29/hiddenbin/boatnet.arm",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/hiddenbin/boatnet.arm']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--74ab1e8a2228",
-      "name": "IOC http://lldlbkse.xyz:808/linux_ppc64",
-      "pattern": "[x-opencti:value = 'http://lldlbkse.xyz:808/linux_ppc64']"
+      "id": "indicator--eab4005486b5",
+      "name": "IOC http://31.56.120.29/iran.sparc",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/iran.sparc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a33c57700311",
-      "name": "IOC http://yhwsyrno.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://yhwsyrno.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--730fc6eb1b70",
+      "name": "IOC http://31.56.120.29/cat.sh",
+      "pattern": "[x-opencti:value = 'http://31.56.120.29/cat.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--37595740ad68",
-      "name": "IOC http://ujmfcahm.xyz:808/linux_arm7",
-      "pattern": "[x-opencti:value = 'http://ujmfcahm.xyz:808/linux_arm7']"
+      "id": "indicator--a65b429d85b7",
+      "name": "IOC http://110.37.0.37:36893/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.37.0.37:36893/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fc3ecf6a82b8",
-      "name": "IOC http://lxbdqihy.xyz:808/linux_mips",
-      "pattern": "[x-opencti:value = 'http://lxbdqihy.xyz:808/linux_mips']"
+      "id": "indicator--fe8023fb3f6c",
+      "name": "IOC http://117.248.253.105:43498/bin.sh",
+      "pattern": "[x-opencti:value = 'http://117.248.253.105:43498/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6d7fa3602252",
-      "name": "IOC http://125.43.106.148:42287/i",
-      "pattern": "[x-opencti:value = 'http://125.43.106.148:42287/i']"
+      "id": "indicator--27498b3fa8f7",
+      "name": "IOC http://87.121.105.136/bins/sora.arm6",
+      "pattern": "[x-opencti:value = 'http://87.121.105.136/bins/sora.arm6']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--cdd6bf80de95",
-      "name": "IOC http://bgwyvsce.xyz:808/linux_ppc64",
-      "pattern": "[x-opencti:value = 'http://bgwyvsce.xyz:808/linux_ppc64']"
+      "id": "indicator--f7a537ddefbc",
+      "name": "IOC http://87.121.105.136/bins/sora.x86",
+      "pattern": "[x-opencti:value = 'http://87.121.105.136/bins/sora.x86']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b51f47346aea",
-      "name": "IOC http://fokfwyaj.xyz:808/linux_ppc64el",
-      "pattern": "[x-opencti:value = 'http://fokfwyaj.xyz:808/linux_ppc64el']"
+      "id": "indicator--785e6bcb08c7",
+      "name": "IOC http://87.121.105.136/bins/sora.spc",
+      "pattern": "[x-opencti:value = 'http://87.121.105.136/bins/sora.spc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f24f31f6ed34",
-      "name": "IOC http://z508yxrc.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://z508yxrc.xyz:808/download.sh']"
+      "id": "indicator--c7fc10401405",
+      "name": "IOC http://87.121.105.136/bins/sora.mips",
+      "pattern": "[x-opencti:value = 'http://87.121.105.136/bins/sora.mips']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bedddd67780a",
-      "name": "IOC http://inbibulf.xyz:808/linux_mips64_softfloat",
-      "pattern": "[x-opencti:value = 'http://inbibulf.xyz:808/linux_mips64_softfloat']"
+      "id": "indicator--0bf6974aed97",
+      "name": "IOC http://87.121.105.136/bins/sora.sh4",
+      "pattern": "[x-opencti:value = 'http://87.121.105.136/bins/sora.sh4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f1cc8b6b08f7",
-      "name": "IOC http://rjooiyab.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://rjooiyab.xyz:808/download.sh']"
+      "id": "indicator--51732f13722d",
+      "name": "IOC http://87.121.105.136/bins/sora.ppc",
+      "pattern": "[x-opencti:value = 'http://87.121.105.136/bins/sora.ppc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2d318b9a36f0",
-      "name": "IOC http://xjhrxgco.xyz:808/linux_mips64el",
-      "pattern": "[x-opencti:value = 'http://xjhrxgco.xyz:808/linux_mips64el']"
+      "id": "indicator--cd8c4ca13890",
+      "name": "IOC http://87.121.105.136/bins/sora.m68k",
+      "pattern": "[x-opencti:value = 'http://87.121.105.136/bins/sora.m68k']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8f736717ce6c",
-      "name": "IOC http://pedgwkam.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://pedgwkam.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--86ec59abd1b6",
+      "name": "IOC http://87.121.105.136/bins/sora.mpsl",
+      "pattern": "[x-opencti:value = 'http://87.121.105.136/bins/sora.mpsl']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ad06a9f9cab3",
-      "name": "IOC http://ljaaeqbt.xyz:808/linux_mipsel",
-      "pattern": "[x-opencti:value = 'http://ljaaeqbt.xyz:808/linux_mipsel']"
+      "id": "indicator--33dc69a4bf2c",
+      "name": "IOC http://87.121.105.136/bins/sora.arm5",
+      "pattern": "[x-opencti:value = 'http://87.121.105.136/bins/sora.arm5']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b0c8758a24ef",
-      "name": "IOC http://vtifqzzb.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://vtifqzzb.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--746f7aed9697",
+      "name": "IOC http://87.121.105.136/bins/sora.arm7",
+      "pattern": "[x-opencti:value = 'http://87.121.105.136/bins/sora.arm7']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b9cfaa19c9d8",
-      "name": "IOC http://visedgpl.xyz:808/linux_arm7",
-      "pattern": "[x-opencti:value = 'http://visedgpl.xyz:808/linux_arm7']"
+      "id": "indicator--ec1d98d0e6c0",
+      "name": "IOC http://87.121.105.136/bins/sora.arm",
+      "pattern": "[x-opencti:value = 'http://87.121.105.136/bins/sora.arm']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--08d21c30147d",
-      "name": "IOC http://yhwsyrno.xyz:808/linux_mips",
-      "pattern": "[x-opencti:value = 'http://yhwsyrno.xyz:808/linux_mips']"
+      "id": "indicator--ecaccc78e94c",
+      "name": "IOC http://42.5.74.217:33774/bin.sh",
+      "pattern": "[x-opencti:value = 'http://42.5.74.217:33774/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fe38001c49d8",
-      "name": "IOC http://lxbdqihy.xyz:808/download.sh",
-      "pattern": "[x-opencti:value = 'http://lxbdqihy.xyz:808/download.sh']"
+      "id": "indicator--db6844deaaf5",
+      "name": "IOC http://119.179.252.119:42680/bin.sh",
+      "pattern": "[x-opencti:value = 'http://119.179.252.119:42680/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--43d38e40041b",
-      "name": "IOC http://cezsikty.xyz:808/linux_mips",
-      "pattern": "[x-opencti:value = 'http://cezsikty.xyz:808/linux_mips']"
+      "id": "indicator--3430dc12dee9",
+      "name": "IOC http://117.217.136.140:44294/bin.sh",
+      "pattern": "[x-opencti:value = 'http://117.217.136.140:44294/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f69949069c25",
-      "name": "IOC http://uc9i5cjx.xyz:808/linux_mips_softfloat",
-      "pattern": "[x-opencti:value = 'http://uc9i5cjx.xyz:808/linux_mips_softfloat']"
+      "id": "indicator--205be57f9044",
+      "name": "IOC http://110.37.0.37:36893/i",
+      "pattern": "[x-opencti:value = 'http://110.37.0.37:36893/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3cb3b30a7802",
-      "name": "IOC http://jmr25ks5.xyz:808/linux_arm6",
-      "pattern": "[x-opencti:value = 'http://jmr25ks5.xyz:808/linux_arm6']"
+      "id": "indicator--3966b776c62d",
+      "name": "IOC http://110.37.123.210:60556/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.37.123.210:60556/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4859aad586d7",
-      "name": "IOC http://zpwhzcuh.xyz:808/linux_mips64el_softfloat",
-      "pattern": "[x-opencti:value = 'http://zpwhzcuh.xyz:808/linux_mips64el_softfloat']"
+      "id": "indicator--be491318d8f6",
+      "name": "IOC http://194.62.55.143/Client-built.exe",
+      "pattern": "[x-opencti:value = 'http://194.62.55.143/Client-built.exe']"
     }
   ]
 }

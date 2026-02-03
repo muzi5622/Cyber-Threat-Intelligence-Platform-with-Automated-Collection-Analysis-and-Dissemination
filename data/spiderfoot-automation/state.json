@@ -142,7 +142,36 @@
     "33048260-f76d-4efa-9d53-d7ff45301f30",
     "1b0b0bb3-4c7b-4083-a14c-019007a67cb3",
     "5ab16dd6-8223-4d20-bd53-7b1166d5de0f",
-    "d74fd886-4bda-4cd2-8072-446fe203018f"
+    "d74fd886-4bda-4cd2-8072-446fe203018f",
+    "5cd30d76-9b98-48f3-9e65-8699a9438334",
+    "6ed9b0cc-92b9-47bd-bca5-a989e474bee6",
+    "0d0c4e88-4533-4977-8f13-2e064583e928",
+    "e4df3d2a-9a33-4f8d-a6be-55cd95a4e0aa",
+    "bf11d298-bf88-45c1-9488-31c03bf80752",
+    "6cc5d2f1-5b33-416b-b350-057ea5d6f180",
+    "354be916-fe29-4f2e-b0a0-01b94b4c6a32",
+    "5c856bf4-bfde-4654-8ea7-5ae2fd235fd7",
+    "8facdffd-54b0-4e42-a623-32f96a129a86",
+    "359df797-ad2f-418a-b62b-6b688a47aa23",
+    "1a5f498d-e508-4060-b7ec-e52c920b03d8",
+    "e612970f-bb11-4202-bc3b-8b5e086549fd",
+    "9a81ec34-c2b2-4ad3-8eb8-26eb341ca8b6",
+    "ee25edb8-f8a2-4037-9ba4-8ebd5e59ae39",
+    "4fdfa81f-72f4-452c-b948-84193ebedb20",
+    "9e74a771-ec65-4691-8f04-05a8830736d3",
+    "f0de18b3-888b-4d66-8d44-79fdecdd83e3",
+    "4a6df706-f1b7-4122-ac32-3ac9cdd1d969",
+    "4942c3b4-d3d3-49eb-b8db-6d386c4e0dc6",
+    "548638d0-6ea7-4d8c-a8db-d66846211e7b",
+    "63918a82-abb3-48ee-b1bc-7999d594f5a0",
+    "3a5f8b8e-bb1e-446d-8a70-918f3ef962c6",
+    "ec5d1ad7-acb6-4ffa-9f85-315b866dda0b",
+    "8b12afac-7fa1-4617-a1c3-e17efeef866e",
+    "b27356e4-0b49-4f3e-a668-6c920b3db7ce",
+    "e6a4b38d-b739-417a-b94c-671d891f375e",
+    "9a5808c4-d1a4-4d1d-b973-9050a31ed820",
+    "b2da4b5b-b5d1-4c90-a838-b5bf8ce5b60b",
+    "db71550f-44d0-42d7-93c9-754cd95e3034"
   ],
   "seen_targets": [
     "domain:github.com",
@@ -151,7 +180,8 @@
     "domain:unit42.paloaltonetworks.com",
     "domain:cpr-blog-image-option-1-300x150.png",
     "domain:research.checkpoint.com",
-    "domain:node.js"
+    "domain:node.js",
+    "domain:krebsonsecurity.com"
   ],
   "seen_enrich": [
     "IPv4-Addr:20.207.73.82",
@@ -170,6 +200,10 @@
     "Domain-Name:research.checkpoint.com",
     "Domain-Name:c67rbnn43k20.wpeproxy.com",
     "IPv4-Addr:141.193.213.20",
-    "Domain-Name:node.js"
+    "Domain-Name:node.js",
+    "Domain-Name:www.krebsonsecurity.com",
+    "Domain-Name:45.45.211.130.bc.googleusercontent.com",
+    "IPv4-Addr:130.211.45.45",
+    "Domain-Name:krebsonsecurity.com"
   ]
 }

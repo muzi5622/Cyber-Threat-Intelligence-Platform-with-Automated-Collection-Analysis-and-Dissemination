@@ -1,8 +1,12 @@
+version: "3.9"
+
 services:
-  # -------------------------
-  # Core dependencies
-  # -------------------------
+  # =========================================================
+  # LAYER 1 — Core dependencies required by OpenCTI
+  # =========================================================
+
   redis:
+    # Used by OpenCTI for caching + internal queues
     image: redis:7
     restart: unless-stopped
     healthcheck:
@@ -12,6 +16,7 @@ services:
       retries: 10
 
   elasticsearch:
+    # Stores OpenCTI data (search + indexing)
     image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4
     environment:
       - discovery.type=single-node
@@ -31,6 +36,7 @@ services:
       retries: 30
 
   minio:
+    # Object storage used by OpenCTI (imports/exports/attachments)
     image: minio/minio:RELEASE.2025-01-20T14-49-07Z
     command: server /data
     environment:
@@ -46,11 +52,13 @@ services:
       retries: 20
 
   rabbitmq:
+    # Message broker used by OpenCTI + worker/connectors (job distribution)
     image: rabbitmq:3-management
     environment:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_USER}
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_PASS}
     ports:
+      # RabbitMQ UI (optional, helpful for debugging)
       - "15672:15672"
     restart: unless-stopped
     healthcheck:
@@ -59,21 +67,25 @@ services:
       timeout: 5s
       retries: 20
 
-  # -------------------------
-  # OpenCTI
-  # -------------------------
+  # =========================================================
+  # LAYER 2 — OpenCTI platform + worker
+  # =========================================================
+
   opencti:
+    # Main OpenCTI web app + GraphQL API
     image: opencti/platform:latest
     environment:
       - APP__PORT=8080
       - APP__BASE_URL=${APP_BASE_URL}
 
+      # Initial admin user (first start)
       - APP__ADMIN__EMAIL=${OPENCTI_ADMIN_EMAIL}
       - APP__ADMIN__PASSWORD=${OPENCTI_ADMIN_PASSWORD}
       - APP__ADMIN__TOKEN=${OPENCTI_ADMIN_TOKEN}
 
       - APP__LOGS_LEVEL=info
 
+      # Dependencies
       - REDIS__HOSTNAME=redis
       - ELASTICSEARCH__URL=http://elasticsearch:9200
 
@@ -92,21 +104,23 @@ services:
       - minio
       - rabbitmq
     ports:
+      # OpenCTI UI + API
       - "8080:8080"
     restart: unless-stopped
 
-    # IMPORTANT: curl is not installed in opencti image -> use python healthcheck
+    # Note: opencti image doesn't always include curl, so use python for healthcheck
     healthcheck:
       test:
         [
           "CMD-SHELL",
-          "python3 -c \"import urllib.request; urllib.request.urlopen('http://localhost:8080/graphql', timeout=5).read(); print('ok')\" >/dev/null 2>&1 || exit 1"
+          "python3 - <<'PY'\nimport os, json, urllib.request\nurl='http://localhost:8080/graphql'\ntoken=os.environ.get('APP__ADMIN__TOKEN','')\npayload={'query':'query { about { version } }'}\nheaders={'Content-Type':'application/json','Authorization':f'Bearer {token}'}\nreq=urllib.request.Request(url, data=json.dumps(payload).encode(), headers=headers)\nurllib.request.urlopen(req, timeout=5).read()\nprint('ok')\nPY"
         ]
       interval: 15s
       timeout: 10s
       retries: 40
 
   worker:
+    # Processes background tasks (imports/enrichments/rules jobs)
     image: opencti/worker:latest
     environment:
       - OPENCTI_URL=http://opencti:8080
@@ -116,41 +130,29 @@ services:
       - opencti
     restart: unless-stopped
 
-  # -------------------------
-  # SpiderFoot (OSINT)
-  # -------------------------
-  spiderfoot:
-    image: dtagdevsec/spiderfoot:24.04
-    command: ["python3", "/home/spiderfoot/sf.py", "-l", "0.0.0.0:8080"]
-    ports:
-      - "5001:8080"
-    restart: unless-stopped
+  # =========================================================
+  # LAYER 3 — Your automation services (CTI pipeline)
+  # =========================================================
 
-  spiderfoot-web:
-    image: nginx:alpine
-    ports:
-      - "5002:80"
-    depends_on:
-      - spiderfoot
-    volumes:
-      - ./services/spiderfoot-web/default.conf:/etc/nginx/conf.d/default.conf:ro
-    restart: unless-stopped
-
-  # -------------------------
-  # RSS -> OpenCTI (Reports)
-  # -------------------------
   rss-ingestor:
+    # Collects threat intel articles from RSS feeds and creates OpenCTI Reports
     build: ./services/rss-ingestor
     environment:
       OPENCTI_BASE: "http://opencti:8080"
       OPENCTI_TOKEN: "${OPENCTI_ADMIN_TOKEN}"
+
+      # Runs every N seconds (5 min default)
       RUN_EVERY_SECONDS: "300"
 
+      # Ingestion controls
       MAX_ITEMS_PER_FEED: "5"
       LOOKBACK_DAYS: "30"
       DISABLE_DEDUP: "false"
 
+      # Local state (for dedup / last seen items)
       RSS_STATE_DB: "/state/rss.db"
+
+      # Report metadata in OpenCTI
       RSS_PRODUCER_NAME: "RSS Feed Ingestor"
       RSS_PRODUCER_DESC: "Automated OSINT collection from CTI RSS sources."
       RSS_CONFIDENCE: "50"
@@ -161,19 +163,60 @@ services:
       - opencti
     restart: unless-stopped
 
-  # -------------------------
-  # NLP Enricher -> OpenCTI (Indicators/Observables)
-  # -------------------------
+  connector-urlhaus:
+    # Imports URLhaus data into OpenCTI once per day (low CPU)
+    image: opencti/connector-urlhaus:rolling
+    restart: unless-stopped
+    depends_on:
+      - opencti
+      - rabbitmq
+
+    # Low resource usage (works with docker compose)
+    cpus: "0.10"
+    mem_limit: 384m
+
+    environment:
+      - OPENCTI_URL=http://opencti:8080
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+
+      # Must be a UUID (unique per connector)
+      - CONNECTOR_ID=${CONNECTOR_URLHAUS_ID}
+
+      - CONNECTOR_TYPE=EXTERNAL_IMPORT
+      - CONNECTOR_NAME=URLHaus
+      - CONNECTOR_SCOPE=urlhaus
+      - CONNECTOR_LOG_LEVEL=info
+      - CONNECTOR_CONFIDENCE_LEVEL=75
+
+      # Run on a schedule (P1D = once per day)
+      - CONNECTOR_RUN_AND_TERMINATE=false
+      - CONNECTOR_DURATION_PERIOD=P1D
+
+
   nlp-enricher:
+    # Reads new Reports, extracts IOCs (IPs/domains/URLs/hashes),
+    # and creates Observables/Indicators in OpenCTI.
     build: ./services/nlp-enricher
     environment:
       OPENCTI_BASE: "http://opencti:8080"
       OPENCTI_TOKEN: "${OPENCTI_ADMIN_TOKEN}"
+
+      # Runs every N seconds (2 min default)
       RUN_EVERY_SECONDS: "120"
+
+      # Create Indicator objects in addition to Observables
       NLP_CREATE_INDICATOR: "true"
+
+      # Label applied to extracted entities
       NLP_LABEL: "auto-extracted"
+
+      # Local state DB (what reports were already processed)
       NLP_STATE_DB: "/state/nlp.db"
+
+      # Only analyze reports newer than N days
       NLP_MAX_AGE_DAYS: "14"
+
+      # Max reports to fetch per run
       NLP_FETCH_LIMIT: "20"
     volumes:
       - ./data/nlp:/state
@@ -181,76 +224,32 @@ services:
       - opencti
     restart: unless-stopped
 
-  # -------------------------
-  # OpenCTI -> SpiderFoot -> OpenCTI (Enrichment)
-  # -------------------------
-  spiderfoot-automation:
-    build: ./services/spiderfoot-automation
-    user: "2000:2000"   # important to avoid /data permission denied
-    environment:
-      - OPENCTI_BASE=http://opencti:8080
-      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
-      - RUN_EVERY_SECONDS=300
-      - REPORT_LIMIT=30
-      - SF_TIMEOUT_SECONDS=300
-      - SF_MAX_THREADS=10
-      - SF_MAX_TARGETS_PER_CYCLE=3
-      - ENRICH_MAX_NEW_OBSERVABLES=200
-      - ENRICH_LABEL_VALUE=spiderfoot-enriched
-      - STATE_PATH=/data/state.json
-      - OUT_DIR=/data/scans
-      - SF_MODULES=sfp_dnsresolve,sfp_sslcert,sfp_whois,sfp_hosting,sfp_webserver
-    volumes:
-      - ./data/spiderfoot-automation:/data
-    depends_on:
-      - opencti
-      - spiderfoot
-    restart: unless-stopped
-
-  # -------------------------
-  # MalwareBazaar Recent Additions
-  # -------------------------
-  # -------------------------
-  # URLHaus (slowed down + limited resources)
-  # -------------------------
-  connector-urlhaus:
-    image: opencti/connector-urlhaus:rolling
-    restart: unless-stopped
-    depends_on:
-      - opencti
-      - rabbitmq
-    cpus: "0.30"
-    mem_limit: 512m
-    environment:
-      - OPENCTI_URL=http://opencti:8080
-      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
-      - CONNECTOR_ID=${CONNECTOR_URLHAUS_ID}
-      - CONNECTOR_TYPE=EXTERNAL_IMPORT
-      - CONNECTOR_NAME=URLHaus
-      - CONNECTOR_SCOPE=urlhaus
-      - CONNECTOR_LOG_LEVEL=info
-      - CONNECTOR_CONFIDENCE_LEVEL=75
-      - CONNECTOR_RUN_AND_TERMINATE=false
-      - CONNECTOR_DURATION_PERIOD=P1D
-
-  # -------------------------
-  # (Optional) Intel API (keep if you want it)
-  # -------------------------
   intel-api:
+    # Optional API you built (example: serve latest IOCs/reports to other tools)
     build: ./services/intel-api
     environment:
       - OPENCTI_BASE=http://opencti:8080
       - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - STRATEGY_ENABLED=true
+      - STRATEGY_TIMEZONE=Asia/Karachi
+      # Daily at 09:00
+      - STRATEGY_DAILY_CRON=0 9 * * *
+      # Weekly Monday at 09:00
+      - STRATEGY_WEEKLY_CRON=0 9 * * 1
+      # Minimum score to auto-create action cases
+      - STRATEGY_CASE_THRESHOLD=70
     ports:
       - "8000:8000"
     depends_on:
       - opencti
     restart: unless-stopped
 
-  # -------------------------
-  # (2) TAXII Exporter (OpenCTI -> STIX bundles on disk)
-  # -------------------------
+  # =========================================================
+  # LAYER 4 — Dissemination (OpenCTI → STIX bundles on disk → served via TAXII)
+  # =========================================================
+
   taxii-exporter:
+    # Exports STIX bundles from OpenCTI and writes to /exports
     build: ./services/taxii-exporter
     environment:
       - OPENCTI_BASE=http://opencti:8080
@@ -263,10 +262,8 @@ services:
       - opencti
     restart: unless-stopped
 
-  # -------------------------
-  # (3) TAXII Server (serve exported bundles)
-  # -------------------------
   taxii-server:
+    # Serves exported bundles over TAXII (Medallion TAXII server)
     image: cti-taxii-server:latest
     build:
       context: ./services/taxii-exporter/medallion
@@ -279,6 +276,9 @@ services:
       - ./data/opencti-export:/data
     restart: unless-stopped
 
+# =========================================================
+# Named volumes (persistent data for core services)
+# =========================================================
 volumes:
   esdata:
   miniodata:

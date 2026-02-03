@@ -1,0 +1,37 @@
+org_profile:
+  name: "Demo Org"
+  sector_keywords: [bank, fintech, finance, payment]
+  geo_keywords: [pakistan, karachi, lahore, south asia]
+  tech_keywords: [microsoft 365, vpn, citrix, fortinet, windows, linux]
+
+scoring:
+  weights:
+    source_reliability: 0.15
+    confidence: 0.20
+    severity: 0.25
+    relevance: 0.25
+    recency: 0.15
+
+  severity_keywords:
+    ransomware: 30
+    phishing: 20
+    credential: 15
+    exploit: 25
+    zero-day: 35
+    c2: 20
+    botnet: 15
+    malware: 15
+    apt: 25
+    supply chain: 20
+
+  base_severity: 10
+
+  recency:
+    max_days: 14
+    max_points: 25
+
+decisions:
+  block_now: 80
+  monitor: 60
+  ignore: 0
+ 
