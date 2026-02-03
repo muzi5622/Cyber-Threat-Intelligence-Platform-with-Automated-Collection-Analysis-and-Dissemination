@@ -1,207 +1,187 @@
-# CTI Platform (EduQual Level 6)
+# 🛡️ CTI Platform Exam Project (EduQual Level 6)
 
-## Automated Cyber Threat Intelligence: Collection → Analysis → Dissemination
+### Automated Cyber Threat Intelligence with Strategic Decision-Making
 
-**Project Title:**
-Comprehensive Cyber Threat Intelligence Platform with Automated Collection, Analysis, and Dissemination
+**Project Title**
+
+**Comprehensive Cyber Threat Intelligence Platform with Automated Collection, Analysis, and Dissemination for Strategic Security Decision Making**
 
 **Student:** Muzammal
 
 **Qualification:** Diploma in Artificial Intelligence Operations (EduQual Level 6)
 
-**Core Technologies:**
-OpenCTI · OSINT (RSS + SpiderFoot) · NLP/IOC Extraction · STIX 2.1 · TAXII-style Sharing · Docker
+**Core Technologies**
+
+OpenCTI · OSINT (RSS + URLHaus) · NLP / IOC Extraction · **Strategic Decision Engine** · STIX 2.1 · TAXII-style Sharing · Docker Compose
 
 ---
 
 ## 1. Project Overview
 
-This project implements a **fully automated Cyber Threat Intelligence (CTI) platform** that follows the complete intelligence lifecycle used by real Security Operations Centers (SOCs), MSSPs, and national CERT teams.
+This project implements a **fully automated Cyber Threat Intelligence (CTI) platform** designed to support **strategic security decision-making**, not just IOC collection.
 
-The platform continuously:
+The platform follows a real-world intelligence lifecycle used by SOCs, MSSPs, and CERT teams:
 
-1. **Collects** threat intelligence from open-source feeds
-2. **Analyzes and enriches** intelligence using NLP and OSINT automation
-3. **Stores and correlates** intelligence in OpenCTI
-4. **Disseminates** intelligence using STIX 2.1 via a TAXII-style interface
+> **Collection → Analysis → Strategic Decision → Dissemination**
 
-All components run automatically using Docker Compose and communicate via APIs and message queues.
+A dedicated **Strategic Decision Engine** automatically evaluates intelligence stored in OpenCTI, prioritizes threats, and produces **executive-level intelligence reports** with clear security decisions.
 
 ---
 
-## 2. End-to-End Automated Flow
+## 2. Key Capabilities
+
+✔ Automated OSINT collection (RSS, URLHaus)
+
+✔ AI-assisted IOC extraction and enrichment
+
+✔ Centralized intelligence graph (OpenCTI)
+
+✔ **Automated threat prioritization**
+
+✔ **BLOCK / MONITOR / IGNORE decisions**
+
+✔ **Daily & weekly strategic intelligence reports**
+
+✔ STIX 2.1 export and TAXII-style sharing
+
+✔ Fully containerized and autonomous
+
+
+This platform answers:
+
+> “What threats matter most, and what should we do now?”
+
+---
+
+## 3. End-to-End Automated Flow
 
 ```
-RSS Feeds ─┐
-           ├─> OpenCTI Reports
-URLHaus    ┘        ↓
-                 NLP Enricher
-                    ↓
-        Observables + Indicators
-                    ↓
-        SpiderFoot Automated Enrichment
-                    ↓
-              Correlated CTI
-                    ↓
-          STIX 2.1 Bundle Export
-                    ↓
-          TAXII-style Distribution
+OSINT Sources (RSS, URLHaus)
+        ↓
+OpenCTI Reports
+        ↓
+NLP Enrichment (IOC Extraction)
+        ↓
+Correlated Intelligence (OpenCTI Graph)
+        ↓
+Strategic Decision Engine (intel-api)
+        ↓
+Executive Reports & Decisions
+        ↓
+STIX 2.1 Bundles
+        ↓
+TAXII-style Distribution
 ```
 
 ---
 
-## 3. Architecture Overview (Layered)
+## 4. Architecture Overview (Layered Design)
+
+
+![architecture digram](architecture.png)
+
 
 The system is intentionally layered to reflect **industry CTI architectures**.
 
 ---
 
-![architecture digram](architecture.png)
+### 🔹 Layer 1 — Core Platform Dependencies
 
+These services support OpenCTI and all automation layers.
 
-### 🔹 Layer 1 – OSINT Collection
-
-**RSS Ingestor (Custom – Fully Automated)**
-
-* Reads 23 curated CTI RSS feeds
-* Converts articles into **OpenCTI Reports**
-* Uses SQLite state tracking to prevent duplicates
+| Service       | Purpose                      |
+| ------------- | ---------------------------- |
+| Redis         | Caching and internal queues  |
+| Elasticsearch | Indexing and search backend  |
+| RabbitMQ      | Asynchronous task processing |
+| MinIO         | Object storage for OpenCTI   |
 
 ---
 
-### 🔹 Layer 2 – CTI Knowledge Base
+### 🔹 Layer 2 — CTI Knowledge Base
 
 **OpenCTI Platform**
 
 * Central CTI repository and analyst dashboard
 * Stores reports, observables, indicators, and relationships
-* Exposes a GraphQL API for automation
+* Provides a GraphQL API for automation
 
 **OpenCTI Worker**
 
-* Handles background processing, indexing, and connectors
+* Processes background jobs (imports, enrichment, rules)
+* Enables scalable CTI processing
 
 ---
 
-### 🔹 Layer 3 – Core Dependencies
+### 🔹 Layer 3 — Automated CTI Pipeline
 
-| Service       | Purpose                          |
-| ------------- | -------------------------------- |
-| Redis         | Cache and internal OpenCTI state |
-| Elasticsearch | Indexing and search backend      |
-| RabbitMQ      | Asynchronous task queue          |
-| MinIO         | Object storage for OpenCTI       |
+#### RSS Ingestor (Custom, Automated)
 
----
+* Collects threat intelligence from curated RSS feeds
+* Converts articles into structured **OpenCTI Reports**
+* Prevents duplication using local state tracking
+* Runs continuously on a fixed schedule
 
-### 🔹 Layer 4 – Analysis & Enrichment (AI + OSINT Automation)
+#### URLHaus Connector
 
-This layer is responsible for **machine-driven intelligence enrichment**.
+* Imports malicious URL intelligence once per day
+* Adds high-confidence external threat data
+* Operates with low resource usage
 
-#### 1. NLP Enricher (Custom – Automated)
+#### NLP Enricher (Custom, Automated)
 
-* Reads recent OpenCTI reports
+* Processes recent OpenCTI reports
 * Extracts:
 
-  * Domains
-  * URLs
-  * IPv4 / IPv6
-  * Hashes (MD5 / SHA1 / SHA256)
+  * Domains, URLs
+  * IPv4 / IPv6 addresses
+  * File hashes (MD5, SHA1, SHA256)
   * CVEs
-* Creates:
-
-  * STIX Observables
-  * STIX Indicators (`createIndicator=true`)
-* Applies confidence scores and labels (`auto-extracted`)
-
-#### 2. SpiderFoot Automation (Custom – Automated)
-
-SpiderFoot is reused here as an **automated enrichment engine**, not a UI tool.
-
-**Automated Flow:**
-
-```
-OpenCTI Reports
-   ↓
-Extract domains / IPs
-   ↓
-Trigger SpiderFoot scans
-   ↓
-Parse OSINT results
-   ↓
-Push enrichment back to OpenCTI
-```
-
-**Key Characteristics:**
-
-* Runs every 600 seconds
-* Passive OSINT only (ethical & non-intrusive)
-* Uses selected modules:
-
-  * DNS resolution
-  * SSL certificate analysis
-  * WHOIS
-  * Hosting identification
-  * Web server fingerprinting
-* Converts results into OpenCTI observables and relationships
-
-> This design mirrors commercial CTI enrichment engines (MISP, Anomali, Recorded Future).
+* Creates STIX Observables and Indicators
+* Applies labels and confidence scores
 
 ---
 
-### 🔹 Layer 5 – Dissemination & Sharing
+### 🔹 Layer 4 — Strategic Decision-Making ⭐ (Core Feature)
 
-**TAXII Exporter (Custom)**
+**Strategic Decision Engine (intel-api)**
 
-* Exports intelligence from OpenCTI into STIX 2.1 JSON bundles
+This service transforms intelligence into **actionable security decisions**.
 
-**TAXII Demo Server**
+It automatically:
 
-* Serves the STIX bundle via HTTP
-* Simulates organizational CTI sharing
+* Pulls recent intelligence from OpenCTI
+* Scores each report based on:
 
----
+  * Confidence
+  * Severity keywords (ransomware, exploit, phishing, etc.)
+  * Organizational relevance
+  * Recency
+* Assigns decisions:
 
-## 4. Docker Services Summary
+  * **BLOCK**
+  * **MONITOR**
+  * **IGNORE**
+* Detects threat themes and trends
+* Generates **executive-ready strategic reports**
 
-| Service               | Port         | Layer        |
-| --------------------- | ------------ | ------------ |
-| OpenCTI               | 8080         | CTI Platform |
-| Elasticsearch         | 9200         | Core         |
-| RabbitMQ              | 5672 / 15672 | Core         |
-| MinIO                 | 9001         | Core         |
-| SpiderFoot            | 5001         | Layer 1      |
-| SpiderFoot (nginx)    | 5002         | Layer 1      |
-| NLP Enricher          | —            | Layer 4      |
-| SpiderFoot Automation | —            | Layer 4      |
-| TAXII Server          | 9000         | Layer 5      |
-| Intel API             | 8000         | Layer 5      |
+This layer turns OpenCTI into a **decision support system**, not just a data store.
 
 ---
 
-## 5. Folder Structure
+### 🔹 Layer 5 — Dissemination & Sharing
 
-```
-cti-platform/
-├─ docker-compose.yml
-├─ .env
-├─ data/
-│  ├─ rss/
-│  ├─ nlp/
-│  ├─ spiderfoot-automation/
-│  └─ opencti-export/
-└─ services/
-   ├─ rss-ingestor/
-   ├─ nlp-enricher/
-   ├─ spiderfoot-automation/
-   ├─ intel-api/
-   ├─ taxii-exporter/
-   └─ spiderfoot-web/
-```
+**STIX Exporter (Custom)**
+
+* Exports OpenCTI intelligence into STIX 2.1 bundles on disk
+
+**TAXII Server**
+
+* Serves STIX bundles via HTTP
+* Simulates organizational and inter-organizational CTI sharing
 
 ---
-
-## 6. Requirements
+## Requirements
 
 * Ubuntu 22.04+ (recommended)
 * Docker Engine
@@ -218,7 +198,7 @@ newgrp docker
 
 ---
 
-## 7. Environment Configuration
+##  Environment Configuration
 
 Create `.env` in the project root:
 
@@ -253,7 +233,7 @@ docker compose ps
 
 ---
 
-## 9. Access URLs
+##  Access URLs
 
 * OpenCTI Dashboard
   `http://<server-ip>:8080`
@@ -272,7 +252,7 @@ docker compose ps
 
 ---
 
-## 10. Automation Verification (Evidence)
+##  Automation Verification (Evidence)
 
 ### RSS Collection
 
@@ -300,7 +280,7 @@ curl http://127.0.0.1:9000/bundle.json | head -n 40
 
 ---
 
-## 11. Stop and Reset
+##  Stop and Reset
 
 Stop services:
 
@@ -317,25 +297,113 @@ rm -rf data/rss data/nlp data/spiderfoot-automation data/opencti-export
 
 ---
 
-## 12. Academic & Industry Alignment
+##  Strategic Intelligence Outputs
+
+### Daily Executive Summary (Automated)
+
+Generated automatically every day.
+
+Includes:
+
+* Threat landscape overview
+* Top threat themes
+* Highest-priority threats
+* BLOCK / MONITOR / IGNORE decisions
+* Immediate security recommendations
+
+📍 **OpenCTI → Knowledge → Reports**
+
+---
+
+### Weekly Strategic Risk Brief (Automated)
+
+Generated weekly.
+
+Includes:
+
+* Trend analysis
+* Risk distribution
+* Leadership-level actions and priorities
+
+📍 **OpenCTI → Knowledge → Reports**
+
+---
+
+##  Docker Services Summary
+
+| Service                         | Port         | Layer              |
+| ------------------------------- | ------------ | ------------------ |
+| OpenCTI                         | 8080         | CTI Core           |
+| Elasticsearch                   | 9200         | Core               |
+| RabbitMQ                        | 5672 / 15672 | Core               |
+| MinIO                           | 9000         | Core               |
+| RSS Ingestor                    | —            | Pipeline           |
+| URLHaus Connector               | —            | Pipeline           |
+| NLP Enricher                    | —            | Pipeline           |
+| **Intel API (Strategy Engine)** | **8000**     | **Decision Layer** |
+| TAXII Server                    | 9000         | Dissemination      |
+
+---
+
+##  Using the Strategic Decision Engine
+
+### Run Daily Strategic Analysis (Manual)
+
+```bash
+curl -X POST http://localhost:8000/strategy/run-daily
+```
+
+### Run Weekly Strategic Analysis (Manual)
+
+```bash
+curl -X POST http://localhost:8000/strategy/run-weekly
+```
+
+Generated reports automatically appear in **OpenCTI**.
+
+---
+
+##  Automation & Scheduling
+
+The platform operates fully automatically:
+
+| Task                    | Schedule        |
+| ----------------------- | --------------- |
+| RSS Collection          | Every 5 minutes |
+| NLP Enrichment          | Every 2 minutes |
+| URLHaus Import          | Daily           |
+| Daily Executive Summary | Daily at 09:00  |
+| Weekly Risk Brief       | Monday at 09:00 |
+
+Monitor execution using:
+
+```bash
+docker compose logs -f intel-api
+```
+
+---
+
+
+
+##  Academic & Industry Alignment
 
 This project demonstrates:
 
 * End-to-end CTI lifecycle automation
-* AI-assisted intelligence analysis
-* OSINT enrichment at scale
-* STIX/TAXII-compliant intelligence sharing
-* Real SOC-style architecture
+* Strategic CTI automation
+* Decision-focused intelligence analysis
+* SOC-aligned architecture
+* Practical use of OpenCTI, STIX, and TAXII
+* Real-world security automation patterns
 
-It aligns with professional roles such as:
-
-* CTI Analyst
-* SOC Analyst
-* Threat Researcher
-* Security Automation Engineer
+It reflects how **modern SOCs and CERT teams** use CTI to support **risk-based decisions**, not just IOC feeds.
 
 ---
 
-## 13. Key Design Justification
+## 10. Conclusion
 
-> SpiderFoot is intentionally deployed both as an analyst-driven OSINT tool (Layer 1) and as a fully automated enrichment engine (Layer 4), reflecting real-world CTI operational models.
+This platform shows how Cyber Threat Intelligence can be elevated from **data collection** to **automated security decision-making**.
+
+By integrating collection, enrichment, correlation, and a **Strategic Decision Engine**, the system delivers **actionable intelligence at scale**, suitable for enterprise and national-level security operations.
+
+
