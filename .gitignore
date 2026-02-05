@@ -5,3 +5,10 @@ __pycache__/
 .vscode/
 .DS_Store
 *.safetensors
+# Ignore Python virtual environment
+myven/
+venv/
+
+# Ignore ML model files
+services/ml-ner-enricher/models/
+
