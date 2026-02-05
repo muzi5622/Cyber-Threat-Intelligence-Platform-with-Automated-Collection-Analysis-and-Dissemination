@@ -241,11 +241,6 @@ docker compose ps
 * RabbitMQ Management
   `http://<server-ip>:15672`
 
-* SpiderFoot UI
-  `http://<server-ip>:5001`
-
-* SpiderFoot (Clean URL)
-  `http://<server-ip>:5002/spiderfoot`
 
 * STIX Bundle
   `http://<server-ip>:9000/bundle.json`
@@ -266,11 +261,6 @@ docker compose logs -f rss-ingestor
 docker compose logs -f nlp-enricher
 ```
 
-### SpiderFoot Automation
-
-```bash
-docker compose logs -f spiderfoot-automation
-```
 
 ### TAXII Output
 
