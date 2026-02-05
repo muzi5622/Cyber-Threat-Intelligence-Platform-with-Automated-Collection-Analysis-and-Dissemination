@@ -224,6 +224,28 @@ services:
       - opencti
     restart: unless-stopped
 
+  ml-ner-enricher:
+    build: ./services/ml-ner-enricher
+    restart: unless-stopped
+    depends_on:
+      - opencti
+    environment:
+      - OPENCTI_BASE=http://opencti:8080
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - MODEL_PATH=/app/models/cti_ner_model_n
+      - NER_THRESHOLD=0.55
+      - POLL_SECONDS=60
+      - LOOKBACK_HOURS=24
+      - BATCH_SIZE=50
+      - CREATE_OBSERVABLES=true
+      - CREATE_ENTITIES=false
+      - STATE_PATH=/data/state.json
+    volumes:
+      - ./data/ml:/data
+
+
+    
+
   intel-api:
     # Optional API you built (example: serve latest IOCs/reports to other tools)
     build: ./services/intel-api
