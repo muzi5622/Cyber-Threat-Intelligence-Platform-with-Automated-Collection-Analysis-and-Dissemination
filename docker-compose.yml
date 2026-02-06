@@ -216,7 +216,7 @@ services:
     - ALIENVAULT_PULSE_START_TIMESTAMP=2026-02-01T00:00:00
 
     # ✅ schedule using OpenCTI standard
-    - CONNECTOR_DURATION_PERIOD=PT5M
+    - CONNECTOR_DURATION_PERIOD=PT6H
 
     depends_on:
       opencti:
