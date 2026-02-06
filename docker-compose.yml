@@ -1,3 +1,4 @@
+
 version: "3.9"
 
 services:
@@ -196,23 +197,26 @@ services:
     image: opencti/connector-alienvault:6.9.13
     restart: unless-stopped
     environment:
-      - OPENCTI_URL=http://opencti:8080
-      - OPENCTI_TOKEN=${OPENCTI_CONNECTOR_TOKEN}
+    - OPENCTI_URL=http://opencti:8080
+    - OPENCTI_TOKEN=${OPENCTI_CONNECTOR_TOKEN}
+    - CONNECTOR_ID=${CONNECTOR_ALIENVAULT_ID}
+    - CONNECTOR_TYPE=EXTERNAL_IMPORT
+    - CONNECTOR_NAME=AlienVault OTX
+    - CONNECTOR_SCOPE=alienvault
+    - CONNECTOR_LOG_LEVEL=info
 
-      - CONNECTOR_ID=alienvault-otx
-      - CONNECTOR_TYPE=EXTERNAL_IMPORT
-      - CONNECTOR_NAME=AlienVault OTX
-      - CONNECTOR_SCOPE=alienvault
-      - CONNECTOR_CONFIDENCE_LEVEL=70
-      - CONNECTOR_UPDATE_EXISTING_DATA=true
-      - CONNECTOR_LOG_LEVEL=info
+    # OTX
+    - ALIENVAULT_API_KEY=${OTX_API_KEY}
 
-      # OTX specific
-      - ALIENVAULT_API_KEY=${OTX_API_KEY}
-      - ALIENVAULT_PULSE_INTERVAL=12  # hours
-      - ALIENVAULT_IMPORT_INDICATORS=true
-      - ALIENVAULT_IMPORT_PULSES=true
-      - ALIENVAULT_CREATE_OBSERVABLES=true
+    # ✅ IMPORTANT: stop data explosion
+    - ALIENVAULT_CREATE_OBSERVABLES=false
+    - ALIENVAULT_CREATE_INDICATORS=false
+
+    # ✅ IMPORTANT: don’t import from 2020; start recent
+    - ALIENVAULT_PULSE_START_TIMESTAMP=2026-02-01T00:00:00
+
+    # ✅ schedule using OpenCTI standard
+    - CONNECTOR_DURATION_PERIOD=PT5M
 
     depends_on:
       opencti:
@@ -274,7 +278,7 @@ services:
       - ./data/ml:/data
 
 
-    
+
 
   intel-api:
     # Optional API you built (example: serve latest IOCs/reports to other tools)
@@ -353,4 +357,3 @@ services:
 volumes:
   esdata:
   miniodata:
- 
