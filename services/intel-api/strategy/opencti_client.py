@@ -5,6 +5,13 @@ from datetime import datetime, timezone
 
 
 class OpenCTIClient:
+    """
+    Minimal OpenCTI GraphQL client for Strategy engine (OpenCTI 6.9.x).
+
+    NOTE:
+    - stixCyberObservables does NOT have `confidence` in OpenCTI 6.9.15 schema.
+    """
+
     def __init__(self):
         self.base_url = os.getenv("OPENCTI_BASE", "http://opencti:8080").rstrip("/")
         self.token = os.getenv("OPENCTI_TOKEN", "")
@@ -21,16 +28,18 @@ class OpenCTIClient:
         )
 
     def graphql(self, query: str, variables: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
-        r = self.session.post(self.endpoint, json={"query": query, "variables": variables or {}}, timeout=30)
+        r = self.session.post(
+            self.endpoint,
+            json={"query": query, "variables": variables or {}},
+            timeout=30,
+        )
         r.raise_for_status()
         data = r.json()
         if "errors" in data:
             raise RuntimeError(data["errors"])
         return data["data"]
 
-    # ---- Queries ----
     def list_reports(self, start_iso: str, end_iso: str, first: int = 200) -> Dict[str, Any]:
-        # ✅ removed x_opencti_score (not on Report in your schema)
         q = """
         query Reports($filters: FilterGroup, $first: Int!) {
           reports(filters: $filters, first: $first, orderBy: created_at, orderMode: desc) {
@@ -84,10 +93,7 @@ class OpenCTIClient:
         }
         return self.graphql(q, {"filters": filters, "first": first})
 
-    # ---- Mutations ----
     def create_report(self, name: str, description: str, confidence: int = 70) -> str:
-        # ✅ your schema: published is NON_NULL DateTime, not boolean
-        # ✅ report_types is optional list, but we set a safe default
         q = """
         mutation CreateReport($input: ReportAddInput!) {
           reportAdd(input: $input) { id }

@@ -6,6 +6,195 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "id": "indicator--5676e940149d",
+      "name": "IOC 59.184.247.121",
+      "pattern": "[x-opencti:value = '59.184.247.121']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--91384e4ec86d",
+      "name": "IOC 42.232.74.167",
+      "pattern": "[x-opencti:value = '42.232.74.167']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e7c1ec203681",
+      "name": "IOC 39.71.228.38",
+      "pattern": "[x-opencti:value = '39.71.228.38']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1d0f8a7f3de3",
+      "name": "IOC 222.139.103.245",
+      "pattern": "[x-opencti:value = '222.139.103.245']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--befad9034666",
+      "name": "IOC 125.42.229.7",
+      "pattern": "[x-opencti:value = '125.42.229.7']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--897c8758c7eb",
+      "name": "IOC 110.37.40.14",
+      "pattern": "[x-opencti:value = '110.37.40.14']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--38ec6562442c",
+      "name": "IOC fjolml5b.dursamurai.digital",
+      "pattern": "[x-opencti:value = 'fjolml5b.dursamurai.digital']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--21665bcadf61",
+      "name": "IOC vnc.exe",
+      "pattern": "[x-opencti:value = 'vnc.exe']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a2ad846e4a19",
+      "name": "IOC svclsc.com",
+      "pattern": "[x-opencti:value = 'svclsc.com']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8dbe8828dd88",
+      "name": "IOC 60.22.111.39",
+      "pattern": "[x-opencti:value = '60.22.111.39']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7daa6c5ea429",
+      "name": "IOC 123.190.131.117",
+      "pattern": "[x-opencti:value = '123.190.131.117']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9cb205a22bcd",
+      "name": "IOC 112.93.202.34",
+      "pattern": "[x-opencti:value = '112.93.202.34']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c6c964e4c979",
+      "name": "IOC 59.96.143.210",
+      "pattern": "[x-opencti:value = '59.96.143.210']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--21df6d9c1277",
+      "name": "IOC 42.224.11.192",
+      "pattern": "[x-opencti:value = '42.224.11.192']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b7c64a60271f",
+      "name": "IOC 110.37.8.198",
+      "pattern": "[x-opencti:value = '110.37.8.198']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--64ca18468ea3",
+      "name": "IOC 110.37.0.190",
+      "pattern": "[x-opencti:value = '110.37.0.190']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b3a98ae83a26",
+      "name": "IOC http://110.37.0.190:35024/i",
+      "pattern": "[x-opencti:value = 'http://110.37.0.190:35024/i']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--894a970b773b",
+      "name": "IOC http://110.37.8.198:35062/i",
+      "pattern": "[x-opencti:value = 'http://110.37.8.198:35062/i']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9c7224266836",
+      "name": "IOC http://svclsc.com/ms/Plugins/vnc.exe",
+      "pattern": "[x-opencti:value = 'http://svclsc.com/ms/Plugins/vnc.exe']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f8703b9e7670",
+      "name": "IOC http://42.224.11.192:38078/bin.sh",
+      "pattern": "[x-opencti:value = 'http://42.224.11.192:38078/bin.sh']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--af584ea0fe3b",
+      "name": "IOC http://59.96.143.210:34992/bin.sh",
+      "pattern": "[x-opencti:value = 'http://59.96.143.210:34992/bin.sh']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ef68b46afba6",
+      "name": "IOC http://112.93.202.34:53783/bin.sh",
+      "pattern": "[x-opencti:value = 'http://112.93.202.34:53783/bin.sh']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--273fa63004ff",
+      "name": "IOC https://fjolml5b.dursamurai.digital/?=check&&actmn=TfsoBLpnLIhHwniL",
+      "pattern": "[x-opencti:value = 'https://fjolml5b.dursamurai.digital/?=check&&actmn=TfsoBLpnLIhHwniL']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--37607b8c6b3f",
+      "name": "IOC http://123.190.131.117:39119/bin.sh",
+      "pattern": "[x-opencti:value = 'http://123.190.131.117:39119/bin.sh']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--52b94025c563",
+      "name": "IOC http://60.22.111.39:36984/i",
+      "pattern": "[x-opencti:value = 'http://60.22.111.39:36984/i']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2f9078ed5282",
+      "name": "IOC http://42.224.11.192:38078/i",
+      "pattern": "[x-opencti:value = 'http://42.224.11.192:38078/i']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f3c4b8d2e2f6",
+      "name": "IOC http://125.42.229.7:34629/i",
+      "pattern": "[x-opencti:value = 'http://125.42.229.7:34629/i']"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
       "id": "indicator--b6c8d2ffffc0",
       "name": "IOC 61.52.158.27",
       "pattern": "[x-opencti:value = '61.52.158.27']"
@@ -1213,195 +1402,6 @@
       "id": "indicator--c07c64b14a4d",
       "name": "IOC http://222.137.87.189:56295/i",
       "pattern": "[x-opencti:value = 'http://222.137.87.189:56295/i']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--c52bd44f125f",
-      "name": "IOC http://36.22.117.42:55323/i",
-      "pattern": "[x-opencti:value = 'http://36.22.117.42:55323/i']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--425c560253b4",
-      "name": "IOC http://123.189.21.224:33276/bin.sh",
-      "pattern": "[x-opencti:value = 'http://123.189.21.224:33276/bin.sh']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--717ed59a395f",
-      "name": "IOC http://158.94.210.195/bins/sora.mpsl",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.mpsl']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--79d052a11936",
-      "name": "IOC http://158.94.210.195/bins/sora.spc",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.spc']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--3330dbad75d9",
-      "name": "IOC http://158.94.210.195/bins/sora.m68k",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.m68k']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--0d7a177af794",
-      "name": "IOC http://158.94.210.195/bins/sora.ppc",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.ppc']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--85189dbdee41",
-      "name": "IOC http://158.94.210.195/bins/sora.arm",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.arm']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--fbe387a730c9",
-      "name": "IOC http://158.94.210.195/bins/sora.x86",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.x86']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--557ea1ef3379",
-      "name": "IOC http://158.94.210.195/bins/sora.arm5",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.arm5']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--d40228b1d28b",
-      "name": "IOC http://158.94.210.195/bins/sora.mips",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.mips']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--e17e21ca9097",
-      "name": "IOC http://158.94.210.195/bins/sora.x86_64",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.x86_64']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--a9156775c6f1",
-      "name": "IOC http://158.94.210.195/bins/sora.arm7",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.arm7']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--24bf6805090d",
-      "name": "IOC http://158.94.210.195/bins/sora.sh4",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.sh4']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--538881465e4d",
-      "name": "IOC http://158.94.210.195/bins/sora.arm6",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.arm6']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--893779cda5b4",
-      "name": "IOC http://158.94.210.195/bins/sora.i686",
-      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.i686']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--2a6acddb7925",
-      "name": "IOC http://115.50.231.21:55172/i",
-      "pattern": "[x-opencti:value = 'http://115.50.231.21:55172/i']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--d97ab7d94e4d",
-      "name": "IOC http://1.181.224.7:49926/bin.sh",
-      "pattern": "[x-opencti:value = 'http://1.181.224.7:49926/bin.sh']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--6021d80136b2",
-      "name": "IOC http://221.13.248.176:36465/bin.sh",
-      "pattern": "[x-opencti:value = 'http://221.13.248.176:36465/bin.sh']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--d15ea27fce78",
-      "name": "IOC http://123.12.231.138:52055/bin.sh",
-      "pattern": "[x-opencti:value = 'http://123.12.231.138:52055/bin.sh']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--e3701d34acfd",
-      "name": "IOC http://117.209.90.100:46189/bin.sh",
-      "pattern": "[x-opencti:value = 'http://117.209.90.100:46189/bin.sh']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--8e4056ac7002",
-      "name": "IOC http://125.45.17.92:55141/i",
-      "pattern": "[x-opencti:value = 'http://125.45.17.92:55141/i']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--1f003a6cb968",
-      "name": "IOC http://182.114.248.66:60964/i",
-      "pattern": "[x-opencti:value = 'http://182.114.248.66:60964/i']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--4ddbb0996d95",
-      "name": "IOC http://125.41.225.143:59986/i",
-      "pattern": "[x-opencti:value = 'http://125.41.225.143:59986/i']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--498457fcd2fa",
-      "name": "IOC http://182.121.178.91:42593/bin.sh",
-      "pattern": "[x-opencti:value = 'http://182.121.178.91:42593/bin.sh']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--03f68fdeb304",
-      "name": "IOC http://123.5.125.131:43652/bin.sh",
-      "pattern": "[x-opencti:value = 'http://123.5.125.131:43652/bin.sh']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--c9db0e09e6a1",
-      "name": "IOC http://110.39.230.2:58126/bin.sh",
-      "pattern": "[x-opencti:value = 'http://110.39.230.2:58126/bin.sh']"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--f6fd5e5c219b",
-      "name": "IOC http://182.116.48.199:53383/bin.sh",
-      "pattern": "[x-opencti:value = 'http://182.116.48.199:53383/bin.sh']"
     }
   ]
 }

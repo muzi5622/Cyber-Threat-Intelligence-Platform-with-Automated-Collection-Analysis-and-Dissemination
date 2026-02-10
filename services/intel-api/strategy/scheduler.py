@@ -28,12 +28,11 @@ def run_weekly():
     return {"report_id": report_id, "name": result["report_name"]}
 
 
-# ---------- NEW ----------
 def run_monthly():
     client = OpenCTIClient()
     result = build_monthly_landscape(CFG_PATH, days=30)
     report_id = client.create_report(result["report_name"], result["description"], confidence=80)
-    print(f"[STRATEGY] Monthly landscape report created: {report_id}")
+    print(f"[STRATEGY] Monthly report created: {report_id}")
     return {"report_id": report_id, "name": result["report_name"]}
 
 
