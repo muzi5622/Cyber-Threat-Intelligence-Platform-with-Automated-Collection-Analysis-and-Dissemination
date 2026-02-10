@@ -6,1402 +6,1402 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--be752190a7dc",
-      "name": "IOC finger.exe",
-      "pattern": "[x-opencti:value = 'finger.exe']"
+      "id": "indicator--b6c8d2ffffc0",
+      "name": "IOC 61.52.158.27",
+      "pattern": "[x-opencti:value = '61.52.158.27']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--194f15533140",
-      "name": "IOC cmd.exe",
-      "pattern": "[x-opencti:value = 'cmd.exe']"
+      "id": "indicator--9e54e980a9c7",
+      "name": "IOC 42.235.99.143",
+      "pattern": "[x-opencti:value = '42.235.99.143']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--06b35a52c543",
-      "name": "IOC reload.exe",
-      "pattern": "[x-opencti:value = 'reload.exe']"
+      "id": "indicator--a76e6a71d2aa",
+      "name": "IOC 39.79.1.35",
+      "pattern": "[x-opencti:value = '39.79.1.35']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8bd748230c4b",
-      "name": "IOC http://130.12.180.20:34029/mps",
-      "pattern": "[x-opencti:value = 'http://130.12.180.20:34029/mps']"
+      "id": "indicator--6262866e4422",
+      "name": "IOC 182.117.27.59",
+      "pattern": "[x-opencti:value = '182.117.27.59']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--55844eedc6b9",
-      "name": "IOC http://130.12.180.20:36695/mps",
-      "pattern": "[x-opencti:value = 'http://130.12.180.20:36695/mps']"
+      "id": "indicator--6d30cb9e8e38",
+      "name": "IOC 123.5.118.90",
+      "pattern": "[x-opencti:value = '123.5.118.90']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--44b96f728934",
-      "name": "IOC http://169.40.135.185/bot.x86_64",
-      "pattern": "[x-opencti:value = 'http://169.40.135.185/bot.x86_64']"
+      "id": "indicator--c0ad50a71c16",
+      "name": "IOC 110.37.72.40",
+      "pattern": "[x-opencti:value = '110.37.72.40']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--75769b652ef5",
-      "name": "IOC http://169.40.135.185/sex.sh",
-      "pattern": "[x-opencti:value = 'http://169.40.135.185/sex.sh']"
+      "id": "indicator--25a73617f6fc",
+      "name": "IOC 106.59.0.186",
+      "pattern": "[x-opencti:value = '106.59.0.186']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7d8687d3319a",
-      "name": "IOC http://61.52.157.88:37027/bin.sh",
-      "pattern": "[x-opencti:value = 'http://61.52.157.88:37027/bin.sh']"
+      "id": "indicator--0aa89a52000a",
+      "name": "IOC cdn.jsdelivr.net",
+      "pattern": "[x-opencti:value = 'cdn.jsdelivr.net']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f4456d67036a",
-      "name": "IOC http://45.230.66.110:10185/Mozi.a",
-      "pattern": "[x-opencti:value = 'http://45.230.66.110:10185/Mozi.a']"
+      "id": "indicator--c847daabf081",
+      "name": "IOC bin.sh",
+      "pattern": "[x-opencti:value = 'bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a54b521e6f46",
-      "name": "IOC http://112.31.189.32:44947/Mozi.m",
-      "pattern": "[x-opencti:value = 'http://112.31.189.32:44947/Mozi.m']"
+      "id": "indicator--0bd116d122cd",
+      "name": "IOC 120.61.18.90",
+      "pattern": "[x-opencti:value = '120.61.18.90']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--888dc43e0182",
-      "name": "IOC http://223.123.43.0:53639/Mozi.m",
-      "pattern": "[x-opencti:value = 'http://223.123.43.0:53639/Mozi.m']"
+      "id": "indicator--55fde3ad7075",
+      "name": "IOC 61.3.111.14",
+      "pattern": "[x-opencti:value = '61.3.111.14']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c12645a9c2e1",
-      "name": "IOC http://130.12.180.43/files/7903503838/crvTLU1.exe",
-      "pattern": "[x-opencti:value = 'http://130.12.180.43/files/7903503838/crvTLU1.exe']"
+      "id": "indicator--26329cb53e01",
+      "name": "IOC 222.137.146.85",
+      "pattern": "[x-opencti:value = '222.137.146.85']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5991215426cd",
-      "name": "IOC http://42.56.135.195:58845/i",
-      "pattern": "[x-opencti:value = 'http://42.56.135.195:58845/i']"
+      "id": "indicator--7cf348fc8f51",
+      "name": "IOC 175.175.15.47",
+      "pattern": "[x-opencti:value = '175.175.15.47']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--add338fef5e2",
-      "name": "IOC http://182.121.233.96:42593/i",
-      "pattern": "[x-opencti:value = 'http://182.121.233.96:42593/i']"
+      "id": "indicator--f228cb6c4d51",
+      "name": "IOC http://175.175.15.47:54526/i",
+      "pattern": "[x-opencti:value = 'http://175.175.15.47:54526/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d7acd2134475",
-      "name": "IOC http://59.177.99.2:44690/i",
-      "pattern": "[x-opencti:value = 'http://59.177.99.2:44690/i']"
+      "id": "indicator--8fa2e3a3d645",
+      "name": "IOC http://222.137.146.85:55026/bin.sh",
+      "pattern": "[x-opencti:value = 'http://222.137.146.85:55026/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--99db7030a9de",
-      "name": "IOC http://130.12.180.43/files/8360091208/VD4ZhoY.exe",
-      "pattern": "[x-opencti:value = 'http://130.12.180.43/files/8360091208/VD4ZhoY.exe']"
+      "id": "indicator--4da3278646d1",
+      "name": "IOC http://61.3.111.14:39508/bin.sh",
+      "pattern": "[x-opencti:value = 'http://61.3.111.14:39508/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f24cb66fbde5",
-      "name": "IOC http://115.61.15.15:49225/i",
-      "pattern": "[x-opencti:value = 'http://115.61.15.15:49225/i']"
+      "id": "indicator--98449f992678",
+      "name": "IOC https://cdn.jsdelivr.net/gh/keys53/c10ud/vik",
+      "pattern": "[x-opencti:value = 'https://cdn.jsdelivr.net/gh/keys53/c10ud/vik']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1930562a77ac",
-      "name": "IOC http://42.5.229.64:50685/bin.sh",
-      "pattern": "[x-opencti:value = 'http://42.5.229.64:50685/bin.sh']"
+      "id": "indicator--61d82a8b3052",
+      "name": "IOC http://120.61.18.90:40374/bin.sh",
+      "pattern": "[x-opencti:value = 'http://120.61.18.90:40374/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--aa52c685404e",
-      "name": "IOC http://182.60.11.195:53524/bin.sh",
-      "pattern": "[x-opencti:value = 'http://182.60.11.195:53524/bin.sh']"
+      "id": "indicator--e5fb1a7c85c3",
+      "name": "IOC http://61.52.158.27:58817/bin.sh",
+      "pattern": "[x-opencti:value = 'http://61.52.158.27:58817/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3dd941573b4a",
-      "name": "IOC http://41.216.189.183:8080/payload/yd2fx0.sh?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ",
-      "pattern": "[x-opencti:value = 'http://41.216.189.183:8080/payload/yd2fx0.sh?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ']"
+      "id": "indicator--e3cdcba424ce",
+      "name": "IOC http://110.37.72.40:53660/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.37.72.40:53660/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2368daff079c",
-      "name": "IOC http://185.19.33.145/ep9TS2/ndt.sh",
-      "pattern": "[x-opencti:value = 'http://185.19.33.145/ep9TS2/ndt.sh']"
+      "id": "indicator--7ae48eaeb986",
+      "name": "IOC http://106.59.0.186:43445/bin.sh",
+      "pattern": "[x-opencti:value = 'http://106.59.0.186:43445/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8112e2c74f44",
-      "name": "IOC http://41.216.189.183:8080/payload/kimhppnwpr?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ",
-      "pattern": "[x-opencti:value = 'http://41.216.189.183:8080/payload/kimhppnwpr?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ']"
+      "id": "indicator--3444fadff364",
+      "name": "IOC http://123.5.118.90:58921/bin.sh",
+      "pattern": "[x-opencti:value = 'http://123.5.118.90:58921/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--784b0dc4de7f",
-      "name": "IOC http://41.216.189.183:8080/payload/aiqar0oflu?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ",
-      "pattern": "[x-opencti:value = 'http://41.216.189.183:8080/payload/aiqar0oflu?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ']"
+      "id": "indicator--0d52e14226a5",
+      "name": "IOC http://39.79.1.35:52082/bin.sh",
+      "pattern": "[x-opencti:value = 'http://39.79.1.35:52082/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--172745bd7a03",
-      "name": "IOC http://41.216.189.183:8080/payload/6xoddlp2gp?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ",
-      "pattern": "[x-opencti:value = 'http://41.216.189.183:8080/payload/6xoddlp2gp?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ']"
+      "id": "indicator--487713562312",
+      "name": "IOC http://61.3.111.14:39508/i",
+      "pattern": "[x-opencti:value = 'http://61.3.111.14:39508/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f1db24e6f7b0",
-      "name": "IOC http://41.216.189.183:8080/payload/9dknjsh6kw?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ",
-      "pattern": "[x-opencti:value = 'http://41.216.189.183:8080/payload/9dknjsh6kw?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ']"
+      "id": "indicator--fb86a68d4115",
+      "name": "IOC http://182.117.27.59:51321/i",
+      "pattern": "[x-opencti:value = 'http://182.117.27.59:51321/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--45cd580c90b1",
-      "name": "IOC http://41.216.189.183:8080/payload/d50gwrf8bh?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ",
-      "pattern": "[x-opencti:value = 'http://41.216.189.183:8080/payload/d50gwrf8bh?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ']"
+      "id": "indicator--ea84ce724291",
+      "name": "IOC http://120.61.18.90:40374/i",
+      "pattern": "[x-opencti:value = 'http://120.61.18.90:40374/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f040139088e3",
-      "name": "IOC http://41.216.189.183:8080/payload/oawy5x7ofd?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ",
-      "pattern": "[x-opencti:value = 'http://41.216.189.183:8080/payload/oawy5x7ofd?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ']"
+      "id": "indicator--ff995b54341e",
+      "name": "IOC http://42.235.99.143:34496/bin.sh",
+      "pattern": "[x-opencti:value = 'http://42.235.99.143:34496/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c7a2bb941f28",
-      "name": "IOC http://41.216.189.183:8080/payload/qdeqhoau8d?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ",
-      "pattern": "[x-opencti:value = 'http://41.216.189.183:8080/payload/qdeqhoau8d?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ']"
+      "id": "indicator--c7bda26df206",
+      "name": "IOC http://123.5.118.90:58921/i",
+      "pattern": "[x-opencti:value = 'http://123.5.118.90:58921/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0ecef7541c62",
-      "name": "IOC http://41.216.189.183:8080/payload/fqora4f4op?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ",
-      "pattern": "[x-opencti:value = 'http://41.216.189.183:8080/payload/fqora4f4op?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ']"
+      "id": "indicator--9127ad9dac58",
+      "name": "IOC http://110.37.72.40:53660/i",
+      "pattern": "[x-opencti:value = 'http://110.37.72.40:53660/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--14de54485a09",
-      "name": "IOC http://41.216.189.183:8080/payload/nekmrfwc5o?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ",
-      "pattern": "[x-opencti:value = 'http://41.216.189.183:8080/payload/nekmrfwc5o?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ']"
+      "id": "indicator--e81a31ed1dec",
+      "name": "IOC http://59.184.247.121:44296/bin.sh",
+      "pattern": "[x-opencti:value = 'http://59.184.247.121:44296/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c5feff1465a3",
-      "name": "IOC http://41.216.189.183:8080/payload/7vq676dd56?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ",
-      "pattern": "[x-opencti:value = 'http://41.216.189.183:8080/payload/7vq676dd56?token=0ClkpLLcj8n0JMA176t7u0Sv4FByP4vJ']"
+      "id": "indicator--1ad653cee8be",
+      "name": "IOC http://39.79.1.35:52082/i",
+      "pattern": "[x-opencti:value = 'http://39.79.1.35:52082/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2e8584f1d5de",
-      "name": "IOC http://181.103.0.149:54881/i",
-      "pattern": "[x-opencti:value = 'http://181.103.0.149:54881/i']"
+      "id": "indicator--adffaca1b764",
+      "name": "IOC http://42.235.99.143:34496/i",
+      "pattern": "[x-opencti:value = 'http://42.235.99.143:34496/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9cbe6214e2e0",
-      "name": "IOC http://113.236.157.178:40043/bin.sh",
-      "pattern": "[x-opencti:value = 'http://113.236.157.178:40043/bin.sh']"
+      "id": "indicator--e061255ff33e",
+      "name": "IOC https://cdn.jsdelivr.net/gh/keys53/c10ud/oph",
+      "pattern": "[x-opencti:value = 'https://cdn.jsdelivr.net/gh/keys53/c10ud/oph']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d7b440258271",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.i686",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.i686']"
+      "id": "indicator--0ecfc4992711",
+      "name": "IOC http://222.139.103.245:38717/bin.sh",
+      "pattern": "[x-opencti:value = 'http://222.139.103.245:38717/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--22ad653d8445",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.i468",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.i468']"
+      "id": "indicator--ec882d7d1e77",
+      "name": "IOC http://110.37.40.14:49466/i",
+      "pattern": "[x-opencti:value = 'http://110.37.40.14:49466/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--610d5447f2f2",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.x86_64",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.x86_64']"
+      "id": "indicator--b9d4a0b3740d",
+      "name": "IOC http://39.71.228.38:41655/i",
+      "pattern": "[x-opencti:value = 'http://39.71.228.38:41655/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3827af840273",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.arm6",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.arm6']"
+      "id": "indicator--c8e16fc34ee6",
+      "name": "IOC http://42.232.74.167:34378/bin.sh",
+      "pattern": "[x-opencti:value = 'http://42.232.74.167:34378/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0fc18f4cc2e9",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.arm5",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.arm5']"
+      "id": "indicator--0cfe291b85fe",
+      "name": "IOC http://61.53.110.27:45380/i",
+      "pattern": "[x-opencti:value = 'http://61.53.110.27:45380/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4ad977ea7b1e",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.mpsl",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.mpsl']"
+      "id": "indicator--81191ef96952",
+      "name": "IOC http://59.184.247.121:44296/i",
+      "pattern": "[x-opencti:value = 'http://59.184.247.121:44296/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6caa2680cb6b",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.x86",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.x86']"
+      "id": "indicator--84074d5e9692",
+      "name": "IOC http://222.139.103.245:38717/i",
+      "pattern": "[x-opencti:value = 'http://222.139.103.245:38717/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--586bdc76d8e0",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.mips",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.mips']"
+      "id": "indicator--2a2bdedfa199",
+      "name": "IOC http://112.248.160.224:52726/i",
+      "pattern": "[x-opencti:value = 'http://112.248.160.224:52726/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b72f6ea1e7b4",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.arm",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.arm']"
+      "id": "indicator--4d89572c5941",
+      "name": "IOC http://123.5.125.202:37221/bin.sh",
+      "pattern": "[x-opencti:value = 'http://123.5.125.202:37221/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--541e8d0f65be",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.spc",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.spc']"
+      "id": "indicator--d47e67773ecb",
+      "name": "IOC http://114.217.63.147:47958/bin.sh",
+      "pattern": "[x-opencti:value = 'http://114.217.63.147:47958/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a8cff6398c91",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.ppc",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.ppc']"
+      "id": "indicator--c483fd8b80c1",
+      "name": "IOC http://123.4.46.23:59243/bin.sh",
+      "pattern": "[x-opencti:value = 'http://123.4.46.23:59243/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--160be09faa40",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.arm7",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.arm7']"
+      "id": "indicator--e59bc15fcd66",
+      "name": "IOC http://42.232.74.167:34378/i",
+      "pattern": "[x-opencti:value = 'http://42.232.74.167:34378/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--80e92b847407",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.arc",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.arc']"
+      "id": "indicator--8beaa7d7d845",
+      "name": "IOC http://219.155.254.62:49369/bin.sh",
+      "pattern": "[x-opencti:value = 'http://219.155.254.62:49369/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7762aa8f2478",
-      "name": "IOC http://64.89.163.109/hiddenbin/boatnet.m68k",
-      "pattern": "[x-opencti:value = 'http://64.89.163.109/hiddenbin/boatnet.m68k']"
+      "id": "indicator--da1141fef48b",
+      "name": "IOC http://114.217.63.147:47958/i",
+      "pattern": "[x-opencti:value = 'http://114.217.63.147:47958/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--386b96be23f7",
-      "name": "IOC http://42.5.229.64:50685/i",
-      "pattern": "[x-opencti:value = 'http://42.5.229.64:50685/i']"
+      "id": "indicator--a46638de70f8",
+      "name": "IOC http://123.4.46.23:59243/i",
+      "pattern": "[x-opencti:value = 'http://123.4.46.23:59243/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2a0fa00abdd3",
-      "name": "IOC http://36.88.136.202:48353/bin.sh",
-      "pattern": "[x-opencti:value = 'http://36.88.136.202:48353/bin.sh']"
+      "id": "indicator--ae3827e92895",
+      "name": "IOC http://219.155.254.62:49369/i",
+      "pattern": "[x-opencti:value = 'http://219.155.254.62:49369/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--27135ebbd2a2",
-      "name": "IOC http://115.61.120.178:45839/bin.sh",
-      "pattern": "[x-opencti:value = 'http://115.61.120.178:45839/bin.sh']"
+      "id": "indicator--3a14b889c179",
+      "name": "IOC http://182.123.253.108:48135/i",
+      "pattern": "[x-opencti:value = 'http://182.123.253.108:48135/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fb9ad31c37d4",
-      "name": "IOC http://182.60.11.195:53524/i",
-      "pattern": "[x-opencti:value = 'http://182.60.11.195:53524/i']"
+      "id": "indicator--648f8d232df1",
+      "name": "IOC http://5.133.139.91:53098/.i",
+      "pattern": "[x-opencti:value = 'http://5.133.139.91:53098/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b513877c72c5",
-      "name": "IOC http://115.56.5.1:52628/i",
-      "pattern": "[x-opencti:value = 'http://115.56.5.1:52628/i']"
+      "id": "indicator--9b82f18ffa06",
+      "name": "IOC http://182.112.7.84:37056/bin.sh",
+      "pattern": "[x-opencti:value = 'http://182.112.7.84:37056/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--cfbf2047c4fe",
-      "name": "IOC http://115.50.94.3:34903/bin.sh",
-      "pattern": "[x-opencti:value = 'http://115.50.94.3:34903/bin.sh']"
+      "id": "indicator--6d3becdcd05a",
+      "name": "IOC http://143.255.240.195:31790/.i",
+      "pattern": "[x-opencti:value = 'http://143.255.240.195:31790/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b44a2ea091cc",
-      "name": "IOC http://176.226.208.187:50442/i",
-      "pattern": "[x-opencti:value = 'http://176.226.208.187:50442/i']"
+      "id": "indicator--f2c4d15dc6ba",
+      "name": "IOC http://203.190.54.34:4693/.i",
+      "pattern": "[x-opencti:value = 'http://203.190.54.34:4693/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--55f510644fb8",
-      "name": "IOC http://115.61.120.178:45839/i",
-      "pattern": "[x-opencti:value = 'http://115.61.120.178:45839/i']"
+      "id": "indicator--387fe6caf312",
+      "name": "IOC http://95.139.107.233:56142/.i",
+      "pattern": "[x-opencti:value = 'http://95.139.107.233:56142/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--71bb8f328d91",
-      "name": "IOC http://117.254.127.193:47348/i",
-      "pattern": "[x-opencti:value = 'http://117.254.127.193:47348/i']"
+      "id": "indicator--57261532c142",
+      "name": "IOC http://2.103.70.96:61365/.i",
+      "pattern": "[x-opencti:value = 'http://2.103.70.96:61365/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--239b77ce19f4",
-      "name": "IOC http://113.236.157.178:40043/i",
-      "pattern": "[x-opencti:value = 'http://113.236.157.178:40043/i']"
+      "id": "indicator--f8af05ba3f50",
+      "name": "IOC http://59.183.126.142:12618/.i",
+      "pattern": "[x-opencti:value = 'http://59.183.126.142:12618/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8fd5a1ce417f",
-      "name": "IOC http://115.48.148.147:38895/bin.sh",
-      "pattern": "[x-opencti:value = 'http://115.48.148.147:38895/bin.sh']"
+      "id": "indicator--7a3838455616",
+      "name": "IOC http://194.36.197.3:61741/.i",
+      "pattern": "[x-opencti:value = 'http://194.36.197.3:61741/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--45e1ea72a9b5",
-      "name": "IOC http://42.5.249.99:51344/i",
-      "pattern": "[x-opencti:value = 'http://42.5.249.99:51344/i']"
+      "id": "indicator--52a257405158",
+      "name": "IOC http://92.83.216.226:36902/.i",
+      "pattern": "[x-opencti:value = 'http://92.83.216.226:36902/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--746c0a345efd",
-      "name": "IOC http://61.2.146.192:59208/bin.sh",
-      "pattern": "[x-opencti:value = 'http://61.2.146.192:59208/bin.sh']"
+      "id": "indicator--47c3d9306878",
+      "name": "IOC http://24.245.129.91:21220/.i",
+      "pattern": "[x-opencti:value = 'http://24.245.129.91:21220/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3c099b477559",
-      "name": "IOC http://221.1.227.167:57682/bin.sh",
-      "pattern": "[x-opencti:value = 'http://221.1.227.167:57682/bin.sh']"
+      "id": "indicator--bde279fe6535",
+      "name": "IOC http://181.166.103.98:24408/.i",
+      "pattern": "[x-opencti:value = 'http://181.166.103.98:24408/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0d37dab3ae2d",
-      "name": "IOC http://117.196.128.247:49948/bin.sh",
-      "pattern": "[x-opencti:value = 'http://117.196.128.247:49948/bin.sh']"
+      "id": "indicator--3a881ca14b40",
+      "name": "IOC http://46.109.73.17:43046/.i",
+      "pattern": "[x-opencti:value = 'http://46.109.73.17:43046/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--39ba5f8eb0b8",
-      "name": "IOC http://130.12.180.43/files/7924412375/upOSLDn.bat",
-      "pattern": "[x-opencti:value = 'http://130.12.180.43/files/7924412375/upOSLDn.bat']"
+      "id": "indicator--430d03150f59",
+      "name": "IOC http://181.171.188.254:17418/.i",
+      "pattern": "[x-opencti:value = 'http://181.171.188.254:17418/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--67d0bc882d4b",
-      "name": "IOC http://46.44.46.247:51067/i",
-      "pattern": "[x-opencti:value = 'http://46.44.46.247:51067/i']"
+      "id": "indicator--53162847d6de",
+      "name": "IOC http://194.160.223.169:30596/.i",
+      "pattern": "[x-opencti:value = 'http://194.160.223.169:30596/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--01c21b9a2564",
-      "name": "IOC http://130.12.180.43/files/7924412375/upOSLDn.exe",
-      "pattern": "[x-opencti:value = 'http://130.12.180.43/files/7924412375/upOSLDn.exe']"
+      "id": "indicator--0e3f1c5da021",
+      "name": "IOC http://31.220.163.1:56268/.i",
+      "pattern": "[x-opencti:value = 'http://31.220.163.1:56268/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6e72babd6626",
-      "name": "IOC http://110.38.198.26:58736/bin.sh",
-      "pattern": "[x-opencti:value = 'http://110.38.198.26:58736/bin.sh']"
+      "id": "indicator--babe4cfa16d0",
+      "name": "IOC http://185.75.110.142:30823/.i",
+      "pattern": "[x-opencti:value = 'http://185.75.110.142:30823/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--cd81d842cdcb",
-      "name": "IOC https://cdn.jsdelivr.net/gh/stp26det/err12/trx",
-      "pattern": "[x-opencti:value = 'https://cdn.jsdelivr.net/gh/stp26det/err12/trx']"
+      "id": "indicator--3161df564687",
+      "name": "IOC http://177.155.128.195:63831/.i",
+      "pattern": "[x-opencti:value = 'http://177.155.128.195:63831/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--47cf9e256cab",
-      "name": "IOC http://31.173.12.36:37471/bin.sh",
-      "pattern": "[x-opencti:value = 'http://31.173.12.36:37471/bin.sh']"
+      "id": "indicator--6fefda7f2118",
+      "name": "IOC http://5.11.69.45:19918/.i",
+      "pattern": "[x-opencti:value = 'http://5.11.69.45:19918/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--eb6a8577e34c",
-      "name": "IOC http://110.38.198.26:58736/i",
-      "pattern": "[x-opencti:value = 'http://110.38.198.26:58736/i']"
+      "id": "indicator--32aec980ecbd",
+      "name": "IOC http://62.175.253.88:10847/.i",
+      "pattern": "[x-opencti:value = 'http://62.175.253.88:10847/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0bd05298dc58",
-      "name": "IOC https://github.com/kandillifatih-ops/hh/raw/refs/heads/main/foto.apk",
-      "pattern": "[x-opencti:value = 'https://github.com/kandillifatih-ops/hh/raw/refs/heads/main/foto.apk']"
+      "id": "indicator--30c32505f4d0",
+      "name": "IOC http://77.82.189.229:3535/.i",
+      "pattern": "[x-opencti:value = 'http://77.82.189.229:3535/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2513d425708c",
-      "name": "IOC https://axelvedos.sa.com/mko1.exe",
-      "pattern": "[x-opencti:value = 'https://axelvedos.sa.com/mko1.exe']"
+      "id": "indicator--1153bb33d5b6",
+      "name": "IOC http://37.29.91.102:12520/.i",
+      "pattern": "[x-opencti:value = 'http://37.29.91.102:12520/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ca3a1f53b94b",
-      "name": "IOC https://github.com/canansuz/rast/raw/refs/heads/main/foto.apk",
-      "pattern": "[x-opencti:value = 'https://github.com/canansuz/rast/raw/refs/heads/main/foto.apk']"
+      "id": "indicator--5156dd54519a",
+      "name": "IOC http://31.28.238.16:54495/.i",
+      "pattern": "[x-opencti:value = 'http://31.28.238.16:54495/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--81cca5d7b899",
-      "name": "IOC https://github.com/ebrukandemir606-jpg/tvciip/raw/refs/heads/main/TV%20%C4%B0NAT.apk",
-      "pattern": "[x-opencti:value = 'https://github.com/ebrukandemir606-jpg/tvciip/raw/refs/heads/main/TV%20%C4%B0NAT.apk']"
+      "id": "indicator--165577ba74e3",
+      "name": "IOC http://89.210.62.39:22997/.i",
+      "pattern": "[x-opencti:value = 'http://89.210.62.39:22997/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b7a82d72e53a",
-      "name": "IOC http://219.155.14.154:37522/i",
-      "pattern": "[x-opencti:value = 'http://219.155.14.154:37522/i']"
+      "id": "indicator--e1311a287567",
+      "name": "IOC http://103.217.84.226:61943/.i",
+      "pattern": "[x-opencti:value = 'http://103.217.84.226:61943/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--78f5a1366799",
-      "name": "IOC http://175.148.159.200:44152/bin.sh",
-      "pattern": "[x-opencti:value = 'http://175.148.159.200:44152/bin.sh']"
+      "id": "indicator--db9e71609f42",
+      "name": "IOC http://146.255.245.170:61653/.i",
+      "pattern": "[x-opencti:value = 'http://146.255.245.170:61653/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fd50aae5df47",
-      "name": "IOC http://160.30.159.104/debug.dbg",
-      "pattern": "[x-opencti:value = 'http://160.30.159.104/debug.dbg']"
+      "id": "indicator--eee2e075078a",
+      "name": "IOC http://85.112.69.96:41037/.i",
+      "pattern": "[x-opencti:value = 'http://85.112.69.96:41037/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d67f594c183a",
-      "name": "IOC http://160.30.159.104/jack5tr.sh",
-      "pattern": "[x-opencti:value = 'http://160.30.159.104/jack5tr.sh']"
+      "id": "indicator--b01b9ef2951a",
+      "name": "IOC http://81.16.251.131:36612/.i",
+      "pattern": "[x-opencti:value = 'http://81.16.251.131:36612/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bdd66ec937f4",
-      "name": "IOC http://175.147.91.125:53753/i",
-      "pattern": "[x-opencti:value = 'http://175.147.91.125:53753/i']"
+      "id": "indicator--c8f367e92397",
+      "name": "IOC http://31.148.121.247:25958/.i",
+      "pattern": "[x-opencti:value = 'http://31.148.121.247:25958/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--358585cc2420",
-      "name": "IOC http://31.173.12.36:37471/i",
-      "pattern": "[x-opencti:value = 'http://31.173.12.36:37471/i']"
+      "id": "indicator--9e7703376752",
+      "name": "IOC http://103.30.92.188:46300/.i",
+      "pattern": "[x-opencti:value = 'http://103.30.92.188:46300/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--93871ac07c41",
-      "name": "IOC http://182.121.238.147:51649/i",
-      "pattern": "[x-opencti:value = 'http://182.121.238.147:51649/i']"
+      "id": "indicator--5134bea409b3",
+      "name": "IOC http://101.128.66.193:23490/.i",
+      "pattern": "[x-opencti:value = 'http://101.128.66.193:23490/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--dafee7c33fec",
-      "name": "IOC http://115.58.12.108:45300/bin.sh",
-      "pattern": "[x-opencti:value = 'http://115.58.12.108:45300/bin.sh']"
+      "id": "indicator--9483dee02751",
+      "name": "IOC http://103.28.227.58:45942/.i",
+      "pattern": "[x-opencti:value = 'http://103.28.227.58:45942/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e5bb0a19d2ca",
-      "name": "IOC http://45.137.201.200:8082/download",
-      "pattern": "[x-opencti:value = 'http://45.137.201.200:8082/download']"
+      "id": "indicator--ca15174687d0",
+      "name": "IOC http://141.237.242.31:28217/.i",
+      "pattern": "[x-opencti:value = 'http://141.237.242.31:28217/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6d1f70da6707",
-      "name": "IOC https://cdn.jsdelivr.net/gh/stp26det/encrypted/trx",
-      "pattern": "[x-opencti:value = 'https://cdn.jsdelivr.net/gh/stp26det/encrypted/trx']"
+      "id": "indicator--6715d1a1cd47",
+      "name": "IOC http://186.39.18.40:32222/.i",
+      "pattern": "[x-opencti:value = 'http://186.39.18.40:32222/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4816ec34634a",
-      "name": "IOC http://110.37.18.205:58392/i",
-      "pattern": "[x-opencti:value = 'http://110.37.18.205:58392/i']"
+      "id": "indicator--2a905dac03ce",
+      "name": "IOC http://212.21.31.221:50383/.i",
+      "pattern": "[x-opencti:value = 'http://212.21.31.221:50383/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--05fecda8c84a",
-      "name": "IOC http://130.12.180.43/files/837705322/3AzCaEe.bat",
-      "pattern": "[x-opencti:value = 'http://130.12.180.43/files/837705322/3AzCaEe.bat']"
+      "id": "indicator--c4f60a18fa2a",
+      "name": "IOC http://83.217.16.24:36010/.i",
+      "pattern": "[x-opencti:value = 'http://83.217.16.24:36010/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ceb7fe4e3d4f",
-      "name": "IOC http://115.53.194.74:42082/bin.sh",
-      "pattern": "[x-opencti:value = 'http://115.53.194.74:42082/bin.sh']"
+      "id": "indicator--93f14c5caef4",
+      "name": "IOC http://176.65.13.192:9701/.i",
+      "pattern": "[x-opencti:value = 'http://176.65.13.192:9701/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5157eee0c36d",
-      "name": "IOC http://123.7.223.162:46793/i",
-      "pattern": "[x-opencti:value = 'http://123.7.223.162:46793/i']"
+      "id": "indicator--36b69bde6056",
+      "name": "IOC http://87.119.108.21:40462/.i",
+      "pattern": "[x-opencti:value = 'http://87.119.108.21:40462/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--132276cbccda",
-      "name": "IOC http://42.224.150.99:41799/bin.sh",
-      "pattern": "[x-opencti:value = 'http://42.224.150.99:41799/bin.sh']"
+      "id": "indicator--e07947ee1148",
+      "name": "IOC http://46.97.36.202:48031/.i",
+      "pattern": "[x-opencti:value = 'http://46.97.36.202:48031/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--96ffec831c09",
-      "name": "IOC http://60.19.223.80:36595/bin.sh",
-      "pattern": "[x-opencti:value = 'http://60.19.223.80:36595/bin.sh']"
+      "id": "indicator--aff73e5cdd43",
+      "name": "IOC http://110.37.27.87:55791/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.37.27.87:55791/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6b6690209de0",
-      "name": "IOC http://scorpcasinos.com/7/Output.js",
-      "pattern": "[x-opencti:value = 'http://scorpcasinos.com/7/Output.js']"
+      "id": "indicator--d11435b25c58",
+      "name": "IOC http://219.155.222.209:48204/bin.sh",
+      "pattern": "[x-opencti:value = 'http://219.155.222.209:48204/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bd49f2bc5039",
-      "name": "IOC http://115.53.194.74:42082/i",
-      "pattern": "[x-opencti:value = 'http://115.53.194.74:42082/i']"
+      "id": "indicator--65a58e26c09e",
+      "name": "IOC http://31.207.243.122:32173/.i",
+      "pattern": "[x-opencti:value = 'http://31.207.243.122:32173/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b244c9264fe8",
-      "name": "IOC http://123.132.163.250:45617/bin.sh",
-      "pattern": "[x-opencti:value = 'http://123.132.163.250:45617/bin.sh']"
+      "id": "indicator--b46bd044080a",
+      "name": "IOC http://185.30.46.167:23802/.i",
+      "pattern": "[x-opencti:value = 'http://185.30.46.167:23802/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2cab987145db",
-      "name": "IOC http://182.121.114.167:53840/bin.sh",
-      "pattern": "[x-opencti:value = 'http://182.121.114.167:53840/bin.sh']"
+      "id": "indicator--0e9c3ab351c5",
+      "name": "IOC http://103.245.96.246:18909/.i",
+      "pattern": "[x-opencti:value = 'http://103.245.96.246:18909/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b4513a62078c",
-      "name": "IOC http://42.224.150.99:41799/i",
-      "pattern": "[x-opencti:value = 'http://42.224.150.99:41799/i']"
+      "id": "indicator--f3be189aa867",
+      "name": "IOC http://45.167.249.58:7541/.i",
+      "pattern": "[x-opencti:value = 'http://45.167.249.58:7541/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2686700fbccf",
-      "name": "IOC http://60.19.223.80:36595/i",
-      "pattern": "[x-opencti:value = 'http://60.19.223.80:36595/i']"
+      "id": "indicator--2e6d94c23b54",
+      "name": "IOC http://1.2.218.40:30952/.i",
+      "pattern": "[x-opencti:value = 'http://1.2.218.40:30952/.i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--02edbfed355e",
-      "name": "IOC https://spacetech.co.in/zoom/ZoomWorkspaceinstallersetup.msi",
-      "pattern": "[x-opencti:value = 'https://spacetech.co.in/zoom/ZoomWorkspaceinstallersetup.msi']"
+      "id": "indicator--7f01a6017a86",
+      "name": "IOC http://182.114.192.241:37258/bin.sh",
+      "pattern": "[x-opencti:value = 'http://182.114.192.241:37258/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b45582f54eb1",
-      "name": "IOC http://103.116.38.63/csk_ppc",
-      "pattern": "[x-opencti:value = 'http://103.116.38.63/csk_ppc']"
+      "id": "indicator--8a5ca201b40c",
+      "name": "IOC http://47.60.155.144:49580/i",
+      "pattern": "[x-opencti:value = 'http://47.60.155.144:49580/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--01721e16710d",
-      "name": "IOC https://pub-e0f31498c93c4562973d8295141e23d0.r2.dev/Docx_xlx_2026.vbs",
-      "pattern": "[x-opencti:value = 'https://pub-e0f31498c93c4562973d8295141e23d0.r2.dev/Docx_xlx_2026.vbs']"
+      "id": "indicator--99a17d314272",
+      "name": "IOC http://119.184.31.239:45531/bin.sh",
+      "pattern": "[x-opencti:value = 'http://119.184.31.239:45531/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8587a234e4a1",
-      "name": "IOC http://115.49.201.27:33460/i",
-      "pattern": "[x-opencti:value = 'http://115.49.201.27:33460/i']"
+      "id": "indicator--8aea26f58621",
+      "name": "IOC http://221.1.226.106:33380/i",
+      "pattern": "[x-opencti:value = 'http://221.1.226.106:33380/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d698aedc2180",
-      "name": "IOC http://94.183.182.179/systemctl/bin.armv7l",
-      "pattern": "[x-opencti:value = 'http://94.183.182.179/systemctl/bin.armv7l']"
+      "id": "indicator--438e0dd4c6e2",
+      "name": "IOC http://123.11.77.250:45047/i",
+      "pattern": "[x-opencti:value = 'http://123.11.77.250:45047/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--718c94eca991",
-      "name": "IOC http://180.191.230.61:40249/Mozi.m",
-      "pattern": "[x-opencti:value = 'http://180.191.230.61:40249/Mozi.m']"
+      "id": "indicator--e8a289eabc1a",
+      "name": "IOC http://219.155.222.209:48204/i",
+      "pattern": "[x-opencti:value = 'http://219.155.222.209:48204/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fbafbe63a598",
-      "name": "IOC https://groomingmfb.com/download-the-latest-acrobat-free-pdf-pro-version-download.zip",
-      "pattern": "[x-opencti:value = 'https://groomingmfb.com/download-the-latest-acrobat-free-pdf-pro-version-download.zip']"
+      "id": "indicator--8d7f8ca95929",
+      "name": "IOC http://182.114.192.241:37258/i",
+      "pattern": "[x-opencti:value = 'http://182.114.192.241:37258/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ccf49280fdcf",
-      "name": "IOC https://rezoc.fun/files/AutoSend_v1.3.exe",
-      "pattern": "[x-opencti:value = 'https://rezoc.fun/files/AutoSend_v1.3.exe']"
+      "id": "indicator--d69c93cd1462",
+      "name": "IOC http://119.184.31.239:45531/i",
+      "pattern": "[x-opencti:value = 'http://119.184.31.239:45531/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4ee9eff15792",
-      "name": "IOC https://newupdate.top/zoom/Windows/ZoomWorkspace.ClientSetup.scr",
-      "pattern": "[x-opencti:value = 'https://newupdate.top/zoom/Windows/ZoomWorkspace.ClientSetup.scr']"
+      "id": "indicator--0970fce54a16",
+      "name": "IOC http://182.112.7.84:37056/i",
+      "pattern": "[x-opencti:value = 'http://182.112.7.84:37056/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d87cb23b7135",
-      "name": "IOC https://sampaworks.info/zoom/ZoomWorkspaceinstallersetup.msi",
-      "pattern": "[x-opencti:value = 'https://sampaworks.info/zoom/ZoomWorkspaceinstallersetup.msi']"
+      "id": "indicator--254187523c62",
+      "name": "IOC http://110.37.27.87:55791/i",
+      "pattern": "[x-opencti:value = 'http://110.37.27.87:55791/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4631f6360ea5",
-      "name": "IOC https://vrajras.com/MicrosoftTeamUpdate.msi",
-      "pattern": "[x-opencti:value = 'https://vrajras.com/MicrosoftTeamUpdate.msi']"
+      "id": "indicator--6c32e82d990f",
+      "name": "IOC http://45.95.146.23/bins/mao.ppc",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.ppc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d183ed0fe756",
-      "name": "IOC https://surel.sbs/Windows/download.php",
-      "pattern": "[x-opencti:value = 'https://surel.sbs/Windows/download.php']"
+      "id": "indicator--d90909c246b9",
+      "name": "IOC http://45.95.146.23/bins/mao.mips",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.mips']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ed1f5ac50fb9",
-      "name": "IOC https://www.xt24.com/install/re42.ps1",
-      "pattern": "[x-opencti:value = 'https://www.xt24.com/install/re42.ps1']"
+      "id": "indicator--c6b70cf7f0df",
+      "name": "IOC http://45.95.146.23/bins/mao.sh4",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.sh4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--67b58ef8c13d",
-      "name": "IOC http://39.79.132.251:37906/bin.sh",
-      "pattern": "[x-opencti:value = 'http://39.79.132.251:37906/bin.sh']"
+      "id": "indicator--64cb1815b24a",
+      "name": "IOC http://45.95.146.23/bins/mao.mpsl",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.mpsl']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e3a955b696d1",
-      "name": "IOC http://123.132.163.250:45617/i",
-      "pattern": "[x-opencti:value = 'http://123.132.163.250:45617/i']"
+      "id": "indicator--c4dfa1cf7b02",
+      "name": "IOC http://45.95.146.23/bins/mao.i486",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.i486']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b8efe449f886",
-      "name": "IOC http://31.130.248.85:25600/.i",
-      "pattern": "[x-opencti:value = 'http://31.130.248.85:25600/.i']"
+      "id": "indicator--f9583c2af52d",
+      "name": "IOC http://45.95.146.23/bins/mao.x86",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.x86']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8de24e54ca78",
-      "name": "IOC http://78.70.248.228:18030/.i",
-      "pattern": "[x-opencti:value = 'http://78.70.248.228:18030/.i']"
+      "id": "indicator--c60f9b101877",
+      "name": "IOC http://45.95.146.23/bins/mao.m68k",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.m68k']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ccb4874af320",
-      "name": "IOC http://83.148.95.248:59812/.i",
-      "pattern": "[x-opencti:value = 'http://83.148.95.248:59812/.i']"
+      "id": "indicator--3153e75d895d",
+      "name": "IOC http://45.95.146.23/bins/mao.arm5",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.arm5']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--637c669c7bb6",
-      "name": "IOC http://95.169.212.91:14618/.i",
-      "pattern": "[x-opencti:value = 'http://95.169.212.91:14618/.i']"
+      "id": "indicator--0c2fe665fafb",
+      "name": "IOC http://45.95.146.23/bins/mao.i686",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.i686']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a6c79f25abb0",
-      "name": "IOC http://185.30.46.118:42754/.i",
-      "pattern": "[x-opencti:value = 'http://185.30.46.118:42754/.i']"
+      "id": "indicator--56161d993ed7",
+      "name": "IOC http://45.95.146.23/bins/mao.spc",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.spc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c4dc0760b3fc",
-      "name": "IOC http://41.100.245.105:28912/.i",
-      "pattern": "[x-opencti:value = 'http://41.100.245.105:28912/.i']"
+      "id": "indicator--376b528549ab",
+      "name": "IOC http://45.95.146.23/bins/mao.x86_64",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.x86_64']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ee64935df70e",
-      "name": "IOC http://179.113.149.57:17437/.i",
-      "pattern": "[x-opencti:value = 'http://179.113.149.57:17437/.i']"
+      "id": "indicator--3011963bb38f",
+      "name": "IOC http://45.95.146.23/bins/mao.arm",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.arm']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a1ffb5251321",
-      "name": "IOC http://103.182.189.250:37888/.i",
-      "pattern": "[x-opencti:value = 'http://103.182.189.250:37888/.i']"
+      "id": "indicator--c6934e763439",
+      "name": "IOC http://45.95.146.23/bins/mao.arc",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.arc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--43182102ffea",
-      "name": "IOC http://170.247.148.41:17271/.i",
-      "pattern": "[x-opencti:value = 'http://170.247.148.41:17271/.i']"
+      "id": "indicator--6d62b7fd89da",
+      "name": "IOC http://167.71.115.223/main_spc",
+      "pattern": "[x-opencti:value = 'http://167.71.115.223/main_spc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1034873b2328",
-      "name": "IOC http://184.185.30.182:29029/.i",
-      "pattern": "[x-opencti:value = 'http://184.185.30.182:29029/.i']"
+      "id": "indicator--aa5f31e644a5",
+      "name": "IOC http://45.95.146.23/bins/mao.arm7",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.arm7']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9817f0b85327",
-      "name": "IOC http://213.91.236.237:10713/.i",
-      "pattern": "[x-opencti:value = 'http://213.91.236.237:10713/.i']"
+      "id": "indicator--ad0a6977c7f4",
+      "name": "IOC http://45.95.146.23/bins/mao.arm6",
+      "pattern": "[x-opencti:value = 'http://45.95.146.23/bins/mao.arm6']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--acc9d1896f18",
-      "name": "IOC http://86.61.41.20:62853/.i",
-      "pattern": "[x-opencti:value = 'http://86.61.41.20:62853/.i']"
+      "id": "indicator--c7e69c8cf8e6",
+      "name": "IOC http://39.106.81.175:5002/download/Roblox_Executor.exe",
+      "pattern": "[x-opencti:value = 'http://39.106.81.175:5002/download/Roblox_Executor.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b0da24b1220d",
-      "name": "IOC http://5.101.11.9:19080/.i",
-      "pattern": "[x-opencti:value = 'http://5.101.11.9:19080/.i']"
+      "id": "indicator--923773935103",
+      "name": "IOC http://39.106.81.175:5002/download/Syntex_Spoofer.exe",
+      "pattern": "[x-opencti:value = 'http://39.106.81.175:5002/download/Syntex_Spoofer.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--141b70cba71e",
-      "name": "IOC http://178.220.234.5:53133/.i",
-      "pattern": "[x-opencti:value = 'http://178.220.234.5:53133/.i']"
+      "id": "indicator--454ade43434e",
+      "name": "IOC http://136.113.36.100:8080/bot.x86_64",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.x86_64']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bc8ccc99dca2",
-      "name": "IOC http://149.50.186.147:24408/.i",
-      "pattern": "[x-opencti:value = 'http://149.50.186.147:24408/.i']"
+      "id": "indicator--f375b93c5965",
+      "name": "IOC http://136.113.36.100:8080/bot.sh4",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.sh4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fd18b9e883a1",
-      "name": "IOC http://36.88.6.203:8907/.i",
-      "pattern": "[x-opencti:value = 'http://36.88.6.203:8907/.i']"
+      "id": "indicator--6ca3e094e062",
+      "name": "IOC http://136.113.36.100:8080/c.sh",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/c.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c278c3ed5c77",
-      "name": "IOC http://109.199.254.48:1790/.i",
-      "pattern": "[x-opencti:value = 'http://109.199.254.48:1790/.i']"
+      "id": "indicator--86ebfe3add8d",
+      "name": "IOC http://136.113.36.100:8080/bot.mipsel",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.mipsel']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0b4d94d30df9",
-      "name": "IOC http://94.188.76.28:49130/.i",
-      "pattern": "[x-opencti:value = 'http://94.188.76.28:49130/.i']"
+      "id": "indicator--de6af884c5b9",
+      "name": "IOC http://136.113.36.100:8080/bot.arc_gnu_2017.09_prebuilt_uclibc_le_arc700_linux_install",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.arc_gnu_2017.09_prebuilt_uclibc_le_arc700_linux_install']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b7f87a0672dc",
-      "name": "IOC http://5.77.214.242:60141/.i",
-      "pattern": "[x-opencti:value = 'http://5.77.214.242:60141/.i']"
+      "id": "indicator--eed0fff0c78f",
+      "name": "IOC http://136.113.36.100:8080/bot.mips",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.mips']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5d21b87171a8",
-      "name": "IOC http://92.17.81.123:27215/.i",
-      "pattern": "[x-opencti:value = 'http://92.17.81.123:27215/.i']"
+      "id": "indicator--e9874c5222b9",
+      "name": "IOC https://raw.githubusercontent.com/ahwsuidahwiduawh/yyy/refs/heads/main/Client-built.exe",
+      "pattern": "[x-opencti:value = 'https://raw.githubusercontent.com/ahwsuidahwiduawh/yyy/refs/heads/main/Client-built.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0290cbb55293",
-      "name": "IOC http://167.62.40.139:39993/.i",
-      "pattern": "[x-opencti:value = 'http://167.62.40.139:39993/.i']"
+      "id": "indicator--aa43bd99441d",
+      "name": "IOC http://136.113.36.100:8080/bot.powerpc-440fp",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.powerpc-440fp']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--01f673a23816",
-      "name": "IOC http://5.152.145.7:53591/.i",
-      "pattern": "[x-opencti:value = 'http://5.152.145.7:53591/.i']"
+      "id": "indicator--25c01e7d25e2",
+      "name": "IOC http://136.113.36.100:8080/bot.i586",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.i586']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e6709072ef77",
-      "name": "IOC http://178.74.102.47:38766/.i",
-      "pattern": "[x-opencti:value = 'http://178.74.102.47:38766/.i']"
+      "id": "indicator--fd1a1e6291e7",
+      "name": "IOC http://136.113.36.100:8080/bot.armv4l",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.armv4l']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4674458c1732",
-      "name": "IOC http://176.193.191.71:8295/.i",
-      "pattern": "[x-opencti:value = 'http://176.193.191.71:8295/.i']"
+      "id": "indicator--aa65e5fd3f9d",
+      "name": "IOC http://136.113.36.100:8080/bot.m68k",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.m68k']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--74862a7086ad",
-      "name": "IOC http://41.162.188.251:22850/.i",
-      "pattern": "[x-opencti:value = 'http://41.162.188.251:22850/.i']"
+      "id": "indicator--bca6e6c9a2fb",
+      "name": "IOC http://136.113.36.100:8080/bot.i686",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.i686']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4c70c4582e6a",
-      "name": "IOC http://77.46.170.18:53326/.i",
-      "pattern": "[x-opencti:value = 'http://77.46.170.18:53326/.i']"
+      "id": "indicator--230a79f9f602",
+      "name": "IOC http://136.113.36.100:8080/bot.powerpc",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.powerpc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f8040ffde928",
-      "name": "IOC http://80.40.194.39:59353/.i",
-      "pattern": "[x-opencti:value = 'http://80.40.194.39:59353/.i']"
+      "id": "indicator--f5bb26518e05",
+      "name": "IOC http://136.113.36.100:8080/bot.armv5l",
+      "pattern": "[x-opencti:value = 'http://136.113.36.100:8080/bot.armv5l']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2988862d806e",
-      "name": "IOC http://46.176.217.154:24040/.i",
-      "pattern": "[x-opencti:value = 'http://46.176.217.154:24040/.i']"
+      "id": "indicator--385fb58365fe",
+      "name": "IOC http://39.106.81.175:5002/download/37KKS9R5AOV0.exe",
+      "pattern": "[x-opencti:value = 'http://39.106.81.175:5002/download/37KKS9R5AOV0.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4ebe24905e3d",
-      "name": "IOC http://136.228.163.150:60925/.i",
-      "pattern": "[x-opencti:value = 'http://136.228.163.150:60925/.i']"
+      "id": "indicator--63693bf5fea9",
+      "name": "IOC http://39.106.81.175:5002/download/KeyGeneratorPro.exe",
+      "pattern": "[x-opencti:value = 'http://39.106.81.175:5002/download/KeyGeneratorPro.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8b72cc8c3f5f",
-      "name": "IOC http://185.220.86.255:34341/.i",
-      "pattern": "[x-opencti:value = 'http://185.220.86.255:34341/.i']"
+      "id": "indicator--7fa016ee6907",
+      "name": "IOC http://39.106.81.175:5002/download/x554650562de7ff4b0a266857cdd8bad5c3445dbe23816c7898eb679d34652391.exe",
+      "pattern": "[x-opencti:value = 'http://39.106.81.175:5002/download/x554650562de7ff4b0a266857cdd8bad5c3445dbe23816c7898eb679d34652391.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0aa7858b663c",
-      "name": "IOC http://213.5.194.56:43416/.i",
-      "pattern": "[x-opencti:value = 'http://213.5.194.56:43416/.i']"
+      "id": "indicator--6651d166498d",
+      "name": "IOC http://39.106.81.175:5002/download/xa29d6ca899a2a2c1497b192dc8aeb1cb6290109c347ffe3bc66d950dc0b0f1a6.exe",
+      "pattern": "[x-opencti:value = 'http://39.106.81.175:5002/download/xa29d6ca899a2a2c1497b192dc8aeb1cb6290109c347ffe3bc66d950dc0b0f1a6.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--eee97ba62556",
-      "name": "IOC http://103.12.161.225:4079/.i",
-      "pattern": "[x-opencti:value = 'http://103.12.161.225:4079/.i']"
+      "id": "indicator--78029f46b5ae",
+      "name": "IOC http://39.106.81.175:5002/download/Y3593UGC11D2.exe",
+      "pattern": "[x-opencti:value = 'http://39.106.81.175:5002/download/Y3593UGC11D2.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ec19f635fd47",
-      "name": "IOC http://221.14.189.155:35111/bin.sh",
-      "pattern": "[x-opencti:value = 'http://221.14.189.155:35111/bin.sh']"
+      "id": "indicator--ed561b092ec3",
+      "name": "IOC http://39.106.81.175:5002/download/Setup.exe",
+      "pattern": "[x-opencti:value = 'http://39.106.81.175:5002/download/Setup.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--de2a1f9c3d31",
-      "name": "IOC http://182.117.12.212:53448/bin.sh",
-      "pattern": "[x-opencti:value = 'http://182.117.12.212:53448/bin.sh']"
+      "id": "indicator--7bcfacba3259",
+      "name": "IOC http://39.106.81.175:5002/download/xQ4gNK9auvFo4.exe",
+      "pattern": "[x-opencti:value = 'http://39.106.81.175:5002/download/xQ4gNK9auvFo4.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--759f1a0514d6",
-      "name": "IOC http://39.79.132.251:37906/i",
-      "pattern": "[x-opencti:value = 'http://39.79.132.251:37906/i']"
+      "id": "indicator--3455e7793f99",
+      "name": "IOC http://39.106.81.175:5002/download/install.exe",
+      "pattern": "[x-opencti:value = 'http://39.106.81.175:5002/download/install.exe']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--008ec2c31ba0",
-      "name": "IOC http://110.37.99.117:59319/bin.sh",
-      "pattern": "[x-opencti:value = 'http://110.37.99.117:59319/bin.sh']"
+      "id": "indicator--d848f7142542",
+      "name": "IOC https://gist.github.com/soontaylor1946/7c09f788d97c44cfeff0507b21db77d9",
+      "pattern": "[x-opencti:value = 'https://gist.github.com/soontaylor1946/7c09f788d97c44cfeff0507b21db77d9']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3f6038fdf32a",
-      "name": "IOC http://125.44.194.31:40874/bin.sh",
-      "pattern": "[x-opencti:value = 'http://125.44.194.31:40874/bin.sh']"
+      "id": "indicator--fe8556fe1f83",
+      "name": "IOC https://floral-king-36d7.michaelleclair1997.workers.dev/",
+      "pattern": "[x-opencti:value = 'https://floral-king-36d7.michaelleclair1997.workers.dev/']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3ebd72982233",
-      "name": "IOC http://221.14.189.155:35111/i",
-      "pattern": "[x-opencti:value = 'http://221.14.189.155:35111/i']"
+      "id": "indicator--4cdcad9c528b",
+      "name": "IOC https://aktivates.fun",
+      "pattern": "[x-opencti:value = 'https://aktivates.fun']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f094e4aea994",
-      "name": "IOC http://2.224.140.178:31291/.i",
-      "pattern": "[x-opencti:value = 'http://2.224.140.178:31291/.i']"
+      "id": "indicator--399f993a92ed",
+      "name": "IOC http://165.232.165.152:8080/xoner_armv6l-unknown-linux-gnueabi-armv7l",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_armv6l-unknown-linux-gnueabi-armv7l']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f0d3d39fb71b",
-      "name": "IOC http://110.74.195.77:42999/.i",
-      "pattern": "[x-opencti:value = 'http://110.74.195.77:42999/.i']"
+      "id": "indicator--91849e40b3f4",
+      "name": "IOC https://i.404.pm/2025/11/12/1762933913-224.jpeg",
+      "pattern": "[x-opencti:value = 'https://i.404.pm/2025/11/12/1762933913-224.jpeg']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9bb6cb69121d",
-      "name": "IOC http://186.96.193.14:19727/.i",
-      "pattern": "[x-opencti:value = 'http://186.96.193.14:19727/.i']"
+      "id": "indicator--0b43e8341c86",
+      "name": "IOC http://165.232.165.152:8080/xoner_mipsel",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_mipsel']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--315ee5d07f17",
-      "name": "IOC http://59.183.123.72:41575/.i",
-      "pattern": "[x-opencti:value = 'http://59.183.123.72:41575/.i']"
+      "id": "indicator--83906e6ad2ea",
+      "name": "IOC http://165.232.165.152:8080/xoner_powerpc",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_powerpc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c31594822a15",
-      "name": "IOC http://103.220.28.184:35037/.i",
-      "pattern": "[x-opencti:value = 'http://103.220.28.184:35037/.i']"
+      "id": "indicator--1ebba8c7ff6b",
+      "name": "IOC http://165.232.165.152:8080/xoner_armv5l",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_armv5l']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--72a6d04d4aad",
-      "name": "IOC http://110.37.99.117:59319/i",
-      "pattern": "[x-opencti:value = 'http://110.37.99.117:59319/i']"
+      "id": "indicator--2e62b36d98f6",
+      "name": "IOC http://165.232.165.152:8080/xoner_arc-linux",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_arc-linux']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f17ae1f5d68d",
-      "name": "IOC http://42.224.13.62:56220/i",
-      "pattern": "[x-opencti:value = 'http://42.224.13.62:56220/i']"
+      "id": "indicator--8112edf27363",
+      "name": "IOC http://165.232.165.152:8080/xoner_armv7l",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_armv7l']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9a3e07dbd617",
-      "name": "IOC http://119.109.217.119:36682/bin.sh",
-      "pattern": "[x-opencti:value = 'http://119.109.217.119:36682/bin.sh']"
+      "id": "indicator--61510c583828",
+      "name": "IOC http://165.232.165.152:8080/xoner_i686",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_i686']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a7bf39137500",
-      "name": "IOC http://115.56.157.205:34257/bin.sh",
-      "pattern": "[x-opencti:value = 'http://115.56.157.205:34257/bin.sh']"
+      "id": "indicator--9428c51cac06",
+      "name": "IOC http://165.232.165.152:8080/xoner_armv6l",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_armv6l']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8bf86973280e",
-      "name": "IOC http://125.41.7.77:35489/bin.sh",
-      "pattern": "[x-opencti:value = 'http://125.41.7.77:35489/bin.sh']"
+      "id": "indicator--921ddb3d181a",
+      "name": "IOC https://i.404.pm/2025/07/24/1753356830-1481.jpeg",
+      "pattern": "[x-opencti:value = 'https://i.404.pm/2025/07/24/1753356830-1481.jpeg']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--83d1da41ccaf",
-      "name": "IOC http://77.247.92.131:54734/bin.sh",
-      "pattern": "[x-opencti:value = 'http://77.247.92.131:54734/bin.sh']"
+      "id": "indicator--c986d786e3ac",
+      "name": "IOC http://165.232.165.152:8080/xoner_arc-linux-uclibc",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_arc-linux-uclibc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b8b0b7da78f8",
-      "name": "IOC http://221.1.227.251:54448/i",
-      "pattern": "[x-opencti:value = 'http://221.1.227.251:54448/i']"
+      "id": "indicator--4796e64b4a35",
+      "name": "IOC http://165.232.165.152:8080/xoner_armv4l",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_armv4l']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bf413d3b8699",
-      "name": "IOC http://115.56.157.205:34257/i",
-      "pattern": "[x-opencti:value = 'http://115.56.157.205:34257/i']"
+      "id": "indicator--92e610389bd3",
+      "name": "IOC http://165.232.165.152:8080/xoner_arc-snps-linux-uclibc",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_arc-snps-linux-uclibc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--48d9e6e4c9de",
-      "name": "IOC http://110.39.248.117:47600/bin.sh",
-      "pattern": "[x-opencti:value = 'http://110.39.248.117:47600/bin.sh']"
+      "id": "indicator--9487d368b63d",
+      "name": "IOC https://i.404.pm/2025/09/27/1758984967-5707.jpeg",
+      "pattern": "[x-opencti:value = 'https://i.404.pm/2025/09/27/1758984967-5707.jpeg']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--67fcdd04db2c",
-      "name": "IOC http://196.39.143.113:8080/sshd",
-      "pattern": "[x-opencti:value = 'http://196.39.143.113:8080/sshd']"
+      "id": "indicator--0a6e66bb285f",
+      "name": "IOC http://165.232.165.152:8080/xoner_sh4",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_sh4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--91eb0e3b97bb",
-      "name": "IOC http://78.132.111.230/sshd",
-      "pattern": "[x-opencti:value = 'http://78.132.111.230/sshd']"
+      "id": "indicator--dc5746dabe92",
+      "name": "IOC http://165.232.165.152:8080/xoner_m68k",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_m68k']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3e975f998abd",
-      "name": "IOC http://91.80.168.48/sshd",
-      "pattern": "[x-opencti:value = 'http://91.80.168.48/sshd']"
+      "id": "indicator--f68564006bd3",
+      "name": "IOC http://165.232.165.152:8080/xoner_powerpc-440fp",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_powerpc-440fp']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c2616fe556a8",
-      "name": "IOC http://78.132.112.17/sshd",
-      "pattern": "[x-opencti:value = 'http://78.132.112.17/sshd']"
+      "id": "indicator--e677dacba228",
+      "name": "IOC http://165.232.165.152:8080/xoner_x86_64",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_x86_64']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--be2849098747",
-      "name": "IOC http://117.216.46.94:2001/sshd",
-      "pattern": "[x-opencti:value = 'http://117.216.46.94:2001/sshd']"
+      "id": "indicator--acac736fa81e",
+      "name": "IOC http://165.232.165.152:8080/xoner_mips",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_mips']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a460a168e4d0",
-      "name": "IOC http://92.41.145.132:8082/sshd",
-      "pattern": "[x-opencti:value = 'http://92.41.145.132:8082/sshd']"
+      "id": "indicator--54734ea0635b",
+      "name": "IOC http://165.232.165.152:8080/xoner_sparc",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_sparc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d8edf86ed4f7",
-      "name": "IOC http://117.216.46.201:2001/sshd",
-      "pattern": "[x-opencti:value = 'http://117.216.46.201:2001/sshd']"
+      "id": "indicator--33ac6105f1cc",
+      "name": "IOC http://165.232.165.152:8080/xoner_i586",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_i586']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5e1be25b2206",
-      "name": "IOC http://92.41.145.132:8083/sshd",
-      "pattern": "[x-opencti:value = 'http://92.41.145.132:8083/sshd']"
+      "id": "indicator--c0c0063f1acc",
+      "name": "IOC http://165.232.165.152:8080/xoner_i486",
+      "pattern": "[x-opencti:value = 'http://165.232.165.152:8080/xoner_i486']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--dd8ef961dbbb",
-      "name": "IOC http://59.182.94.196:2003/sshd",
-      "pattern": "[x-opencti:value = 'http://59.182.94.196:2003/sshd']"
+      "id": "indicator--149fecbe3c07",
+      "name": "IOC https://wispy-butterfly-ed72.michaelleclair1997.workers.dev/",
+      "pattern": "[x-opencti:value = 'https://wispy-butterfly-ed72.michaelleclair1997.workers.dev/']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0f9d8f9859f1",
-      "name": "IOC http://41.146.14.152:8081/sshd",
-      "pattern": "[x-opencti:value = 'http://41.146.14.152:8081/sshd']"
+      "id": "indicator--d59ee14473d6",
+      "name": "IOC http://182.114.248.66:60964/bin.sh",
+      "pattern": "[x-opencti:value = 'http://182.114.248.66:60964/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ade103a75061",
-      "name": "IOC http://117.216.46.229:2001/sshd",
-      "pattern": "[x-opencti:value = 'http://117.216.46.229:2001/sshd']"
+      "id": "indicator--c07c64b14a4d",
+      "name": "IOC http://222.137.87.189:56295/i",
+      "pattern": "[x-opencti:value = 'http://222.137.87.189:56295/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--29d3b70dede8",
-      "name": "IOC http://123.209.72.198:85/sshd",
-      "pattern": "[x-opencti:value = 'http://123.209.72.198:85/sshd']"
+      "id": "indicator--c52bd44f125f",
+      "name": "IOC http://36.22.117.42:55323/i",
+      "pattern": "[x-opencti:value = 'http://36.22.117.42:55323/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9bc7be878133",
-      "name": "IOC http://123.209.77.253:85/sshd",
-      "pattern": "[x-opencti:value = 'http://123.209.77.253:85/sshd']"
+      "id": "indicator--425c560253b4",
+      "name": "IOC http://123.189.21.224:33276/bin.sh",
+      "pattern": "[x-opencti:value = 'http://123.189.21.224:33276/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--701243bc9654",
-      "name": "IOC http://101.168.32.118:85/sshd",
-      "pattern": "[x-opencti:value = 'http://101.168.32.118:85/sshd']"
+      "id": "indicator--717ed59a395f",
+      "name": "IOC http://158.94.210.195/bins/sora.mpsl",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.mpsl']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b30e447a8625",
-      "name": "IOC http://123.19.39.187/sshd",
-      "pattern": "[x-opencti:value = 'http://123.19.39.187/sshd']"
+      "id": "indicator--79d052a11936",
+      "name": "IOC http://158.94.210.195/bins/sora.spc",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.spc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--33d42b5521ff",
-      "name": "IOC http://113.165.26.78/sshd",
-      "pattern": "[x-opencti:value = 'http://113.165.26.78/sshd']"
+      "id": "indicator--3330dbad75d9",
+      "name": "IOC http://158.94.210.195/bins/sora.m68k",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.m68k']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--118b8fe7b0dc",
-      "name": "IOC http://123.19.33.211/sshd",
-      "pattern": "[x-opencti:value = 'http://123.19.33.211/sshd']"
+      "id": "indicator--0d7a177af794",
+      "name": "IOC http://158.94.210.195/bins/sora.ppc",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.ppc']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ce0c8151010e",
-      "name": "IOC http://221.162.58.69:51909/i",
-      "pattern": "[x-opencti:value = 'http://221.162.58.69:51909/i']"
+      "id": "indicator--85189dbdee41",
+      "name": "IOC http://158.94.210.195/bins/sora.arm",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.arm']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--69768d29b792",
-      "name": "IOC http://5.11.73.208:43524/i",
-      "pattern": "[x-opencti:value = 'http://5.11.73.208:43524/i']"
+      "id": "indicator--fbe387a730c9",
+      "name": "IOC http://158.94.210.195/bins/sora.x86",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.x86']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a196d0da1c72",
-      "name": "IOC http://79.172.96.84:3012/i",
-      "pattern": "[x-opencti:value = 'http://79.172.96.84:3012/i']"
+      "id": "indicator--557ea1ef3379",
+      "name": "IOC http://158.94.210.195/bins/sora.arm5",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.arm5']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2b7debbf4e7c",
-      "name": "IOC http://168.0.121.1:39119/i",
-      "pattern": "[x-opencti:value = 'http://168.0.121.1:39119/i']"
+      "id": "indicator--d40228b1d28b",
+      "name": "IOC http://158.94.210.195/bins/sora.mips",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.mips']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6348aa2ba478",
-      "name": "IOC http://168.0.121.130:39119/i",
-      "pattern": "[x-opencti:value = 'http://168.0.121.130:39119/i']"
+      "id": "indicator--e17e21ca9097",
+      "name": "IOC http://158.94.210.195/bins/sora.x86_64",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.x86_64']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--83b20b4f63d9",
-      "name": "IOC http://80.40.106.22:1025/i",
-      "pattern": "[x-opencti:value = 'http://80.40.106.22:1025/i']"
+      "id": "indicator--a9156775c6f1",
+      "name": "IOC http://158.94.210.195/bins/sora.arm7",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.arm7']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--beb91cbef97d",
-      "name": "IOC http://14.32.224.7:1350/i",
-      "pattern": "[x-opencti:value = 'http://14.32.224.7:1350/i']"
+      "id": "indicator--24bf6805090d",
+      "name": "IOC http://158.94.210.195/bins/sora.sh4",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.sh4']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--cc3965c6b7a5",
-      "name": "IOC http://1.244.47.211:24954/i",
-      "pattern": "[x-opencti:value = 'http://1.244.47.211:24954/i']"
+      "id": "indicator--538881465e4d",
+      "name": "IOC http://158.94.210.195/bins/sora.arm6",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.arm6']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a7f51ce84fb1",
-      "name": "IOC http://121.134.223.69:11803/i",
-      "pattern": "[x-opencti:value = 'http://121.134.223.69:11803/i']"
+      "id": "indicator--893779cda5b4",
+      "name": "IOC http://158.94.210.195/bins/sora.i686",
+      "pattern": "[x-opencti:value = 'http://158.94.210.195/bins/sora.i686']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3e3aa0c939f7",
-      "name": "IOC http://14.32.224.7:55381/i",
-      "pattern": "[x-opencti:value = 'http://14.32.224.7:55381/i']"
+      "id": "indicator--2a6acddb7925",
+      "name": "IOC http://115.50.231.21:55172/i",
+      "pattern": "[x-opencti:value = 'http://115.50.231.21:55172/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--42b837033e78",
-      "name": "IOC http://41.146.14.152:8083/sshd",
-      "pattern": "[x-opencti:value = 'http://41.146.14.152:8083/sshd']"
+      "id": "indicator--d97ab7d94e4d",
+      "name": "IOC http://1.181.224.7:49926/bin.sh",
+      "pattern": "[x-opencti:value = 'http://1.181.224.7:49926/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--90197ced663d",
-      "name": "IOC http://41.146.14.152:8084/sshd",
-      "pattern": "[x-opencti:value = 'http://41.146.14.152:8084/sshd']"
+      "id": "indicator--6021d80136b2",
+      "name": "IOC http://221.13.248.176:36465/bin.sh",
+      "pattern": "[x-opencti:value = 'http://221.13.248.176:36465/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c207026d7166",
-      "name": "IOC http://41.146.14.152:8082/sshd",
-      "pattern": "[x-opencti:value = 'http://41.146.14.152:8082/sshd']"
+      "id": "indicator--d15ea27fce78",
+      "name": "IOC http://123.12.231.138:52055/bin.sh",
+      "pattern": "[x-opencti:value = 'http://123.12.231.138:52055/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d296fe3295b0",
-      "name": "IOC http://196.210.92.110:7115/i",
-      "pattern": "[x-opencti:value = 'http://196.210.92.110:7115/i']"
+      "id": "indicator--e3701d34acfd",
+      "name": "IOC http://117.209.90.100:46189/bin.sh",
+      "pattern": "[x-opencti:value = 'http://117.209.90.100:46189/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--39088d5f4746",
-      "name": "IOC http://79.78.23.203:1723/i",
-      "pattern": "[x-opencti:value = 'http://79.78.23.203:1723/i']"
+      "id": "indicator--8e4056ac7002",
+      "name": "IOC http://125.45.17.92:55141/i",
+      "pattern": "[x-opencti:value = 'http://125.45.17.92:55141/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5a6885021a2e",
-      "name": "IOC http://192.140.176.79:12124/02.08.2022.exe",
-      "pattern": "[x-opencti:value = 'http://192.140.176.79:12124/02.08.2022.exe']"
+      "id": "indicator--1f003a6cb968",
+      "name": "IOC http://182.114.248.66:60964/i",
+      "pattern": "[x-opencti:value = 'http://182.114.248.66:60964/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b0d9ba8bba78",
-      "name": "IOC http://119.109.217.119:36682/i",
-      "pattern": "[x-opencti:value = 'http://119.109.217.119:36682/i']"
+      "id": "indicator--4ddbb0996d95",
+      "name": "IOC http://125.41.225.143:59986/i",
+      "pattern": "[x-opencti:value = 'http://125.41.225.143:59986/i']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bbfead4849c0",
-      "name": "IOC http://130.12.180.43/files/7598745812/ACWEBaQ.exe",
-      "pattern": "[x-opencti:value = 'http://130.12.180.43/files/7598745812/ACWEBaQ.exe']"
+      "id": "indicator--498457fcd2fa",
+      "name": "IOC http://182.121.178.91:42593/bin.sh",
+      "pattern": "[x-opencti:value = 'http://182.121.178.91:42593/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--171c6be021e3",
-      "name": "IOC http://125.41.7.77:35489/i",
-      "pattern": "[x-opencti:value = 'http://125.41.7.77:35489/i']"
+      "id": "indicator--03f68fdeb304",
+      "name": "IOC http://123.5.125.131:43652/bin.sh",
+      "pattern": "[x-opencti:value = 'http://123.5.125.131:43652/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2877b35c6257",
-      "name": "IOC http://61.53.124.231:58875/bin.sh",
-      "pattern": "[x-opencti:value = 'http://61.53.124.231:58875/bin.sh']"
+      "id": "indicator--c9db0e09e6a1",
+      "name": "IOC http://110.39.230.2:58126/bin.sh",
+      "pattern": "[x-opencti:value = 'http://110.39.230.2:58126/bin.sh']"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--41d1903dbb1a",
-      "name": "IOC http://112.124.33.87:60147/linux",
-      "pattern": "[x-opencti:value = 'http://112.124.33.87:60147/linux']"
+      "id": "indicator--f6fd5e5c219b",
+      "name": "IOC http://182.116.48.199:53383/bin.sh",
+      "pattern": "[x-opencti:value = 'http://182.116.48.199:53383/bin.sh']"
     }
   ]
 }
