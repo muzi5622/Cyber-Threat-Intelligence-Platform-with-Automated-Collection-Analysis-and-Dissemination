@@ -15,7 +15,12 @@ CFG_PATH = os.getenv("STRATEGY_CONFIG", "/app/strategy/config.yml")
 def run_daily():
     client = OpenCTIClient()
     result = build_daily_exec_summary(CFG_PATH)
-    report_id = client.create_report(result["report_name"], result["description"], confidence=70)
+    report_id = client.create_report(
+        result["report_name"],
+        result["description"],
+        confidence=70,
+        tag_values=["strategy-exec", "strategy-daily", "executive-brief"],
+    )
     print(f"[STRATEGY] Daily report created: {report_id}")
     return {"report_id": report_id, "name": result["report_name"]}
 
@@ -23,7 +28,12 @@ def run_daily():
 def run_weekly():
     client = OpenCTIClient()
     result = build_weekly_brief(CFG_PATH)
-    report_id = client.create_report(result["report_name"], result["description"], confidence=75)
+    report_id = client.create_report(
+        result["report_name"],
+        result["description"],
+        confidence=75,
+        tag_values=["strategy-exec", "strategy-weekly", "executive-brief"],
+    )
     print(f"[STRATEGY] Weekly report created: {report_id}")
     return {"report_id": report_id, "name": result["report_name"]}
 
@@ -31,7 +41,12 @@ def run_weekly():
 def run_monthly():
     client = OpenCTIClient()
     result = build_monthly_landscape(CFG_PATH, days=30)
-    report_id = client.create_report(result["report_name"], result["description"], confidence=80)
+    report_id = client.create_report(
+        result["report_name"],
+        result["description"],
+        confidence=80,
+        tag_values=["strategy-exec", "strategy-monthly", "executive-assessment"],
+    )
     print(f"[STRATEGY] Monthly report created: {report_id}")
     return {"report_id": report_id, "name": result["report_name"]}
 
@@ -44,7 +59,7 @@ def start_scheduler():
 
     daily_cron = os.getenv("STRATEGY_DAILY_CRON", "0 9 * * *")
     weekly_cron = os.getenv("STRATEGY_WEEKLY_CRON", "0 9 * * 1")
-    monthly_cron = os.getenv("STRATEGY_MONTHLY_CRON", "0 9 1 * *")  # 1st of month 09:00
+    monthly_cron = os.getenv("STRATEGY_MONTHLY_CRON", "0 9 1 * *")
     tz = os.getenv("STRATEGY_TIMEZONE", "Asia/Karachi")
 
     def parse_5(cron_str: str):
@@ -59,11 +74,8 @@ def start_scheduler():
     sched.add_job(run_daily, CronTrigger(minute=d_m, hour=d_h, day=d_dom, month=d_mon, day_of_week=d_dow))
     sched.add_job(run_weekly, CronTrigger(minute=w_m, hour=w_h, day=w_dom, month=w_mon, day_of_week=w_dow))
     sched.add_job(run_monthly, CronTrigger(minute=m_m, hour=m_h, day=m_dom, month=m_mon, day_of_week=m_dow))
-
     sched.start()
-    print(
-        f"[STRATEGY] scheduler started (tz={tz}) "
-        f"daily='{daily_cron}' weekly='{weekly_cron}' monthly='{monthly_cron}'"
-    )
+
+    print(f"[STRATEGY] scheduler started (tz={tz}) daily='{daily_cron}' weekly='{weekly_cron}' monthly='{monthly_cron}'")
     return sched
  
