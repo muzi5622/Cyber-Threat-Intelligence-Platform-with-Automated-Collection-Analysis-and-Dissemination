@@ -68,7 +68,6 @@ class OpenCTIClient:
                 observable_value
                 entity_type
                 created_at
-                confidence
                 x_opencti_score
               }
             }

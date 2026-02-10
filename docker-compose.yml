@@ -216,7 +216,7 @@ services:
     - ALIENVAULT_PULSE_START_TIMESTAMP=2026-02-01T00:00:00
 
     # ✅ schedule using OpenCTI standard
-    - CONNECTOR_DURATION_PERIOD=PT6H
+    - CONNECTOR_DURATION_PERIOD=PT12H
 
     depends_on:
       opencti:
@@ -292,6 +292,7 @@ services:
       - STRATEGY_DAILY_CRON=0 9 * * *
       # Weekly Monday at 09:00
       - STRATEGY_WEEKLY_CRON=0 9 * * 1
+      - STRATEGY_MONTHLY_CRON=0 9 1 * * 
       # Minimum score to auto-create action cases
       - STRATEGY_CASE_THRESHOLD=70
     ports:

@@ -1,12 +1,13 @@
 import os
 import requests
 from fastapi import FastAPI, APIRouter
-
+from strategy.scheduler import start_scheduler, run_daily, run_weekly, run_monthly
 # Make local package imports always work
 import sys
 sys.path.append(os.path.dirname(__file__))
 
-from strategy.scheduler import start_scheduler, run_daily, run_weekly
+#from strategy.scheduler import start_scheduler, run_daily, run_weekly
+
 
 OPENCTI_BASE = os.getenv("OPENCTI_BASE", "http://opencti:8080").rstrip("/")
 OPENCTI_TOKEN = os.getenv("OPENCTI_TOKEN", "")
@@ -93,10 +94,16 @@ def manual_weekly():
     out = run_weekly()
     return {"status": "ok", "created": out}
 
+@router.post("/run-monthly")
+def manual_monthly():
+    out = run_monthly()
+    return {"status": "ok", "created": out}
+
+
+
 app.include_router(router)
 
 
 @app.on_event("startup")
 def _startup():
     start_scheduler()
- 
