@@ -1,0 +1,16 @@
+partners:
+  public:
+    tlp: clear
+    include_reports: false
+    max_observables: 200
+    max_reports: 0
+    sanitize_reports: true
+    allowed_labels: []
+  bank:
+    tlp: amber
+    include_reports: true
+    max_observables: 200
+    max_reports: 20
+    sanitize_reports: true
+    # If empty -> no label filtering
+    allowed_labels: []
