@@ -192,8 +192,10 @@ services:
       - OPENCTI_BASE=http://opencti:8080
       - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
       - STATE_PATH=/data/state.json
+      - MODEL_PATH=muzi5622/cti-ner-model
     volumes:
       - ./data/ml:/data
+      - ./models_cache:/root/.cache/huggingface/transformers
     depends_on:
       - opencti
     restart: unless-stopped
