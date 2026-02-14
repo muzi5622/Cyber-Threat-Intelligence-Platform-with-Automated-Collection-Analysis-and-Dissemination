@@ -9,6 +9,36 @@ import requests
 from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
 
 
+
+# At the very top
+MODEL_PATH = os.getenv("MODEL_PATH", "muzi5622/cti-ner-model").strip()
+
+# build_ner() uses MODEL_PATH
+def build_ner():
+    print(f"[ml-ner-enricher] downloading/loading model {MODEL_PATH} ...")
+
+    tok = AutoTokenizer.from_pretrained(MODEL_PATH, use_fast=True)
+    mdl = AutoModelForTokenClassification.from_pretrained(MODEL_PATH)
+
+    # Fix for DistilBERT / models that don't use token_type_ids
+    if hasattr(tok, "model_input_names") and "token_type_ids" in tok.model_input_names:
+        tok.model_input_names = [n for n in tok.model_input_names if n != "token_type_ids"]
+
+    orig_forward = mdl.forward
+    def forward_drop_token_type_ids(*args, **kwargs):
+        kwargs.pop("token_type_ids", None)
+        return orig_forward(*args, **kwargs)
+    mdl.forward = forward_drop_token_type_ids
+
+    return pipeline(
+        "token-classification",
+        model=mdl,
+        tokenizer=tok,
+        aggregation_strategy="simple",
+        device=-1,  # CPU
+    )
+
+
 # -------------------------
 # Config
 # -------------------------
@@ -411,4 +441,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
- 
