@@ -1,43 +1,48 @@
 # Cyber Threat Intelligence Platform  
-## Threat Intelligence Sharing & TAXII Dissemination Layer
+# Threat Intelligence Sharing & TAXII Dissemination Layer
 
 ---
 
 # 📌 Overview
 
-This feature implements **secure threat intelligence sharing** using:
+This feature implements secure threat intelligence sharing using:
 
-- STIX 2.1 standard bundles
-- API key–protected partner access
-- Internal intelligence segmentation
-- TLP-based dissemination (CLEAR / AMBER / RED)
-- Source sanitization policies
-- Automated export from OpenCTI
+- STIX 2.1 standard bundles  
+- API key–protected partner access  
+- Internal intelligence segmentation  
+- TLP-based dissemination (CLEAR / AMBER / RED)  
+- Source sanitization policies  
+- Automated export from OpenCTI  
+- Honeypot IOC pipeline integration  
+- High-confidence IOC sharing feeds  
+- Preview endpoints for validation before consumption  
 
 It enables controlled intelligence sharing with:
 
-- 🌍 Public community
-- 🏦 Industry partners
-- 🛡 Internal SOC teams
+- 🌍 Public community  
+- 🏦 Industry partners  
+- 🛡 Internal SOC teams  
 
 ---
 
 # 🧠 Architecture (Dissemination Layer)
 
+```
 OpenCTI → TAXII Exporter → STIX Bundles on Disk → Sharing Gateway (API Key Protected)
+```
 
-### Flow:
+Flow:
 
-1. OpenCTI stores reports, indicators, observables.
-2. `taxii-exporter` pulls data via GraphQL.
-3. Data is filtered + sanitized based on policy.
-4. STIX 2.1 bundles are generated into:
+- OpenCTI stores reports, indicators, observables  
+- taxii-exporter pulls data via GraphQL  
+- Data is filtered and sanitized based on policy  
+- STIX 2.1 bundles are generated into:
 
 ```
 data/opencti-export/share/
 ```
 
-5. `taxii-server` serves them via HTTP endpoints.
+- taxii-server serves them via HTTP endpoints  
 
 ---
 
@@ -50,20 +55,85 @@ data/opencti-export/share/
 │   └── bundle.json
 ├── partners/
 │   └── bank/
-│       └── reports.json
+│       ├── reports.json
+│       ├── iocs_high.json
+│       └── preview.json
 └── internal/
     └── reports.json
 ```
 
 ---
 
+# 🆕 New Feature: High-Confidence IOC Sharing
+
+New endpoint provides curated, high-confidence indicators extracted from:
+
+- Honeypot attacks  
+- Confirmed malicious activity  
+- Verified malicious infrastructure  
+- Detection-ready indicators  
+
+Endpoint:
+
+```
+/share/partners/bank/iocs_high.json
+```
+
+Example preview command:
+
+```bash
+curl -s -H "X-API-Key: BANK123" \
+http://localhost:9000/share/partners/bank/iocs_high.json \
+| jq '.objects[] | .type' | head
+```
+
+Example output:
+
+```
+"indicator"
+"indicator"
+"ipv4-addr"
+"domain-name"
+"file"
+```
+
+---
+
+# 👁 Preview Endpoint (New)
+
+Preview endpoint allows partners to validate feed safely before ingestion.
+
+Endpoint:
+
+```
+/share/partners/bank/preview.json
+```
+
+Purpose:
+
+- Validate structure
+- Verify STIX compliance
+- Confirm access permissions
+- Test ingestion pipelines
+
+Example:
+
+```bash
+curl -s -H "X-API-Key: BANK123" \
+http://localhost:9000/share/partners/bank/preview.json | jq .
+```
+
+---
+
 # 🔐 Intelligence Segmentation Model
 
-| Feed      | TLP      | Auth Required | Content Scope |
-|-----------|----------|--------------|---------------|
-| Public    | CLEAR    | ❌ No        | Sanitized observables only |
-| Partner   | AMBER    | ✅ Partner Key | Curated reports + indicators |
-| Internal  | RED      | ✅ Internal Key | Full intelligence set |
+| Feed | TLP | Auth Required | Content Scope |
+|----|----|----|----|
+| Public | CLEAR | ❌ No | Sanitized observables only |
+| Partner | AMBER | ✅ Partner Key | Curated reports + indicators |
+| Partner IOC Feed | AMBER | ✅ Partner Key | High-confidence IOCs |
+| Partner Preview | AMBER | ✅ Partner Key | Preview sample |
+| Internal | RED | ✅ Internal Key | Full intelligence set |
 
 ---
 
@@ -71,27 +141,49 @@ data/opencti-export/share/
 
 The exporter automatically inserts STIX marking-definition:
 
-- `marking-definition--tlp-clear`
-- `marking-definition--tlp-amber`
-- `marking-definition--tlp-red`
+```
+marking-definition--tlp-clear
+marking-definition--tlp-amber
+marking-definition--tlp-red
+```
 
 Each bundle includes proper STIX 2.1 marking structure.
+
+Example:
+
+```json
+{
+  "type": "bundle",
+  "spec_version": "2.1",
+  "objects": [...]
+}
+```
 
 ---
 
 # ⚙️ How It Works Internally
 
-## 1️⃣ Export Process
+Inside:
 
-Inside `services/taxii-exporter/export.py`
+```
+services/taxii-exporter/export.py
+```
 
-### Step 1 – Fetch from OpenCTI
+---
+
+## Step 1 – Fetch from OpenCTI
 
 Uses GraphQL:
-- `stixCyberObservables`
-- `reports`
 
-### Step 2 – Apply Partner Policy
+- stixCyberObservables  
+- reports  
+- indicators  
+
+Includes honeypot pipeline intelligence.
+
+---
+
+## Step 2 – Apply Partner Policy
 
 Policy file:
 
@@ -105,6 +197,7 @@ Example:
 bank:
   tlp: amber
   include_reports: true
+  include_high_confidence_iocs: true
   max_observables: 200
   max_reports: 20
   sanitize_reports: true
@@ -112,17 +205,25 @@ bank:
     - otx
     - osint
     - linux
+    - honeypot
 ```
 
-### Step 3 – Filter Logic
+---
 
-- Limit by max_observables
-- Limit by max_reports
-- Filter by allowed_labels
-- Filter by source (e.g. OTX)
-- Apply sanitization if enabled
+## Step 3 – Filter Logic
 
-### Step 4 – Generate STIX Bundle
+Exporter applies:
+
+- Limit by max_observables  
+- Limit by max_reports  
+- Filter by allowed_labels  
+- Filter by source  
+- Filter by confidence score  
+- Apply sanitization if enabled  
+
+---
+
+## Step 4 – Generate STIX Bundle
 
 Creates:
 
@@ -134,24 +235,33 @@ Creates:
 }
 ```
 
+Files generated:
+
+```
+reports.json
+iocs_high.json
+preview.json
+```
+
 ---
 
 # 🔎 Source Sanitization
 
-When `sanitize_reports: true`, exporter removes:
+When sanitize_reports: true, exporter removes:
 
-- createdBy
-- external references
-- internal labels
-- internal scoring metadata
-- connector metadata
-- internal enrichment traces
+- createdBy  
+- external references  
+- internal labels  
+- internal scoring metadata  
+- connector metadata  
+- internal enrichment traces  
 
 This protects:
-- Internal sources
-- Investigation notes
-- Analyst comments
-- Attribution confidence
+
+- Internal sources  
+- Investigation notes  
+- Analyst comments  
+- Attribution confidence  
 
 ---
 
@@ -168,8 +278,10 @@ X-API-Key: BANK123
 Without key:
 
 ```
-401 Unauthorized (partner)
+401 Unauthorized
 ```
+
+---
 
 ## Internal Access
 
@@ -182,20 +294,20 @@ X-Internal-Key: INTERNAL123
 Without key:
 
 ```
-401 Unauthorized (internal)
+401 Unauthorized
 ```
 
 ---
 
 # 🚀 How To Start
 
-## Start Everything
+Start everything:
 
 ```bash
 docker compose up -d --build
 ```
 
-## Restart Only Sharing Layer
+Restart sharing layer:
 
 ```bash
 docker compose up -d --force-recreate taxii-exporter taxii-server
@@ -208,12 +320,13 @@ docker compose up -d --force-recreate taxii-exporter taxii-server
 Force re-export:
 
 ```bash
-docker compose exec taxii-exporter sh -lc 'python -c "import export; export.export_collections()"'
+docker compose exec taxii-exporter sh -lc \
+'python -c "import export; export.export_collections()"'
 ```
 
 ---
 
-# 🧹 Reset Export Data (Fresh Regeneration)
+# 🧹 Reset Export Data
 
 ```bash
 rm -rf data/opencti-export/share
@@ -221,12 +334,15 @@ rm -f data/opencti-export/bundle.json
 
 docker compose up -d --force-recreate taxii-exporter taxii-server
 
-docker compose exec taxii-exporter sh -lc 'python -c "import export; export.export_collections()"'
+docker compose exec taxii-exporter sh -lc \
+'python -c "import export; export.export_collections()"'
 ```
 
 ---
 
 # 🧪 Testing & Validation
+
+---
 
 ## 1️⃣ Check index
 
@@ -235,19 +351,24 @@ curl -s http://localhost:9000/share/index.json | jq .
 ```
 
 Expected:
-- generated_at
-- lookback_days
-- paths
+
+```
+generated_at
+lookback_days
+paths
+```
 
 ---
 
 ## 2️⃣ Public Feed
 
 ```bash
-curl -s http://localhost:9000/share/public/bundle.json | grep -m 1 '"definition":'
+curl -s http://localhost:9000/share/public/bundle.json \
+| grep -m 1 '"definition":'
 ```
 
-Should show:
+Expected:
+
 ```
 "tlp": "clear"
 ```
@@ -256,18 +377,19 @@ Should show:
 
 ## 3️⃣ Partner Feed
 
-### Without Key
+Without Key:
 
 ```bash
 curl -i http://localhost:9000/share/partners/bank/reports.json
 ```
 
 Expected:
+
 ```
 401 Unauthorized
 ```
 
-### With Key
+With Key:
 
 ```bash
 curl -s -H "X-API-Key: BANK123" \
@@ -275,60 +397,61 @@ http://localhost:9000/share/partners/bank/reports.json \
 | grep -c '"type": "report"'
 ```
 
-Expected:
-```
-5
+---
+
+## 4️⃣ Partner High-Confidence IOC Feed
+
+```bash
+curl -s -H "X-API-Key: BANK123" \
+http://localhost:9000/share/partners/bank/iocs_high.json \
+| jq '.objects[] | .type' | head
 ```
 
 ---
 
-## 4️⃣ Internal Feed
+## 5️⃣ Partner Preview Endpoint
 
-### Without Key
+```bash
+curl -s -H "X-API-Key: BANK123" \
+http://localhost:9000/share/partners/bank/preview.json | jq .
+```
+
+---
+
+## 6️⃣ Internal Feed
+
+Without Key:
 
 ```bash
 curl -i http://localhost:9000/share/internal/reports.json
 ```
 
-Expected:
-```
-401 Unauthorized
-```
-
-### With Key
+With Key:
 
 ```bash
 curl -s -H "X-Internal-Key: INTERNAL123" \
-http://localhost:9000/share/internal/reports.json \
-| grep -c '"type": "report"'
-```
-
-Expected:
-```
-50
+http://localhost:9000/share/internal/reports.json
 ```
 
 ---
 
 # 🧩 Use Cases
 
-### 🏦 Industry Partner Sharing
-Share curated OTX-derived intelligence without exposing internal investigations.
+🏦 Industry Partner Sharing  
+Share curated intelligence safely.
 
-### 🌍 Community Intelligence
-Provide CLEAR-level indicators to public researchers.
+🌍 Community Intelligence  
+Provide public threat indicators.
 
-### 🛡 SOC Operations
-Maintain RED-level full feed internally.
+🛡 SOC Operations  
+Maintain full internal intelligence.
 
-### 📈 Regulatory Compliance
-Segment intelligence per TLP requirements.
+🤖 Automated Blocking  
+Use IOC feed for automated defense.
 
 ---
 
 # 🛠 Debugging Guide
-
-## Container restarting?
 
 Check logs:
 
@@ -336,84 +459,62 @@ Check logs:
 docker compose logs --tail=50 taxii-exporter
 ```
 
-## Unauthorized error?
+Verify files:
 
-Ensure correct header:
-
-```
-X-API-Key
-X-Internal-Key
+```bash
+ls data/opencti-export/share/partners/bank/
 ```
 
-## No reports showing?
+Expected:
 
-Check:
-- partners.yml allowed_labels
-- OpenCTI actually contains labeled data
-- max_reports limit
+```
+reports.json
+iocs_high.json
+preview.json
+```
 
 ---
 
 # 🧠 Workflow Summary
 
-1. RSS Ingestor pulls feeds.
-2. NLP + ML enrich content.
-3. Intel API scores intelligence.
-4. OpenCTI stores enriched objects.
-5. TAXII exporter filters & sanitizes.
-6. Sharing server exposes STIX bundles securely.
+```
+RSS + Honeypot → OpenCTI → Exporter → Filter → Sanitize → STIX → API Sharing
+```
 
 ---
 
 # 🏆 Security Controls Implemented
 
-- API key enforcement
-- TLP segmentation
-- Label filtering
-- Source sanitization
-- Report limiting
-- Observable limiting
-- Partner-specific collections
-- STIX 2.1 compliance
-
----
-
-# 🎓 How To Explain in Viva / Presentation
-
-> “We implemented a three-tier intelligence dissemination model using STIX 2.1. Intelligence is exported from OpenCTI, filtered by partner policy, sanitized for source protection, marked with TLP definitions, and securely shared via API-key protected endpoints. Public, partner, and internal feeds are segmented to enforce least privilege intelligence sharing.”
-
----
-
-# 📌 Important Notes
-
-405 Method Not Allowed is normal for HEAD requests.  
-Use GET instead.
-
-Curl pipe error `Failure writing output` is harmless (caused by head).
+- API key enforcement  
+- TLP segmentation  
+- Label filtering  
+- Source sanitization  
+- Report limiting  
+- Observable limiting  
+- Partner-specific feeds  
+- Preview validation endpoint  
+- STIX 2.1 compliance  
 
 ---
 
 # 🔮 Future Enhancements
 
-- Multi-partner dynamic provisioning
-- OAuth2 instead of static API keys
-- Real TAXII 2.1 Collections API
-- Per-partner dynamic label filtering
+- TAXII 2.1 collections
+- OAuth2 authentication
 - Rate limiting
 - Audit logging
-- Feed usage tracking
-- Download statistics
+- Feed analytics
 
 ---
 
 # ✅ Current Status
 
 ✔ Public feed working  
-✔ Partner API key enforcement working  
-✔ Internal API key enforcement working  
-✔ STIX 2.1 compliant bundles  
-✔ TLP marking included  
-✔ Source sanitization functional  
-✔ Policy-based filtering active  
+✔ Partner feed working  
+✔ High-confidence IOC feed working  
+✔ Preview endpoint working  
+✔ Internal feed working  
+✔ API security working  
+✔ STIX 2.1 compliant  
 
 ---
