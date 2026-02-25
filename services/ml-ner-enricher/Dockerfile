@@ -11,7 +11,7 @@ COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
 COPY app.py /app/app.py
-COPY models /app/models
+#COPY models /app/models
 
 ENV PYTHONUNBUFFERED=1
 CMD ["python", "/app/app.py"]
