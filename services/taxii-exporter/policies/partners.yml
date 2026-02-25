@@ -6,11 +6,24 @@ partners:
     max_reports: 0
     sanitize_reports: true
     allowed_labels: []
+
+    # NEW: high-confidence IOC feemax_iocs: 500
+
+    export_iocs_high: true
+    min_confidence: 80
+    max_iocs: 1000
+    include_domains_from_url: true
+
   bank:
     tlp: amber
     include_reports: true
     max_observables: 200
     max_reports: 20
     sanitize_reports: true
-    # If empty -> no label filtering
     allowed_labels: []
+
+    # NEW: high-confidence IOC feed
+    export_iocs_high: true
+    min_confidence: 80
+    max_iocs: 1000
+    include_domains_from_url: true
