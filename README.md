@@ -143,7 +143,7 @@ Supports:
 
 # 🏗 Architecture
 
-![architecture digram](architecture.png)
+![architecture digram](architecture.svg)
 ---
 
 # 🐳 Services
