@@ -1,0 +1,12 @@
+pycti
+pandas
+numpy
+joblib
+huggingface_hub
+requests
+
+# pin to match model training version
+scikit-learn==1.6.1
+
+# (optional) only if you're using hdbscan in container
+hdbscan

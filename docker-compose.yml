@@ -201,6 +201,32 @@ services:
       - opencti
     restart: unless-stopped
 
+
+  actor-profiler:
+    build: ./services/actor-profiler
+    environment:
+      - ES_URL=http://elasticsearch:9200
+      - ES_INDEX=honeypot-logs-*
+      - OPENCTI_URL=http://opencti:8080
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - RUN_EVERY_SECONDS=300
+      - LOOKBACK_MINUTES=60
+
+      # Hugging Face model repo
+      - HF_REPO_ID=muzi5622/actor-profiler-model
+      # Optional if repo is private:
+      # - HF_TOKEN=${HF_TOKEN}
+
+      # Optional state db for checkpointing
+      - STATE_PATH=/state/state.json
+    volumes:
+      - ./services/actor-profiler/app.py:/app/app.py:ro
+      - ./data/actor-profiler:/state
+    depends_on:
+      - elasticsearch
+      - opencti
+    restart: unless-stopped
+
   intel-api:
     build: ./services/intel-api
     environment:
