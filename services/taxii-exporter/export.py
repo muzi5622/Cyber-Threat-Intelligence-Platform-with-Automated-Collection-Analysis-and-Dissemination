@@ -1,4 +1,10 @@
-import os, time, json, re
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+import time
+import json
+import re
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urlparse
 
@@ -26,6 +32,10 @@ DEFAULT_MIN_CONFIDENCE = 80
 DEFAULT_MAX_IOCS_HIGH = 1000
 
 HEADERS = {"Authorization": f"Bearer {OPENCTI_TOKEN}"}
+
+# Max page size for OpenCTI GraphQL pagination.
+# 200 is a safe default; tune if your OpenCTI allows more.
+GQL_PAGE_SIZE = int(os.getenv("OPENCTI_GQL_PAGE_SIZE", "200"))
 
 
 # ---------------------------
@@ -146,14 +156,34 @@ def observable_value(node: dict) -> str:
     return (node.get("observable_value") or node.get("value") or "").strip()
 
 
+def _gql_post(query: str, variables: dict, timeout: int = 60) -> dict:
+    """Post a GraphQL request to OpenCTI with basic error handling."""
+    gql = f"{OPENCTI_BASE}/graphql"
+    r = requests.post(
+        gql,
+        headers={**HEADERS, "Content-Type": "application/json"},
+        json={"query": query, "variables": variables},
+        timeout=timeout,
+    )
+    r.raise_for_status()
+    data = r.json()
+    if "errors" in data:
+        # Keep it short to avoid flooding logs
+        print("[taxii-exporter] GraphQL errors:", str(data["errors"])[:800])
+    return data
+
+
 # ---------------------------
-# OpenCTI fetchers
+# OpenCTI fetchers (PAGINATED)
 # ---------------------------
 def fetch_observables(limit: int = 200) -> list:
-    gql = f"{OPENCTI_BASE}/graphql"
+    """
+    Fetch stixCyberObservables with pagination so we don't miss items
+    that fall outside the newest 'first:N' page.
+    """
     q = """
-    query($n:Int!){
-      stixCyberObservables(first:$n, orderBy: created_at, orderMode: desc){
+    query($n:Int!, $after:ID){
+      stixCyberObservables(first:$n, after:$after, orderBy: created_at, orderMode: desc){
         edges{
           node{
             id
@@ -163,30 +193,43 @@ def fetch_observables(limit: int = 200) -> list:
             createdBy { name }
             objectLabel { value }
           }
+          cursor
+        }
+        pageInfo{
+          hasNextPage
+          endCursor
         }
       }
     }
     """
-    r = requests.post(
-        gql,
-        headers={**HEADERS, "Content-Type": "application/json"},
-        json={"query": q, "variables": {"n": limit}},
-        timeout=30,
-    )
-    r.raise_for_status()
-    data = r.json()
-    if "errors" in data:
-        print("[taxii-exporter] fetch_observables GraphQL errors:", str(data["errors"])[:800])
-        return []
-    edges = data["data"]["stixCyberObservables"]["edges"]
-    return [e["node"] for e in edges if e.get("node")]
+
+    out = []
+    after = None
+    page_size = min(GQL_PAGE_SIZE, max(1, limit))
+
+    while len(out) < limit:
+        data = _gql_post(q, {"n": min(page_size, limit - len(out)), "after": after}, timeout=60)
+        block = (data.get("data") or {}).get("stixCyberObservables") or {}
+        edges = block.get("edges") or []
+        out.extend([e["node"] for e in edges if e.get("node")])
+
+        page = block.get("pageInfo") or {}
+        if not page.get("hasNextPage"):
+            break
+        after = page.get("endCursor")
+        if not after:
+            break
+
+    return out[:limit]
 
 
 def fetch_reports(limit: int = 50) -> list:
-    gql = f"{OPENCTI_BASE}/graphql"
+    """
+    Fetch reports with pagination.
+    """
     q = """
-    query($n:Int!){
-      reports(first:$n, orderBy: created_at, orderMode: desc){
+    query($n:Int!, $after:ID){
+      reports(first:$n, after:$after, orderBy: created_at, orderMode: desc){
         edges{
           node{
             id
@@ -196,30 +239,45 @@ def fetch_reports(limit: int = 50) -> list:
             createdBy { name }
             objectLabel { value }
           }
+          cursor
+        }
+        pageInfo{
+          hasNextPage
+          endCursor
         }
       }
     }
     """
-    r = requests.post(
-        gql,
-        headers={**HEADERS, "Content-Type": "application/json"},
-        json={"query": q, "variables": {"n": limit}},
-        timeout=30,
-    )
-    r.raise_for_status()
-    data = r.json()
-    if "errors" in data:
-        print("[taxii-exporter] fetch_reports GraphQL errors:", str(data["errors"])[:800])
-        return []
-    edges = data["data"]["reports"]["edges"]
-    return [e["node"] for e in edges if e.get("node")]
+
+    out = []
+    after = None
+    page_size = min(GQL_PAGE_SIZE, max(1, limit))
+
+    while len(out) < limit:
+        data = _gql_post(q, {"n": min(page_size, limit - len(out)), "after": after}, timeout=60)
+        block = (data.get("data") or {}).get("reports") or {}
+        edges = block.get("edges") or []
+        out.extend([e["node"] for e in edges if e.get("node")])
+
+        page = block.get("pageInfo") or {}
+        if not page.get("hasNextPage"):
+            break
+        after = page.get("endCursor")
+        if not after:
+            break
+
+    return out[:limit]
 
 
 def fetch_indicators(limit: int = 200) -> list:
-    gql = f"{OPENCTI_BASE}/graphql"
+    """
+    Fetch indicators with pagination.
+    This is the critical fix for your missing IOC: OpenCTI will only return
+    the newest 'first:N' unless you page through using 'after'.
+    """
     q = """
-    query($n:Int!){
-      indicators(first:$n, orderBy: created_at, orderMode: desc){
+    query($n:Int!, $after:ID){
+      indicators(first:$n, after:$after, orderBy: created_at, orderMode: desc){
         edges{
           node{
             id
@@ -232,23 +290,34 @@ def fetch_indicators(limit: int = 200) -> list:
             createdBy { name }
             objectLabel { value }
           }
+          cursor
+        }
+        pageInfo{
+          hasNextPage
+          endCursor
         }
       }
     }
     """
-    r = requests.post(
-        gql,
-        headers={**HEADERS, "Content-Type": "application/json"},
-        json={"query": q, "variables": {"n": limit}},
-        timeout=30,
-    )
-    r.raise_for_status()
-    data = r.json()
-    if "errors" in data:
-        print("[taxii-exporter] fetch_indicators GraphQL errors:", str(data["errors"])[:800])
-        return []
-    edges = data["data"]["indicators"]["edges"]
-    return [e["node"] for e in edges if e.get("node")]
+
+    out = []
+    after = None
+    page_size = min(GQL_PAGE_SIZE, max(1, limit))
+
+    while len(out) < limit:
+        data = _gql_post(q, {"n": min(page_size, limit - len(out)), "after": after}, timeout=60)
+        block = (data.get("data") or {}).get("indicators") or {}
+        edges = block.get("edges") or []
+        out.extend([e["node"] for e in edges if e.get("node")])
+
+        page = block.get("pageInfo") or {}
+        if not page.get("hasNextPage"):
+            break
+        after = page.get("endCursor")
+        if not after:
+            break
+
+    return out[:limit]
 
 
 # ---------------------------
@@ -316,6 +385,7 @@ _PAT_IPV6 = re.compile(r"ipv6-addr:value\s*=\s*'([^']+)'", re.IGNORECASE)
 _PAT_DOMAIN = re.compile(r"domain-name:value\s*=\s*'([^']+)'", re.IGNORECASE)
 _PAT_URL = re.compile(r"url:value\s*=\s*'([^']+)'", re.IGNORECASE)
 
+
 def domain_from_url(u: str) -> str:
     try:
         p = urlparse(u)
@@ -323,6 +393,7 @@ def domain_from_url(u: str) -> str:
         return host
     except Exception:
         return ""
+
 
 def extract_iocs_from_pattern(pattern: str, include_domains_from_url: bool = True) -> list:
     if not pattern:
@@ -351,7 +422,13 @@ def extract_iocs_from_pattern(pattern: str, include_domains_from_url: bool = Tru
     return uniq
 
 
-def export_iocs_high_from_indicators(collection_name: str, policy: dict, tlp_obj: dict, indicators: list, out_path: str) -> bool:
+def export_iocs_high_from_indicators(
+    collection_name: str,
+    policy: dict,
+    tlp_obj: dict,
+    indicators: list,
+    out_path: str,
+) -> bool:
     export_enabled = bool(policy.get("export_iocs_high", DEFAULT_EXPORT_IOCS_HIGH))
     if not export_enabled:
         return False
@@ -384,7 +461,49 @@ def export_iocs_high_from_indicators(collection_name: str, policy: dict, tlp_obj
         if len(used) >= max_iocs:
             break
 
-    bundle = {"type": "bundle", "id": f"bundle--cti-share-iocs-high-{collection_name}", "spec_version": "2.1", "objects": objects}
+    bundle = {
+        "type": "bundle",
+        "id": f"bundle--cti-share-iocs-high-{collection_name}",
+        "spec_version": "2.1",
+        "objects": objects,
+    }
+    write_json(out_path, bundle)
+    return True
+
+
+# ---------------------------
+# PATCH ADDED: IOC export guaranteed from observables
+# ---------------------------
+def export_iocs_from_observables(
+    collection_name: str,
+    policy: dict,
+    tlp_obj: dict,
+    observables: list,
+    out_path: str,
+) -> bool:
+    max_iocs = safe_int(policy.get("max_iocs", DEFAULT_MAX_IOCS_HIGH), DEFAULT_MAX_IOCS_HIGH)
+
+    obs = [o for o in observables if match_allowed_labels(o, policy.get("allowed_labels", []))]
+    obs = obs[: max_iocs]
+
+    objects = [tlp_obj]
+    used = set()
+    for o in obs:
+        val = observable_value(o)
+        if not val or val in used:
+            continue
+        used.add(val)
+        sid = (o.get("id") or "")[-12:] or f"{abs(hash(val))%10**12:012d}"
+        objects.append(stix_indicator_for_value(val, sid, o.get("created_at") or now_utc_iso()))
+        if len(used) >= max_iocs:
+            break
+
+    bundle = {
+        "type": "bundle",
+        "id": f"bundle--cti-share-iocs-obs-{collection_name}",
+        "spec_version": "2.1",
+        "objects": objects,
+    }
     write_json(out_path, bundle)
     return True
 
@@ -410,42 +529,51 @@ def export_collections():
     ensure_dirs()
     policies = load_policies(POLICY_PATH)
 
-    public = policies.get("public", {
-        "tlp": "clear",
-        "include_reports": False,
-        "max_observables": 200,
-        "max_reports": 0,
-        "sanitize_reports": True,
-        "allowed_labels": [],
-        "export_iocs_high": False,
-        "min_confidence": DEFAULT_MIN_CONFIDENCE,
-        "max_iocs": DEFAULT_MAX_IOCS_HIGH,
-        "include_domains_from_url": True,
-    })
-    internal = policies.get("internal", {
-        "tlp": "red",
-        "include_reports": True,
-        "max_observables": 800,
-        "max_reports": 50,
-        "sanitize_reports": False,
-        "allowed_labels": [],
-        "export_iocs_high": False,
-        "min_confidence": DEFAULT_MIN_CONFIDENCE,
-        "max_iocs": DEFAULT_MAX_IOCS_HIGH,
-        "include_domains_from_url": True,
-    })
-    partner = policies.get(DEFAULT_PARTNER_NAME, {
-        "tlp": "amber",
-        "include_reports": True,
-        "max_observables": 200,
-        "max_reports": 20,
-        "sanitize_reports": True,
-        "allowed_labels": [],
-        "export_iocs_high": False,
-        "min_confidence": DEFAULT_MIN_CONFIDENCE,
-        "max_iocs": DEFAULT_MAX_IOCS_HIGH,
-        "include_domains_from_url": True,
-    })
+    public = policies.get(
+        "public",
+        {
+            "tlp": "clear",
+            "include_reports": False,
+            "max_observables": 200,
+            "max_reports": 0,
+            "sanitize_reports": True,
+            "allowed_labels": [],
+            "export_iocs_high": False,
+            "min_confidence": DEFAULT_MIN_CONFIDENCE,
+            "max_iocs": DEFAULT_MAX_IOCS_HIGH,
+            "include_domains_from_url": True,
+        },
+    )
+    internal = policies.get(
+        "internal",
+        {
+            "tlp": "red",
+            "include_reports": True,
+            "max_observables": 800,
+            "max_reports": 50,
+            "sanitize_reports": False,
+            "allowed_labels": [],
+            "export_iocs_high": False,
+            "min_confidence": DEFAULT_MIN_CONFIDENCE,
+            "max_iocs": DEFAULT_MAX_IOCS_HIGH,
+            "include_domains_from_url": True,
+        },
+    )
+    partner = policies.get(
+        DEFAULT_PARTNER_NAME,
+        {
+            "tlp": "amber",
+            "include_reports": True,
+            "max_observables": 200,
+            "max_reports": 20,
+            "sanitize_reports": True,
+            "allowed_labels": [],
+            "export_iocs_high": False,
+            "min_confidence": DEFAULT_MIN_CONFIDENCE,
+            "max_iocs": DEFAULT_MAX_IOCS_HIGH,
+            "include_domains_from_url": True,
+        },
+    )
 
     raw_obs = fetch_observables(limit=max(DEFAULT_MAX_OBS, safe_int(internal.get("max_observables", 800), 800)))
     raw_rep = fetch_reports(limit=max(DEFAULT_MAX_REPORTS, safe_int(internal.get("max_reports", 50), 50)))
@@ -509,14 +637,17 @@ def export_collections():
     if export_iocs_high_from_indicators("internal", internal, int_tlp_obj, raw_ind, int_iocs_path):
         generated_paths["internal_iocs_high"] = "share/internal/iocs_high.json"
 
-    # ---- PARTNER (OTX curated observables + optional sanitized reports) ----
+    # ---- PARTNER (observables + optional sanitized reports) ----
     p_tlp_obj = tlp_marking(partner.get("tlp", "amber"))
     p_tlp_id = p_tlp_obj["id"]
 
-    p_obs = [o for o in raw_obs if is_otx_observable(o)]
+    # You changed this to export ALL observables to partner:
+    # p_obs = [o for o in raw_obs if is_otx_observable(o)]
+    p_obs = raw_obs
     p_obs = [o for o in p_obs if match_allowed_labels(o, partner.get("allowed_labels", []))]
     p_obs = p_obs[: safe_int(partner.get("max_observables", 200), 200)]
 
+    # Keep reports OTX-filtered (your existing behavior)
     p_rep = [r for r in raw_rep if is_otx_report(r)]
     p_rep = [r for r in p_rep if match_allowed_labels(r, partner.get("allowed_labels", []))]
     p_rep = p_rep[: safe_int(partner.get("max_reports", 20), 20)]
@@ -538,7 +669,16 @@ def export_collections():
     write_json(p_path, p_bundle)
     generated_paths["partner_reports"] = f"share/partners/{DEFAULT_PARTNER_NAME}/reports.json"
 
-    # PARTNER iocs_high.json (from indicators, NOT OTX-restricted — because createdBy can be null)
+    # ---------------------------
+    # PATCH ADDED: partner iocs_from_observables.json (guaranteed coverage)
+    # ---------------------------
+    p_iocs_obs_path = os.path.join(base_share, "partners", DEFAULT_PARTNER_NAME, "iocs_from_observables.json")
+    export_iocs_from_observables(DEFAULT_PARTNER_NAME, partner, p_tlp_obj, raw_obs, p_iocs_obs_path)
+    generated_paths["partner_iocs_from_observables"] = (
+        f"share/partners/{DEFAULT_PARTNER_NAME}/iocs_from_observables.json"
+    )
+
+    # PARTNER iocs_high.json (from indicators) (kept as-is)
     p_iocs_path = os.path.join(base_share, "partners", DEFAULT_PARTNER_NAME, "iocs_high.json")
     if export_iocs_high_from_indicators(DEFAULT_PARTNER_NAME, partner, p_tlp_obj, raw_ind, p_iocs_path):
         generated_paths["partner_iocs_high"] = f"share/partners/{DEFAULT_PARTNER_NAME}/iocs_high.json"
@@ -565,4 +705,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main() 
+    main()
